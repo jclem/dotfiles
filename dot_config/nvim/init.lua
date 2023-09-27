@@ -69,7 +69,8 @@ wk.register({
     v = {
         name = "neovim",
         q = { "<cmd>qa<cr>", "Quit All" },
-        Q = { "<cmd>qa!<cr>", "Quit All (no warn)" }
+        Q = { "<cmd>qa!<cr>", "Quit All (no warn)" },
+        W = { "<cmd>wqa<cr>", "Quit All (write)" }
     },
     z = {
         name = "fzf",
