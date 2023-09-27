@@ -1,0 +1,3 @@
+git_protocol: https
+aliases:
+    view: "repo view -w"
