@@ -1,0 +1,20 @@
+#!/usr/bin/env -S bash -x
+
+if test ! $(which brew); then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    eval "$(/opt/hombrew/bin/brew shellenv)"
+fi
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "bat"
+brew "fd"
+brew "fish"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "htop"
+brew "httpie"
+brew "jq"
+brew "ripgrep"
+brew "wget"
+EOF
