@@ -13,7 +13,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
+
 
 require("lazy").setup({
     { "junegunn/fzf",            name = "fzf" },
@@ -34,6 +34,8 @@ require("lazy").setup({
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.termguicolors = true
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
 
 require("nvim-tree").setup({
     renderer = {
