@@ -12,7 +12,7 @@
 
 fzf_configure_bindings \
     --directory=\cf \
-    --git_log=\cg \
+    --git_log=\co \
     --git_status=\cs \
     --history=\ch \
     --processes=\cp \
