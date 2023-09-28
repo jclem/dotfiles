@@ -68,6 +68,7 @@ require("nvim-tree").setup({
     }
 })
 
+vim.cmd("filetype on")
 vim.cmd("colorscheme rose-pine")
 
 local wk = require("which-key")
