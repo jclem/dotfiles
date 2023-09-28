@@ -1,7 +1,6 @@
 if test (uname) = Darwin
-    set -x PATH \
-        $PATH \
+    fish_add_path \
         /opt/homebrew/bin \
-        $HOME/.local/ \
+        /opt/homebrew/opt/ruby/bin \
         $HOME/go/bin
 end
