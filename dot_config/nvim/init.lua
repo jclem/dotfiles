@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    { "github/copilot.vim",      name = "copilot" },
     { "junegunn/fzf",            name = "fzf" },
     { "junegunn/fzf.vim",        name = "fzf.vim" },
     { "rose-pine/neovim",        name = "rose-pine", opts = { variant = "moon" } },
