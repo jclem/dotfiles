@@ -78,6 +78,12 @@ wk.register({
         s = { "<cmd>w<cr>", "Save File" },
         t = { "<cmd>NvimTreeToggle<cr>", "Toggle Tree" }
     },
+    s = {
+        name = "split",
+        ["|"] = { "<cmd>vsplit<cr>", "Vertical Split" },
+        ["-"] = { "<cmd>split<cr>", "Split" },
+        ["_"] = { "<cmd>only<cr>", "Only" }
+    },
     v = {
         name = "neovim",
         q = { "<cmd>qa<cr>", "Quit All" },
