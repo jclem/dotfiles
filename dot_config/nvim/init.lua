@@ -14,6 +14,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    {
+        "kylechui/nvim-surround",
+        name = "surround",
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({})
+        end
+
+    },
     { "github/copilot.vim",      name = "copilot" },
     { "junegunn/fzf",            name = "fzf" },
     { "junegunn/fzf.vim",        name = "fzf.vim" },
