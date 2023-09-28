@@ -13,12 +13,10 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-
-
 require("lazy").setup({
     { "junegunn/fzf",            name = "fzf" },
     { "junegunn/fzf.vim",        name = "fzf.vim" },
-    { "rose-pine/neovim",        name = "rose-pine" },
+    { "rose-pine/neovim",        name = "rose-pine", opts = { variant = "moon" } },
     { "nvim-tree/nvim-tree.lua", name = "nvim-tree" },
     {
         "folke/which-key.nvim",
@@ -29,7 +27,6 @@ require("lazy").setup({
         end
     }
 })
-
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
