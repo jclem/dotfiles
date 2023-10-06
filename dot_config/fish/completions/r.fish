@@ -7,5 +7,5 @@
 
  complete --command r \
 	 --condition "test (count (commandline -opc)) -eq 2" \
-	 --arguments "(ls -L $CODE/(commandline -o)[2])" \
+	 --arguments "(ls -L $CODE/(commandline -opc)[2])" \
 	 --no-files
