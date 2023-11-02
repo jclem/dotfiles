@@ -6,6 +6,9 @@ if test ! $(which brew); then
 fi
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "oven-sh/bun"
+tap "homebrew/cask-versions"
+
 brew "bat"
 brew "elixir"
 brew "fd"
@@ -19,9 +22,11 @@ brew "httpie"
 brew "jq"
 brew "neovim"
 brew "node"
-brew "oven-sh/bun/bun"
+brew "bun"
 brew "ripgrep"
 brew "ruby"
 brew "tmux"
 brew "wget"
+
+cask "iterm2-nightly"
 EOF
