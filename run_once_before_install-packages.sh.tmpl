@@ -6,8 +6,8 @@ if test ! $(which brew); then
 fi
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
-tap "oven-sh/bun"
 tap "homebrew/cask-versions"
+tap "oven-sh/bun"
 
 brew "bat"
 brew "elixir"
@@ -28,5 +28,9 @@ brew "ruby"
 brew "tmux"
 brew "wget"
 
+cask "cleanshot"
 cask "iterm2-nightly"
+cask "obsidian"
+cask "raycast"
+cask "visual-studio-code"
 EOF
