@@ -17,3 +17,5 @@ fzf_configure_bindings \
     --history=\ch \
     --processes=\cp \
     --variables=\cv
+
+bind --mode insert \cr 'rg_fzf'
