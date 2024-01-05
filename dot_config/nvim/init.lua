@@ -99,7 +99,19 @@ require("lazy").setup({
           b = { "<cmd>Telescope buffers<cr>", "Buffers" },
           c = { "<cmd>Telescope commands<cr>", "Commands" },
           h = { "<cmd>Telescope help_tags<cr>", "Help" },
-        }
+          s = { "<cmd>Telescope treesitter<cr>", "Symbols (Treesitter)" },
+          l = {
+            name = "LSP",
+            c = { "<cmd>Telescope lsp_incoming_calls<cr>", "Calls (incoming)" },
+            C = { "<cmd>Telescope lsp_outgoing_calls<cr>", "Calls (outgoing)" },
+            d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
+            i = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
+            r = { "<cmd>Telescope lsp_references<cr>", "References" },
+            s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document symbols" },
+            S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace symbols" },
+            t = { "<cmd>Telescope lsp_type_definitions<cr>", "Type definitions" },
+          },
+        },
       }, {
         prefix = "<leader>"
       })
@@ -237,3 +249,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end
 })
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
+
