@@ -163,6 +163,10 @@ require("lazy").setup({
     config = function()
       require("lspconfig").astro.setup({})
       require("lspconfig").tsserver.setup({})
+      require("lspconfig").elixirls.setup({
+        cmd = { "/opt/elixir-ls/language_server.sh" },
+        on_attach = on_attach,
+      })
     end,
   },
   {
@@ -225,6 +229,8 @@ vim.o.undodir = vim.fn.stdpath("data") .. "undo" -- Set undo directory
 -- Indentation settings
 vim.o.expandtab = true -- Use tabs instead of spaces, except when otherwise configured
 vim.o.shiftwidth = 2 -- Number of spaces to use for autoindent
+vim.o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations
+vim.o.smarttab = true -- Use shiftwidth for tabbing with <Tab> and <BS>
 vim.o.tabstop = 2 -- Number of spaces that a <Tab> counts for
 vim.o.autoindent = true -- Copy indent from current line when starting a new line
 vim.o.wrap = true -- Wrap lines
