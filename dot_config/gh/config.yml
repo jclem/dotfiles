@@ -1,3 +1,5 @@
 git_protocol: https
+version: "1"
 aliases:
+    space: "codespace code --insiders"
     view: "repo view -w"
