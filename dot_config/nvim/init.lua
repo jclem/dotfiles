@@ -47,8 +47,8 @@ vim.o.autoindent = true -- Copy indent from current line when starting a new lin
 vim.o.wrap = true -- Wrap lines
 
 -- ## Whitespace Settings
-vim.opt.list = true
-vim.opt.listchars = { trail = '·', nbsp = '␣' }
+vim.opt.list = false
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- # Keybindings
 
@@ -151,6 +151,10 @@ require("lazy").setup({
           name = "File",
           s = { "<cmd>w<cr>", "Save file" },
           S = { "<cmd>wall<cr>", "Save all files" },
+        },
+        c = {
+            name = "Configuration",
+            l = { "<cmd>set list!<cr>", "Toggle list" }
         },
         s = {
           name = "Split",
