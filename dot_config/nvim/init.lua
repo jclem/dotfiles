@@ -50,6 +50,9 @@ vim.o.wrap = true -- Wrap lines
 vim.opt.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- ## Plugin Configuration
+vim.g.neoformat_try_node_exe = 1
+
 -- # Keybindings
 
 -- ## Basic Keybindings
@@ -98,6 +101,9 @@ end
 
 -- Plugins
 require("lazy").setup({
+  {
+    "sbdchd/neoformat"
+  },
   {
     "rose-pine/neovim",
     name = "rose-pine",
