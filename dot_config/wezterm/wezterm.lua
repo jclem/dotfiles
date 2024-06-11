@@ -29,9 +29,15 @@ config.font_size = 12
 config.enable_tab_bar = false
 -- config.hide_tab_bar_if_only_one_tab = true
 
+-- # Window Configuration
 config.window_decorations = 'RESIZE'
-
 config.window_close_confirmation = 'NeverPrompt'
+config.window_padding = {
+  left = '32px',
+  right = '32px',
+  top = '24px',
+  bottom = '16px',
+}
 
 -- # Domains
 
