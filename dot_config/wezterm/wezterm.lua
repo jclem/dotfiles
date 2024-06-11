@@ -108,7 +108,7 @@ config.keys = {{
     key = 'x',
     mods = 'LEADER',
     action = act.CloseCurrentPane {
-        confirm = false
+        confirm = true
     }
 }, {
     key = 'z',
