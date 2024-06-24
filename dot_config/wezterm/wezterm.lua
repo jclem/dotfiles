@@ -117,10 +117,6 @@ config.keys = {{
 }, {
     key = 'k',
     mods = 'CMD',
-    action = act.ClearScrollback 'ScrollbackOnly'
-}, {
-    key = 'k',
-    mods = 'CMD|SHIFT',
     action = act.ClearScrollback 'ScrollbackAndViewport'
 }, {
     key = 'r',
