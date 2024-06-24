@@ -243,16 +243,34 @@ require("lazy").setup({
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
       require("lspconfig").astro.setup({})
       require("lspconfig").golangci_lint_ls.setup({})
       require("lspconfig").gopls.setup({})
       require("lspconfig").ruby_ls.setup({})
-      require("lspconfig").tsserver.setup({})
+      require("lspconfig").tsserver.setup({
+          capabilities = capabilities,
+      })
       require("lspconfig").elixirls.setup({
         cmd = { "/opt/elixir-ls/language_server.sh" },
         on_attach = on_attach,
+        capabilities = capabilities,
       })
     end,
+  },
+  {
+      "hrsh7th/nvim-cmp",
+      config = function()
+          require("cmp").setup {
+              sources = {
+                  { name = "nvim_lsp" },
+              },
+          }
+      end
+  },
+  {
+      "hrsh7th/cmp-nvim-lsp",
   },
   {
     "nvim-telescope/telescope-fzf-native.nvim",
