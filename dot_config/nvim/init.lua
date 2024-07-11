@@ -109,12 +109,10 @@ require("lazy").setup({
     name = "rose-pine",
     opts = {
       variant = "auto",
-      dark_variant = "moon",
     },
     config = function ()
       require("rose-pine").setup({
         variant = "auto",
-        dark_variant = "moon",
       })
       change_background()
       vim.cmd("colorscheme rose-pine")
