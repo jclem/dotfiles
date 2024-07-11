@@ -248,7 +248,7 @@ require("lazy").setup({
       require("lspconfig").astro.setup({})
       require("lspconfig").golangci_lint_ls.setup({})
       require("lspconfig").gopls.setup({})
-      require("lspconfig").ruby_ls.setup({})
+      require("lspconfig").ruby_lsp.setup({})
       require("lspconfig").tsserver.setup({
           capabilities = capabilities,
       })
