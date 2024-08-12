@@ -10,12 +10,14 @@
 # Search Processes   |  Ctrl+Alt+P (P for process)   |  --processes
 # Search Variables   |  Ctrl+V     (V for variable)  |  --variables
 
-fzf_configure_bindings \
-    --directory=\cf \
-    --git_log=\co \
-    --git_status=\cs \
-    --history=\ch \
-    --processes=\cp \
-    --variables=\cv
+if type -q fzf_configure_bindings
+    fzf_configure_bindings \
+        --directory=\cf \
+        --git_log=\co \
+        --git_status=\cs \
+        --history=\ch \
+        --processes=\cp \
+        --variables=\cv
 
-bind --mode insert \cr 'rg_fzf'
+    bind --mode insert \cr rg_fzf
+end
