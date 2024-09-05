@@ -1,0 +1,22 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-s r": "editor::Rename",
+      "ctrl-s e": "editor::GoToDiagnostic",
+      "ctrl-i": "assistant::InlineAssist"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-t": "terminal_panel::ToggleFocus"
+    }
+  }
+]

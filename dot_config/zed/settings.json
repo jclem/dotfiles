@@ -9,8 +9,9 @@
 {
   "active_pane_magnification": 1.5,
   "ui_font_family": "Berkeley Mono",
-  "ui_font_size": 15,
+  "ui_font_size": 14,
   "buffer_font_family": "Berkeley Mono",
+  "buffer_font_size": 14,
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
@@ -36,14 +37,20 @@
       "PATH": ""
     }
   },
-  "theme": "Rosé Pine",
-  // "theme": {
-  //   "light": "Rosé Pine Dawn",
-  //   "dark": "Rosé Pine"
-  // },
+  "theme": {
+    "light": "Rosé Pine Dawn",
+    "dark": "Rosé Pine"
+  },
   "vim_mode": true,
   "languages": {
+    "CSS": {
+      "tab_size": 2
+    },
+    "HTML": {
+      "tab_size": 2
+    },
     "Markdown": {
+      "formatter": "prettier",
       "format_on_save": "prettier"
     },
     "TypeScript": {
