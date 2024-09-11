@@ -11,12 +11,14 @@
     "bindings": {
       "ctrl-s r": "editor::Rename",
       "ctrl-s e": "editor::GoToDiagnostic",
-      "ctrl-i": "assistant::InlineAssist"
+      "ctrl-i": "assistant::InlineAssist",
+      "ctrl-t": "terminal_panel::ToggleFocus"
     }
   },
   {
+    "context": "Terminal",
     "bindings": {
-      "ctrl-t": "terminal_panel::ToggleFocus"
+      "ctrl-t": "workspace::ToggleBottomDock"
     }
   }
 ]
