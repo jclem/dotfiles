@@ -54,6 +54,8 @@
       "format_on_save": "prettier"
     },
     "TypeScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
       "format_on_save": "prettier",
       "code_actions_on_format": {
         "source.organizeImports": true
