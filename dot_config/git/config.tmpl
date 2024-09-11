@@ -1,12 +1,13 @@
 [alias]
-	cm = commit
-	co = checkout
-	df = diff
-	ds = diff --staged
-	lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	pl = pull
-	ps = push
-	st = status
+	cm  = commit
+	co  = checkout
+	df  = diff
+	ds  = diff --staged
+	lg  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	pl  = pull
+	ps  = push
+	psf = push --force-with-lease --force-if-includes
+	st  = status
 [commit]
 	gpgsign = true
 [diff]
