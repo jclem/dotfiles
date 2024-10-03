@@ -42,6 +42,9 @@
     "dark": "Rosé Pine"
   },
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "never"
+  },
   "languages": {
     "CSS": {
       "tab_size": 2
