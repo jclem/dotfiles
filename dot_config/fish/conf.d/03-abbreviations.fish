@@ -1,4 +1,5 @@
 if status --is-interactive
+    abbr --add --global cat  bat
     abbr --add --global code code-insiders
     abbr --add --global cz   chezmoi
     abbr --add --global fly  flyctl
