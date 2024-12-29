@@ -104,6 +104,9 @@ require("lazy").setup({
     "sbdchd/neoformat"
   },
   {
+      "imsnif/kdl.vim"
+  },
+  {
     "rose-pine/neovim",
     name = "rose-pine",
     opts = {
