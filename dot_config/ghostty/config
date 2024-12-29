@@ -27,4 +27,4 @@ font-variation = wdth=70
 font-variation = wght=600
 
 macos-titlebar-style = hidden
-initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
+initial-command = /opt/homebrew/bin/fish -c "zellij a main"
