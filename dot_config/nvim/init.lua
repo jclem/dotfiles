@@ -108,11 +108,11 @@ require("lazy").setup({
     "rose-pine/neovim",
     name = "rose-pine",
     opts = {
-      variant = "auto",
+      variant = "moon",
     },
     config = function ()
       require("rose-pine").setup({
-        variant = "auto",
+        variant = "moon",
       })
       change_background()
       vim.cmd("colorscheme rose-pine")
