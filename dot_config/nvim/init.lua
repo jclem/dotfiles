@@ -158,6 +158,11 @@ require("lazy").setup({
           s = { "<cmd>w<cr>", "Save file" },
           S = { "<cmd>wall<cr>", "Save all files" },
         },
+        l = {
+          name = "LSP",
+          d = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Definition" },
+          s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature" },
+        },
         c = {
             name = "Configuration",
             l = { "<cmd>set list!<cr>", "Toggle list" }
@@ -249,15 +254,16 @@ require("lazy").setup({
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local lspconfig = require("lspconfig")
 
-      require("lspconfig").astro.setup({})
-      require("lspconfig").golangci_lint_ls.setup({})
-      require("lspconfig").gopls.setup({})
-      require("lspconfig").ruby_lsp.setup({})
-      require("lspconfig").tsserver.setup({
+      lspconfig.astro.setup({})
+      lspconfig.golangci_lint_ls.setup({})
+      lspconfig.gopls.setup({})
+      lspconfig.ruby_lsp.setup({})
+      lspconfig.tsserver.setup({
           capabilities = capabilities,
       })
-      require("lspconfig").elixirls.setup({
+      lspconfig.elixirls.setup({
         cmd = { "/opt/elixir-ls/language_server.sh" },
         on_attach = on_attach,
         capabilities = capabilities,
@@ -267,7 +273,13 @@ require("lazy").setup({
   {
       "hrsh7th/nvim-cmp",
       config = function()
-          require("cmp").setup {
+          local cmp = require("cmp")
+
+          cmp.setup {
+              window = {
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
+              },
               sources = {
                   { name = "nvim_lsp" },
               },
@@ -316,6 +328,33 @@ require("lazy").setup({
   },
 })
 
+vim.diagnostic.config({
+  underline = true,
+  signs = true,
+  virtual_text = false,
+  float = {
+    show_header = true,
+    source = true,
+    border = "rounded",
+    focusable = false,
+  },
+})
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {
+    border = "rounded",
+  }
+)
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {
+    border = "rounded",
+  }
+)
+
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   group = vim.api.nvim_create_augroup("format", { clear = true }),
   pattern = "*",
@@ -323,5 +362,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format()
   end
 })
+
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
 
