@@ -71,7 +71,6 @@ vim.keymap.set("", "<C-l>", "<C-w>l", { noremap = true }) -- Move right a split
 -- ## Miscellanous Keybindings
 vim.keymap.set({"n", "v"}, "\\", "<cmd>NvimTreeToggle<cr>", { noremap = true }) -- Toggle file tree
 
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -159,6 +158,11 @@ require("lazy").setup({
         c = {
             name = "Configuration",
             l = { "<cmd>set list!<cr>", "Toggle list" }
+        },
+        m = {
+            name = "Diagnostics",
+            n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next diagnostic" },
+            p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
         },
         s = {
           name = "Split",
