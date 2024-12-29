@@ -1,0 +1,30 @@
+shell-integration = fish
+window-padding-x = 8
+
+# Blue/green are switched.
+# https://github.com/rose-pine/ghostty/blob/f02bbcee707dd28f651b0efeb367020527cb7b2e/readme.md#usage
+# No dark/light palettes until they're supported by palette and selection-background, too.
+theme = rose-pine-moon
+# green
+palette = 2=#3e8fb0
+palette = 10=#3e8fb0
+# blue
+palette = 4=#9ccfd8
+palette = 12=#9ccfd8
+selection-background = #44415a
+
+# theme = rose-pine-dawn
+# # green
+# palette = 2=#286983
+# palette = 10=#286983
+# # blue
+# palette = 4=#56949f
+# palette = 12=#56949f
+# selection-background = #dfdad9
+
+font-family = TX-02
+font-variation = wdth=80
+font-variation = wght=600
+
+macos-titlebar-style = hidden
+initial-command = /opt/homebrew/bin/zellij ls | grep main && /opt/homebrew/bin/zellij attach main || /opt/homebrew/bin/zellij -s main
