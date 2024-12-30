@@ -90,18 +90,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- Only used to match at startup.
--- After that, auto-dark-mode takes over.
-local function change_background()
-	local m = vim.fn.system("defaults read -g AppleInterfaceStyle")
-	m = m:gsub("%s+", "")
-	if m == "Dark" then
-		vim.o.background = "dark"
-	else
-		vim.o.background = "light"
-	end
-end
-
 -- Plugins
 require("lazy").setup({
 	{
@@ -117,28 +105,17 @@ require("lazy").setup({
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		opts = {
-			variant = "moon",
-		},
 		config = function()
 			require("rose-pine").setup({
 				variant = "moon",
+				styles = {
+					bold = false,
+					italic = false,
+					transparency = true,
+				},
 			})
-			change_background()
 			vim.cmd("colorscheme rose-pine")
 		end,
-	},
-	{
-		"f-person/auto-dark-mode.nvim",
-		config = {
-			update_interval = 1000,
-			set_dark_mode = function()
-				vim.o.background = "dark"
-			end,
-			set_light_mode = function()
-				vim.o.background = "light"
-			end,
-		}
 	},
 	{
 		"github/copilot.vim",
