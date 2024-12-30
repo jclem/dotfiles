@@ -155,173 +155,180 @@ require("lazy").setup({
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
-		opts = {
-			delay = 0,
-		},
-		keys = {
-			-- Configuration
-			{ "<leader>c", group = "Configuration" },
-			{
-				"<leader>cl",
-				"<cmd>set list!<cr>",
-				desc = "Toggle list"
-			},
+		config = function()
+			local wk = require('which-key')
+			wk.setup({
+				preset = "helix",
+				delay = 0,
+			})
 
-			-- File
-			{ "<leader>f", group = "File" },
-			{
-				"<leader>fS",
-				"<cmd>wall<cr>",
-				desc = "Save all files"
-			},
-			{
-				"<leader>fs",
-				"<cmd>w<cr>",
-				desc = "Save file"
-			},
+			local keys = {
+				-- Configuration
+				{ "<leader>c", group = "Configuration" },
+				{
+					"<leader>cl",
+					"<cmd>set list!<cr>",
+					desc = "Toggle list"
+				},
 
-			-- LSP
-			{ "<leader>l", group = "LSP" },
-			{
-				"<leader>ld",
-				"<cmd>lua vim.lsp.buf.hover()<cr>",
-				desc = "Definition"
-			},
-			{
-				"<leader>ls",
-				"<cmd>lua vim.lsp.buf.signature_help()<cr>",
-				desc = "Signature"
-			},
+				-- File
+				{ "<leader>f", group = "File" },
+				{
+					"<leader>fS",
+					"<cmd>wall<cr>",
+					desc = "Save all files"
+				},
+				{
+					"<leader>fs",
+					"<cmd>w<cr>",
+					desc = "Save file"
+				},
 
-			-- Diagnostics
-			{ "<leader>m", group = "Diagnostics" },
-			{
-				"<leader>mn",
-				"<cmd>lua vim.diagnostic.goto_next()<cr>",
-				desc = "Next diagnostic"
-			},
-			{
-				"<leader>mp",
-				"<cmd>lua vim.diagnostic.goto_prev()<cr>",
-				desc = "Previous diagnostic"
-			},
+				-- LSP
+				{ "<leader>l", group = "LSP" },
+				{
+					"<leader>ld",
+					"<cmd>lua vim.lsp.buf.hover()<cr>",
+					desc = "Definition"
+				},
+				{
+					"<leader>ls",
+					"<cmd>lua vim.lsp.buf.signature_help()<cr>",
+					desc = "Signature"
+				},
 
-			-- Split
-			{ "<leader>s", group = "Split" },
-			{
-				"<leader>s-",
-				"<cmd>split<cr>",
-				desc = "Split"
-			},
-			{
-				"<leader>s|",
-				"<cmd>vsplit<cr>",
-				desc = "Vertical split"
-			},
-			{
-				"<leader>s_",
-				"<cmd>only<cr>",
-				desc = "Only"
-			},
+				-- Diagnostics
+				{ "<leader>m", group = "Diagnostics" },
+				{
+					"<leader>mn",
+					"<cmd>lua vim.diagnostic.goto_next()<cr>",
+					desc = "Next diagnostic"
+				},
+				{
+					"<leader>mp",
+					"<cmd>lua vim.diagnostic.goto_prev()<cr>",
+					desc = "Previous diagnostic"
+				},
 
-			-- Telescope
-			{ "<leader>t", group = "Telescope" },
-			{
-				"<leader>tb",
-				"<cmd>Telescope buffers<cr>",
-				desc = "Buffers"
-			},
-			{
-				"<leader>tc",
-				"<cmd>Telescope commands<cr>",
-				desc = "Commands"
-			},
-			{
-				"<leader>tg",
-				"<cmd>Telescope live_grep<cr>",
-				desc = "Grep"
-			},
-			{
-				"<leader>th",
-				"<cmd>Telescope help_tags<cr>",
-				desc = "Help"
-			},
-			{
-				"<leader>ts",
-				"<cmd>Telescope treesitter<cr>",
-				desc = "Symbols (Treesitter)"
-			},
-			{
-				"<leader>tt",
-				"<cmd>Telescope find_files<cr>",
-				desc = "Files"
-			},
+				-- Split
+				{ "<leader>s", group = "Split" },
+				{
+					"<leader>s-",
+					"<cmd>split<cr>",
+					desc = "Split"
+				},
+				{
+					"<leader>s|",
+					"<cmd>vsplit<cr>",
+					desc = "Vertical split"
+				},
+				{
+					"<leader>s_",
+					"<cmd>only<cr>",
+					desc = "Only"
+				},
+
+				-- Telescope
+				{ "<leader>t", group = "Telescope" },
+				{
+					"<leader>tb",
+					"<cmd>Telescope buffers<cr>",
+					desc = "Buffers"
+				},
+				{
+					"<leader>tc",
+					"<cmd>Telescope commands<cr>",
+					desc = "Commands"
+				},
+				{
+					"<leader>tg",
+					"<cmd>Telescope live_grep<cr>",
+					desc = "Grep"
+				},
+				{
+					"<leader>th",
+					"<cmd>Telescope help_tags<cr>",
+					desc = "Help"
+				},
+				{
+					"<leader>ts",
+					"<cmd>Telescope treesitter<cr>",
+					desc = "Symbols (Treesitter)"
+				},
+				{
+					"<leader>tt",
+					"<cmd>Telescope find_files<cr>",
+					desc = "Files"
+				},
 
 
-			-- Telescope/LSP
-			{
-				"<leader>tl",
-				group = "LSP"
-			},
-			{
-				"<leader>tlC",
-				"<cmd>Telescope lsp_outgoing_calls<cr>",
-				desc = "Calls (outgoing)"
-			},
-			{
-				"<leader>tlS",
-				"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-				desc = "Workspace symbols"
-			},
-			{
-				"<leader>tlc",
-				"<cmd>Telescope lsp_incoming_calls<cr>",
-				desc = "Calls (incoming)"
-			},
-			{
-				"<leader>tld",
-				"<cmd>lua require'telescope.builtin'.lsp_definitions{jump_type = 'vsplit'}<cr>",
-				desc = "Definitions"
-			},
-			{
-				"<leader>tli",
-				"<cmd>lua require'telescope.builtin'.lsp_implementations{jump_type = 'vsplit'}<cr>",
-				desc = "Implementations"
-			},
-			{
-				"<leader>tlr",
-				"<cmd>Telescope lsp_references<cr>",
-				desc = "References"
-			},
-			{
-				"<leader>tls",
-				"<cmd>Telescope lsp_document_symbols<cr>",
-				desc = "Document symbols"
-			},
-			{
-				"<leader>tlt",
-				"<cmd>lua require'telescope.builtin'.lsp_type_definitions{jump_type = 'vsplit'}<cr>",
-				desc = "Type definitions"
-			},
+				-- Telescope/LSP
+				{
+					"<leader>tl",
+					group = "LSP"
+				},
+				{
+					"<leader>tlC",
+					"<cmd>Telescope lsp_outgoing_calls<cr>",
+					desc = "Calls (outgoing)"
+				},
+				{
+					"<leader>tlS",
+					"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+					desc = "Workspace symbols"
+				},
+				{
+					"<leader>tlc",
+					"<cmd>Telescope lsp_incoming_calls<cr>",
+					desc = "Calls (incoming)"
+				},
+				{
+					"<leader>tld",
+					"<cmd>lua require'telescope.builtin'.lsp_definitions{jump_type = 'vsplit'}<cr>",
+					desc = "Definitions"
+				},
+				{
+					"<leader>tli",
+					"<cmd>lua require'telescope.builtin'.lsp_implementations{jump_type = 'vsplit'}<cr>",
+					desc = "Implementations"
+				},
+				{
+					"<leader>tlr",
+					"<cmd>Telescope lsp_references<cr>",
+					desc = "References"
+				},
+				{
+					"<leader>tls",
+					"<cmd>Telescope lsp_document_symbols<cr>",
+					desc = "Document symbols"
+				},
+				{
+					"<leader>tlt",
+					"<cmd>lua require'telescope.builtin'.lsp_type_definitions{jump_type = 'vsplit'}<cr>",
+					desc = "Type definitions"
+				},
 
-			-- Neovim
-			{ "<leader>v", group = "Neovim" },
-			{
-				"<leader>vQ",
-				"<cmd>qa!<cr>",
-				desc = "Quit all (no warn)"
-			},
-			{
-				"<leader>vW",
-				"<cmd>wqa<cr>",
-				desc = "Quit all (write)"
-			},
-			{
-				"<leader>vq",
-				"<cmd>qa<cr>",
-				desc = "Quit all"
-			},
-		},
+				-- Neovim
+				{ "<leader>v", group = "Neovim" },
+				{
+					"<leader>vQ",
+					"<cmd>qa!<cr>",
+					desc = "Quit all (no warn)"
+				},
+				{
+					"<leader>vW",
+					"<cmd>wqa<cr>",
+					desc = "Quit all (write)"
+				},
+				{
+					"<leader>vq",
+					"<cmd>qa<cr>",
+					desc = "Quit all"
+				},
+			}
+
+			wk.add(keys)
+		end,
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -495,16 +502,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function()
 		vim.lsp.buf.format()
-	end
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "lua",
-	callback = function()
-		vim.bo.expandtab = false
-		vim.bo.shiftwidth = 4
-		vim.bo.softtabstop = 4
-		vim.bo.tabstop = 4
 	end
 })
 
