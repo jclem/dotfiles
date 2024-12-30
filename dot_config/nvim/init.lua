@@ -260,7 +260,7 @@ require("lazy").setup({
       lspconfig.golangci_lint_ls.setup({})
       lspconfig.gopls.setup({})
       lspconfig.ruby_lsp.setup({})
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
           capabilities = capabilities,
       })
       lspconfig.elixirls.setup({
