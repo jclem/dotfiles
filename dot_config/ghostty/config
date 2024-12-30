@@ -23,8 +23,9 @@ selection-background = #44415a
 # selection-background = #dfdad9
 
 font-family = TX-02
-font-variation = wdth=70
-font-variation = wght=600
+font-variation = wdth=60
+font-variation = wght=350
+font-size = 16
 
 macos-titlebar-style = hidden
 initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
