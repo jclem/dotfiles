@@ -130,6 +130,11 @@ require("lazy").setup({
 		end,
 	},
 	{
+		"folke/trouble.nvim",
+		opts = {},
+		cmd = "Trouble",
+	},
+	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		config = function()
@@ -140,6 +145,31 @@ require("lazy").setup({
 			})
 
 			local keys = {
+				-- Trouble
+				{ "<leader>b",  group = "Trouble" },
+				{
+					"<leader>bd",
+					"<cmd>Trouble diagnostics<cr>",
+					desc = "Diagnostics"
+				},
+				-- Trouble/LSP
+				{ "<leader>bl", group = "LSP" },
+				{
+					"<leader>bld",
+					"<cmd>Trouble lsp_definitions<cr>",
+					desc = "Definitions"
+				},
+				{
+					"<leader>bli",
+					"<cmd>Trouble lsp_implementations<cr>",
+					desc = "Implementations"
+				},
+				{
+					"<leader>blr",
+					"<cmd>Trouble lsp_references<cr>",
+					desc = "References"
+				},
+
 				-- Configuration
 				{ "<leader>c", group = "Configuration" },
 				{
