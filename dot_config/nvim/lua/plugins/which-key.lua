@@ -47,6 +47,8 @@ return {
 			-- Window
 			{ "<leader>w",  group = "Window" },
 			{ "<leader>wo", "<cmd>only<cr>",                desc = "Only" },
+			-- Etc
+			{ "<leader>/",  "<cmd>NvimTreeFocus<cr>",       desc = "Focus Tree" },
 		})
 	end
 }
