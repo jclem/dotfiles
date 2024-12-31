@@ -6,6 +6,7 @@ if test ! $(which brew); then
 fi
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+tap "hashicorp/tap"
 tap "homebrew/cask-versions"
 tap "jclem/tap"
 tap "oven-sh/bun"
@@ -19,6 +20,7 @@ brew "fzf"
 brew "gh"
 brew "git"
 brew "go"
+brew "hashicorp/tap/terraform-ls"
 brew "htop"
 brew "httpie"
 brew "konk"
