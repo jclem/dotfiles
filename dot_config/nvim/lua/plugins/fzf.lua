@@ -11,6 +11,7 @@ return {
 	config = function()
 		require("which-key").add({
 			-- Diagnostics
+			{ "<leader>da", "<cmd>FzfLua diagnostics_all<cr>",       desc = "All Diagnostics", },
 			{ "<leader>db", "<cmd>FzfLua diagnostics_document<cr>",  desc = "Document Diagnostics", },
 			{ "<leader>dl", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace Diagnostics", },
 			-- Files

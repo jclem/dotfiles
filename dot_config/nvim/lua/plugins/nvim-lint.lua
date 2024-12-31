@@ -1,9 +1,9 @@
 return {
 	"mfussenegger/nvim-lint",
-	config = function()
+	config = function(_, opts)
 		local lint = require("lint")
 
-		lint.linters_by_ft = { go = { "golangcilint" }, }
+		lint.linters_by_ft = opts.linters_by_ft or {}
 
 		vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
 			callback = function()
@@ -11,4 +11,4 @@ return {
 			end
 		})
 	end,
-} 
+}

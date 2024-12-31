@@ -5,7 +5,7 @@ return {
 			local configs = require("nvim-treesitter.configs")
 
 			configs.setup({
-				ensure_installed = { "go", "gomod", "gosum", "gowork" },
+				ensure_installed = { "hcl", "terraform" },
 				highlight = { enable = true },
 			})
 		end
@@ -14,8 +14,7 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
-				golangci_lint_ls = {},
-				gopls = {},
+				terraformls = {},
 			},
 		},
 	},
@@ -23,7 +22,8 @@ return {
 		"mfussenegger/nvim-lint",
 		opts = {
 			linters_by_ft = {
-				go = { "golangcilint" },
+				terraform = { "terraform_validate" },
+				tf = { "terraform_validate" },
 			},
 		},
 	},
@@ -31,7 +31,9 @@ return {
 		"stevearc/conform.nvim",
 		opts = {
 			formatters_by_ft = {
-				go = { "gofmt" },
+				terraform = { "terraform_fmt" },
+				tf = { "terraform_fmt" },
+				["terraform-vars"] = { "terraform_fmt" },
 			},
 		},
 	},

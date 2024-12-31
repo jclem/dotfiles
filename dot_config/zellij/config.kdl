@@ -1,4 +1,8 @@
 keybinds clear-defaults=true {
+	shared_among "normal" "pane" {
+		bind "Super k" { Clear; Write 10; }
+	}
+
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
