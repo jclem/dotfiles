@@ -24,8 +24,9 @@ selection-background = #44415a
 
 font-family = TX-02
 font-variation = wdth=60
-font-variation = wght=350
+font-variation = wght=300
 font-size = 16
+font-thicken = true # ligature bugs for TX-02 at 350, so we thicken w/ghostty
 
 macos-titlebar-style = hidden
 initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
