@@ -17,8 +17,14 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-	{ "imsnif/kdl.vim" },
-	{ import = "plugins" },
-	{ import = "plugins.languages" },
+require("lazy").setup({
+	spec = {
+		{ "imsnif/kdl.vim" },
+		{ import = "plugins" },
+		{ import = "plugins.languages" },
+	},
+
+	change_detection = {
+		notify = false,
+	},
 })
