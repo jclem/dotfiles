@@ -9,4 +9,5 @@ if status --is-interactive
     abbr --add --global uid  "mkid uuid 7 -b62"
     abbr --add --global vim  nvim
     abbr --add --global w    wezterm
+    abbr --add --global zj   zellij
 end
