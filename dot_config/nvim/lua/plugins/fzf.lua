@@ -15,6 +15,7 @@ return {
 			{ "<leader>db", "<cmd>FzfLua diagnostics_document<cr>",  desc = "Document Diagnostics", },
 			{ "<leader>dl", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace Diagnostics", },
 			-- Files
+			{ "<leader>fb", "<cmd>FzfLua buffers<cr>",               desc = "Find Buffers", },
 			{ "<leader>ff", "<cmd>FzfLua files<cr>",                 desc = "Find Files", },
 			{ "<leader>fr", "<cmd>FzfLua oldfiles<cr>",              desc = "Recent", },
 			{ "<leader>fg", "<cmd>FzfLua grep_project<cr>",          desc = "Grep Project", },
