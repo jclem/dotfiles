@@ -33,6 +33,7 @@ return {
 			{ "<leader>fs", "<cmd>w<cr>",                        desc = "Save" },
 			{ "<leader>fS", "<cmd>wall<cr>",                     desc = "Save All" },
 			{ "<leader>ft", "<cmd>NvimTreeFindFile<cr>",         desc = "Reveal in Tree" },
+			{ "<leader>fv", "<cmd>e!<cr>",                       desc = "Revert" },
 			-- LSP
 			{ "<leader>l",  group = "LSP" },
 			{ "<leader>lR", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename" },
