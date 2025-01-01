@@ -1,14 +1,9 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		config = function()
-			local configs = require("nvim-treesitter.configs")
-
-			configs.setup({
-				ensure_installed = { "go", "gomod", "gosum", "gowork" },
-				highlight = { enable = true },
-			})
-		end
+		opts = {
+			ensure_installed = { "go", "gomod", "gosum", "gowork" },
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",

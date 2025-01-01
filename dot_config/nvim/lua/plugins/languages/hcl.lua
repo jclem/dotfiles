@@ -1,14 +1,9 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		config = function()
-			local configs = require("nvim-treesitter.configs")
-
-			configs.setup({
-				ensure_installed = { "hcl", "terraform" },
-				highlight = { enable = true },
-			})
-		end
+		opts = {
+			ensure_installed = { "hcl", "terraform" },
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",
