@@ -1,4 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	opts = {},
+	opts = {
+		format_after_save = {},
+	},
 }
