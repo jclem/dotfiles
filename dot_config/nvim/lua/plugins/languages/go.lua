@@ -4,7 +4,24 @@ return {
 		opts = {
 			servers = {
 				golangci_lint_ls = {},
-				gopls = {},
+				-- Yes, this requires all of this ugly nesting.
+				gopls = {
+					settings = {
+						settings = {
+							gopls = {
+								["ui.inlayhint.hints"] = {
+									assignVariableTypes = true,
+									compositeLiteralFields = true,
+									compositeLiteralTypes = true,
+									constantValues = true,
+									functionTypeParameters = true,
+									parameterNames = true,
+									rangeVariableTypes = true,
+								},
+							},
+						},
+					},
+				},
 			},
 		},
 	},
