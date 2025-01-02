@@ -1,11 +1,5 @@
 return {
 	{
-		"nvim-treesitter/nvim-treesitter",
-		opts = {
-			ensure_installed = { "typescript" },
-		},
-	},
-	{
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
@@ -27,8 +21,6 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		config = function(_, opts)
-			require("nvim-ts-autotag").setup(opts or {})
-		end,
+		opts = {},
 	},
 }

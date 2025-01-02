@@ -19,7 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	spec = {
-		{ "imsnif/kdl.vim" },
 		{ import = "plugins" },
 		{ import = "plugins.languages" },
 	},

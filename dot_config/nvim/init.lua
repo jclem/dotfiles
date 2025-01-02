@@ -71,7 +71,10 @@ vim.keymap.set("", "<C-l>", "<C-w>l", { noremap = true }) -- Move right a split
 
 -- ## Miscellanous Keybindings
 vim.keymap.set({ "n", "v" }, "\\", "<cmd>NvimTreeToggle<cr>", { noremap = true }) -- Toggle file tree
-vim.api.nvim_set_keymap("i", "<C-c>", "<Esc>", { noremap = true })                -- Map <C-c> to <Esc>, since <C-c> blocks autocommands # https://bsky.app/profile/tpo.pe/post/3lend4ayck22i
+
+-- Map <C-c> to <Esc>, since <C-c> blocks autocommands
+-- https://bsky.app/profile/tpo.pe/post/3lend4ayck22i
+vim.api.nvim_set_keymap("i", "<C-c>", "<Esc>", { noremap = true })
 
 require("config.lazy")
 

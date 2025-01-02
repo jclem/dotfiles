@@ -2,11 +2,12 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local lualine = require('lualine')
 		local p = require('rose-pine.palette')
 
 		vim.opt.cmdheight = 0
 
-		require('lualine').setup({
+		lualine.setup({
 			options = {
 				theme = {
 					normal = {
