@@ -9,7 +9,9 @@ return {
 		require("fzf-lua").register_ui_select()
 	end,
 
-	config = function()
+	config = function(_, opts)
+		require('fzf-lua').setup(opts or {})
+
 		require("which-key").add({
 			-- Diagnostics
 			{ "<leader>da", "<cmd>FzfLua diagnostics_all<cr>",       desc = "All Diagnostics", },
