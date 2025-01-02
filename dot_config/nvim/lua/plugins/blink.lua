@@ -39,7 +39,7 @@ return {
 		-- 		},
 		-- 	},
 		keymap = {
-			preset = "super-tab",
+			preset = "default",
 		},
 		signature = {
 			enabled = true,
