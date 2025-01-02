@@ -9,7 +9,7 @@ return {
 					settings = {
 						settings = {
 							gopls = {
-								["ui.inlayhint.hints"] = {
+								hints = {
 									assignVariableTypes = true,
 									compositeLiteralFields = true,
 									compositeLiteralTypes = true,
