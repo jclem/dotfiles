@@ -39,16 +39,7 @@ return {
 			{ "<leader>lR",      "<cmd>lua vim.lsp.buf.rename()<cr>",                      desc = "Rename" },
 			-- Marks
 			{ "<leader>m",       group = "Marks" },
-			{ "<leader>maa",     "mA",                                                     desc = "Set A" },
-			{ "<leader>mab",     "mB",                                                     desc = "Set B" },
-			{ "<leader>mac",     "mC",                                                     desc = "Set C" },
-			{ "<leader>mad",     "mD",                                                     desc = "Set D" },
-			{ "<leader>ma",      "`A",                                                     desc = "Goto A" },
-			{ "<leader>mb",      "`B",                                                     desc = "Goto B" },
-			{ "<leader>mc",      "`C",                                                     desc = "Goto C" },
-			{ "<leader>md",      "`D",                                                     desc = "Goto D" },
-			{ "<leader>mf",      "<cmd>LuaFzf marks<cr>",                                  desc = "List Marks" },
-			{ "<leader>mx",      "<cmd>delm! | delm A-D<cr>",                              desc = "Delete Marks" },
+			{ "<leader>mx",      "<cmd>delm! | delm A-Z0-9<cr>",                           desc = "Delete Marks" },
 			-- UI
 			{ "<leader>u",       group = "UI" },
 			{ "<leader>uh",      "<cmd>set hlsearch!<cr>",                                 desc = "Toggle Highlight" },

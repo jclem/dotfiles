@@ -35,6 +35,8 @@ return {
 			{ "<leader>lr", "<cmd>FzfLua lsp_references<cr>",        desc = "References", },
 			{ "<leader>ls", "<cmd>FzfLua lsp_document_symbols<cr>",  desc = "Document Symbols", },
 			{ "<leader>lS", "<cmd>FzfLua lsp_workspace_symbols<cr>", desc = "Workspace Symbols", },
+			-- Marks
+			{ "<leader>ml", "<cmd>FzfLua marks<cr>",                 desc = "List Marks" },
 			-- Neovim
 			{ "<leader>vc", "<cmd>FzfLua commands<cr>",              desc = "Commands" },
 			{ "<leader>vh", "<cmd>FzfLua helptags<cr>",              desc = "Help" },
