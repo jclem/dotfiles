@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	version = false,
+	enabled = true,
 	build = ":TSUpdate",
 	opts_extend = { "ensure_installed" },
 	opts = {

@@ -1,9 +1,13 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	enabled = true,
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		"rose-pine/neovim",
+	},
 	config = function()
-		local lualine = require('lualine')
-		local p = require('rose-pine.palette')
+		local lualine = require("lualine")
+		local p = require("rose-pine.palette")
 
 		vim.opt.cmdheight = 0
 

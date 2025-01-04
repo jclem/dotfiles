@@ -3,7 +3,9 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
-				golangci_lint_ls = {},
+				-- Using nvim-lint, instead.
+				-- golangci_lint_ls = {},
+
 				-- Yes, this requires all of this ugly nesting.
 				gopls = {
 					settings = {

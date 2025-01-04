@@ -1,6 +1,7 @@
 return {
-	'echasnovski/mini.surround', 
-	version = '*',
+	"echasnovski/mini.surround",
+	version = "*",
+	enabled = true,
 	opts = {
 		mappings = {
 			add = "sa",

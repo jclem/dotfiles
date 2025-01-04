@@ -5,6 +5,12 @@ local bufcache = {}
 return {
 	"echasnovski/mini.diff",
 	version = "*",
+	enabled = true,
+	opts = {
+		view = {
+			style = "sign",
+		},
+	},
 	config = function(_, opts)
 		local minidiff = require("mini.diff")
 

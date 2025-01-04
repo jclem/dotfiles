@@ -9,7 +9,7 @@ return {
 							typescript = {
 								inlayHints = {
 									parameterNames = {
-										enabled = 'all',
+										enabled = "all",
 										suppressWhenArgumentMatchesName = false,
 									},
 									parameterTypes = { enabled = true },
@@ -42,6 +42,7 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
+		enabled = true,
 		opts = {},
 	},
 }

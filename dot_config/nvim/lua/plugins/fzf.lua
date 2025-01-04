@@ -1,16 +1,14 @@
 return {
 	"ibhagwan/fzf-lua",
-
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
+	enabled = true,
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 
 	init = function()
 		require("fzf-lua").register_ui_select()
 	end,
 
 	config = function(_, opts)
-		require('fzf-lua').setup(opts or {})
+		require("fzf-lua").setup(opts or {})
 
 		require("which-key").add({
 			-- Diagnostics
@@ -29,12 +27,6 @@ return {
 			{ "<leader>gf", "<cmd>FzfLua git_files<cr>",             desc = "Files", },
 			{ "<leader>gl", "<cmd>FzfLua git_blame<cr>",             desc = "Blame (buffer)", },
 			{ "<leader>gt", "<cmd>FzfLua git_stash<cr>",             desc = "Stash", },
-			-- LSP
-			{ "<leader>ld", "<cmd>FzfLua lsp_definitions<cr>",       desc = "Definitions", },
-			{ "<leader>li", "<cmd>FzfLua lsp_implementations<cr>",   desc = "Implementations", },
-			{ "<leader>lr", "<cmd>FzfLua lsp_references<cr>",        desc = "References", },
-			{ "<leader>ls", "<cmd>FzfLua lsp_document_symbols<cr>",  desc = "Document Symbols", },
-			{ "<leader>lS", "<cmd>FzfLua lsp_workspace_symbols<cr>", desc = "Workspace Symbols", },
 			-- Marks
 			{ "<leader>ml", "<cmd>FzfLua marks<cr>",                 desc = "List Marks" },
 			-- Neovim

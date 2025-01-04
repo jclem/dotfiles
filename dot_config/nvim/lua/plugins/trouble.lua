@@ -1,21 +1,49 @@
 return {
 	"folke/trouble.nvim",
+	enabled = true,
+	lazy = false,
 	cmd = { "Trouble" },
 	opts = {
+		warn_no_results = false,
+
 		modes = {
-			lsp = {
-				win = { position = "right" },
+			diagnostics = {
+				auto_close = true,
+				filter = { buf = 0 }
 			},
+
+			lsp_floating_types = {
+				auto_jump = false,
+				mode = "lsp_type_definitions",
+				win = {
+					type = "split",
+				}
+			},
+
+			lsp_large = {
+				mode = "lsp",
+				win = {
+					type = "split",
+					relative = "editor",
+					position = "right",
+					size = 60,
+				}
+			}
 		},
 	},
 	keys = {
-		{ "<leader>x",  group = "Trouble" },
-		{ "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>",              desc = "Diagnostics (Trouble)" },
-		{ "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics (Trouble)" },
-		{ "<leader>cs", "<cmd>Trouble symbols toggle<cr>",                  desc = "Symbols (Trouble)" },
-		{ "<leader>cS", "<cmd>Trouble lsp toggle<cr>",                      desc = "LSP references/definitions/... (Trouble)" },
-		{ "<leader>xL", "<cmd>Trouble loclist toggle<cr>",                  desc = "Location List (Trouble)" },
-		{ "<leader>xQ", "<cmd>Trouble qflist toggle<cr>",                   desc = "Quickfix List (Trouble)" },
+		{ "<leader>ld", "<cmd>Trouble lsp_definitions toggle auto_jump=false focus=false<cr>",      desc = "Definitions" },
+		{ "<leader>lD", "<cmd>Trouble lsp_definitions toggle auto_jump=true focus=true<cr>",        desc = "Definitions (Focus)" },
+		{ "<leader>lt", "<cmd>Trouble lsp_type_definitions toggle auto_jump=false focus=false<cr>", desc = "Type Definitions" },
+		{ "<leader>lT", "<cmd>Trouble lsp_type_definitions toggle auto_jump=true focus=true<cr>",   desc = "Type Definitions (Focus)" },
+		{ "<leader>li", "<cmd>Trouble lsp_implementations toggle auto_jump=false focus=false<cr>",  desc = "Implementations" },
+		{ "<leader>lI", "<cmd>Trouble lsp_implementations toggle auto_jump=true focus=true<cr>",    desc = "Implementations (Focus)" },
+		{ "<leader>lr", "<cmd>Trouble lsp_references toggle auto_jump=false focus=false<cr>",       desc = "References" },
+		{ "<leader>lR", "<cmd>Trouble lsp_references toggle auto_jump=true focus=true<cr>",         desc = "References (Focus)" },
+		{ "<leader>ll", "<cmd>Trouble lsp toggle auto_jump=false focus=false<cr>",                  desc = "LSP" },
+		{ "<leader>lL", "<cmd>Trouble lsp_large toggle auto_jump=false focus=true<cr>",             desc = "All (Focus)" },
+		{ "<leader>xx", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",                         desc = "Buffer Diagnostics" },
+		{ "<leader>xX", "<cmd>Trouble diagnostics toggle<cr>",                                      desc = "Workspace Diagnostics" },
 		{
 			"[q",
 			function()

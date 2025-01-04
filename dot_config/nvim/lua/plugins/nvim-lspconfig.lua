@@ -2,6 +2,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		version = "*",
+		enabled = true,
 		config = function(_, opts)
 			require("which-key").add({
 				{
