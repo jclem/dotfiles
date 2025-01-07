@@ -43,10 +43,6 @@ return {
 			{ "<leader>mx",      "<cmd>delm! | delm A-Z0-9<cr>",                             desc = "Delete Marks" },
 			-- UI
 			{ "<leader>u",       group = "UI" },
-			{ "<leader>uh",      "<cmd>set hlsearch!<cr>",                                   desc = "Toggle Highlight" },
-			{ "<leader>ut",      "<cmd>set cursorline!<cr>",                                 desc = "Toggle Cursorline" },
-			{ "<leader>uw",      "<cmd>set wrap!<cr>",                                       desc = "Toggle Wrap" },
-			{ "<leader>ul",      "<cmd>set list!<cr>",                                       desc = "Toggle List" },
 			-- Neovim
 			{ "<leader>v",       group = "Neovim" },
 			{ "<leader>vq",      "<cmd>qa<cr>",                                              desc = "Quit All" },
