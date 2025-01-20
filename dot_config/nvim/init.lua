@@ -76,6 +76,9 @@ vim.keymap.set({ "n", "v" }, "\\", "<cmd>NvimTreeToggle<cr>", { noremap = true }
 -- https://bsky.app/profile/tpo.pe/post/3lend4ayck22i
 vim.api.nvim_set_keymap("i", "<C-c>", "<Esc>", { noremap = true })
 
+vim.api.nvim_set_keymap("n", "{", "<cmd>tabprev<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "}", "<cmd>tabnext<cr>", { noremap = true })
+
 require("config.lazy")
 
 vim.diagnostic.config({

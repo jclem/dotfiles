@@ -29,6 +29,8 @@ return {
 			{ "<leader>gt", "<cmd>FzfLua git_stash<cr>",             desc = "Stash", },
 			-- Marks
 			{ "<leader>ml", "<cmd>FzfLua marks<cr>",                 desc = "List Marks" },
+			-- Tabs
+			{ "<leader>tl", "<cmd>FzfLua tabs<cr>",                  desc = "List Tabs" },
 			-- Neovim
 			{ "<leader>vc", "<cmd>FzfLua commands<cr>",              desc = "Commands" },
 			{ "<leader>vh", "<cmd>FzfLua helptags<cr>",              desc = "Help" },

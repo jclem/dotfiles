@@ -41,6 +41,12 @@ return {
 			-- Marks
 			{ "<leader>m",       group = "Marks" },
 			{ "<leader>mx",      "<cmd>delm! | delm A-Z0-9<cr>",                             desc = "Delete Marks" },
+			-- Tabs
+			{ "<leader>t",       group = "Tabs" },
+			{ "<leader>tc",      "<cmd>tabnew<cr>",                                          desc = "Create tab" },
+			{ "<leader>tn",      "<cmd>tabnext<cr>",                                         desc = "Next tab" },
+			{ "<leader>tp",      "<cmd>tabprev<cr>",                                         desc = "Previous tab" },
+			{ "<leader>tx",      "<cmd>tabclose<cr>",                                        desc = "Close tab" },
 			-- UI
 			{ "<leader>u",       group = "UI" },
 			-- Neovim
