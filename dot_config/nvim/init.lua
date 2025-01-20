@@ -117,3 +117,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
+
+-- Show hover after delay (CursorHold)
+-- vim.o.updatetime = 750
+--
+-- vim.api.nvim_create_autocmd("CursorHold", {
+-- 	group = vim.api.nvim_create_augroup("show_hover", { clear = true }),
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		vim.lsp.buf.hover()
+-- 	end
+-- })
