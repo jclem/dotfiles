@@ -4,12 +4,13 @@ window-padding-x = 8
 # Blue/green are switched.
 # https://github.com/rose-pine/ghostty/blob/f02bbcee707dd28f651b0efeb367020527cb7b2e/readme.md#usage
 # No dark/light palettes until they're supported by palette and selection-background, too.
-theme = rose-pine-moon
+theme = rose-pine-dawn
 
 font-family = TX-02
 font-variation = wdth=60
 font-variation = wght=350
 font-size = 16
+font-thicken = true
 
 # macos-titlebar-style = hidden
 # initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
