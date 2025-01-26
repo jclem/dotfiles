@@ -4,7 +4,7 @@ window-padding-x = 8
 # Blue/green are switched.
 # https://github.com/rose-pine/ghostty/blob/f02bbcee707dd28f651b0efeb367020527cb7b2e/readme.md#usage
 # No dark/light palettes until they're supported by palette and selection-background, too.
-theme = rose-pine-dawn
+theme = rose-pine-moon
 
 font-family = Berkeley Mono Variable
 font-variation = wdth=60
