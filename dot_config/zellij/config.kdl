@@ -1,6 +1,6 @@
 keybinds clear-defaults=true {
 	shared_among "normal" "pane" {
-		bind "Super k" { Clear; Write 10; }
+		bind "Super k" { Clear; Write 12; }
 	}
 
     locked {
