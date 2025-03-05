@@ -1,4 +1,4 @@
-set -x BAT_THEME "rose-pine-dawn"
+set -x BAT_THEME "rose-pine-moon"
 set -x CODE "$HOME/src/github.com"
 set -x DOWNLOADS "$HOME/Downloads"
 set -x EDITOR "nvim"
