@@ -1,0 +1,4 @@
+{
+	"fallback_hostname": "localhost",
+	"http_hostnames": ["localhost"]
+}

@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "dot_config/ghostty/config": "toml",
+    "*.sh.tmpl": "shellscript"
+  }
+}

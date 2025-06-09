@@ -1,0 +1,30 @@
+[alias]
+	cm  = commit
+	co  = checkout
+	df  = diff
+	ds  = diff --staged
+	lg  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	pl  = pull
+	ps  = push
+	psf = push --force-with-lease --force-if-includes
+	st  = status
+[commit]
+	gpgsign = true
+[diff]
+	mnemonicPrefix = true
+	renames = copies
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[init]
+	defaultBranch = main
+[merge]
+	ff = only
+[rerere]
+	enabled = true
+[user]
+	name = {{ .user.name }}
+	email = {{ .user.email }}{{ if .gpg.keyid }}
+	signingkey = {{ .gpg.keyid }}
+	{{- end }}

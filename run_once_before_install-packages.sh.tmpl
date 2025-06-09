@@ -1,0 +1,32 @@
+#!/usr/bin/env -S bash -x
+
+if test ! "$(which brew)"; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    eval "$(/opt/hombrew/bin/brew shellenv)"
+fi
+
+brew bundle --file=/dev/stdin <<EOF
+brew "bat"
+brew "bun"
+brew "fd"
+brew "fish"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "go"
+brew "htop"
+brew "httpie"
+brew "jq"
+brew "neovim"
+brew "node"
+brew "ripgrep"
+brew "watchexec"
+brew "wget"
+brew "zellij"
+
+cask "cleanshot"
+cask "cursor"
+cask "docker"
+cask "ghostty"
+cask "raycast"
+EOF

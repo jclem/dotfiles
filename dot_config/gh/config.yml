@@ -1,0 +1,4 @@
+git_protocol: ssh
+version: "1"
+aliases:
+  view: "repo view -w"

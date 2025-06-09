@@ -1,0 +1,12 @@
+shell-integration = fish
+window-padding-x = 8
+
+theme = dark:tokyonight-storm,light:tokyonight-day
+
+font-family = Berkeley Mono Variable
+font-variation = wdth=70
+font-variation = wght=350
+font-size = 16
+font-thicken = true
+
+initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"

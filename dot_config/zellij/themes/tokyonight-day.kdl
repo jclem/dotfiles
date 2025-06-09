@@ -1,0 +1,144 @@
+// ghostty colors
+// /Applications/Ghostty.app/Contents/Resources/ghostty/themes/tokyonight-day
+// palette  1           = #f52a65
+// palette  2           = #587539
+// palette  3           = #8c6c3e
+// palette  4           = #2e7de9
+// palette  5           = #9854f1
+// palette  6           = #007197
+// palette  7           = #6172b0
+// palette  8           = #a1a6c5
+// palette  9           = #f52a65
+// palette 10           = #587539
+// palette 11           = #8c6c3e
+// palette 12           = #2e7de9
+// palette 13           = #9854f1
+// palette 14           = #007197
+// palette 15           = #3760bf
+// background           = #e1e2e7
+// foreground           = #3760bf
+// cursor-color         = #3760bf
+// cursor-text          = #e1e2e7
+// selection-background = #99a7df
+// selection-foreground = #3760bf
+
+themes {
+  tokyonight-day {
+    text_unselected {
+      base 52 59 88
+      background 225 226 231
+      emphasis_0 140 67 81
+      emphasis_1 150 80 39
+      emphasis_2 41 89 170
+      emphasis_3 56 95 13
+    }
+    text_selected {
+      base 225 226 231
+      background 52 59 88
+      emphasis_0 140 67 81
+      emphasis_1 150 80 39
+      emphasis_2 41 89 170
+      emphasis_3 56 95 13
+    }
+    ribbon_unselected {
+      base 52 59 88
+      background 225 226 231
+      emphasis_0 150 80 39
+      emphasis_1 41 89 170
+      emphasis_2 90 62 142
+      emphasis_3 56 95 13
+    }
+    ribbon_selected {
+      base 225 226 231
+      background 52 59 88
+      emphasis_0 150 80 39
+      emphasis_1 41 89 170
+      emphasis_2 90 62 142
+      emphasis_3 56 95 13
+    }
+    table_title {
+      base 52 59 88
+      background 225 226 231
+      emphasis_0 41 89 170
+      emphasis_1 150 80 39
+      emphasis_2 90 62 142
+      emphasis_3 56 95 13
+    }
+    table_cell_unselected {
+      base 52 59 88
+      background 225 226 231
+      emphasis_0 140 67 81
+      emphasis_1 150 80 39
+      emphasis_2 41 89 170
+      emphasis_3 56 95 13
+    }
+    table_cell_selected {
+      base 225 226 231
+      background 52 59 88
+      emphasis_0 140 67 81
+      emphasis_1 150 80 39
+      emphasis_2 41 89 170
+      emphasis_3 56 95 13
+    }
+    list_unselected {
+      base 52 59 88
+      background 225 226 231
+      emphasis_0 140 67 81
+      emphasis_1 150 80 39
+      emphasis_2 41 89 170
+      emphasis_3 56 95 13
+    }
+    list_selected {
+      base 225 226 231
+      background 52 59 88
+      emphasis_0 140 67 81
+      emphasis_1 150 80 39
+      emphasis_2 41 89 170
+      emphasis_3 56 95 13
+    }
+    frame_selected {
+      base 46 125 233
+      background 225 226 231
+      emphasis_0 41 89 170
+      emphasis_1 150 80 39
+      emphasis_2 90 62 142
+      emphasis_3 56 95 13
+    }
+    frame_highlight {
+      base 245 42 101
+      background 225 226 231
+      emphasis_0 41 89 170
+      emphasis_1 150 80 39
+      emphasis_2 140 67 81
+      emphasis_3 56 95 13
+    }
+    exit_code_success {
+      base 56 95 13
+      background 225 226 231
+      emphasis_0 51 99 92
+      emphasis_1 41 89 170
+      emphasis_2 150 80 39
+      emphasis_3 90 62 142
+    }
+    exit_code_error {
+      base 140 67 81
+      background 225 226 231
+      emphasis_0 150 80 39
+      emphasis_1 41 89 170
+      emphasis_2 90 62 142
+      emphasis_3 56 95 13
+    }
+    multiplayer_user_colors {
+      player_1 90 62 142
+      player_2 41 89 170
+      player_3 140 67 81
+      player_4 51 99 92
+      player_5 150 80 39
+      player_6 15 75 110
+      player_7 143 94 21
+      player_8 99 79 48
+      player_9 0 108 134
+      player_10 108 110 117
+    }
+  }
+}

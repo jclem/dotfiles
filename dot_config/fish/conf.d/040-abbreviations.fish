@@ -1,0 +1,9 @@
+if status --is-interactive
+    abbr --add --global cat  bat
+    abbr --add --global cz   chezmoi
+    abbr --add --global g    git
+    abbr --add --global --set-cursor gcn "git commit --no-verify --message \"%\""
+    abbr --add --global gpb  "git push --set-upstream origin (current_branch)"
+    abbr --add --global vim  nvim
+    abbr --add --global zj   zellij
+end
