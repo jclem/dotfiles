@@ -1,6 +1,8 @@
 vim.g.mapleader = " " -- Use space for mapleader, very efficient.
 vim.g.maplocalleader = " "
 
+require("config.lazy")
+
 -- # Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -78,4 +80,6 @@ vim.keymap.set({ "n", "v" }, "\\", "<cmd>NvimTreeToggle<cr>", { noremap = true }
 -- https://bsky.app/profile/tpo.pe/post/3lend4ayck22i
 vim.api.nvim_set_keymap("i", "<C-c>", "<Esc>", { noremap = true })
 
-require("config.lazy")
+-- # Colorscheme
+-- vim.o.background = "dark" -- Set background to dark
+vim.cmd("colorscheme tokyonight") -- Set colorscheme
