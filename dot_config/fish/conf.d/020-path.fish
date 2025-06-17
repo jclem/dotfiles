@@ -3,4 +3,5 @@ fish_add_path --move \
     /opt/homebrew/bin \
     $HOME/.cache/.bun/bin \
     $HOME/.local/bin/env.fish \
-    $HOME/go/bin
+    $HOME/go/bin \
+    $HOME/bin
