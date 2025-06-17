@@ -1,6 +1,7 @@
 if status --is-interactive
     abbr --add --global cat  bat
     abbr --add --global cz   chezmoi
+    abbr --add --global df   dotfiles
     abbr --add --global g    git
     abbr --add --global --set-cursor gcn "git commit --no-verify --message \"%\""
     abbr --add --global gpb  "git push --set-upstream origin (current_branch)"
