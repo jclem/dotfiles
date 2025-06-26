@@ -1,3 +1,3 @@
 function current_branch
-    echo -n (git rev-parse --abbrev-ref HEAD)
+    echo -n (git symbolic-ref --quiet --short HEAD)
 end
