@@ -60,7 +60,6 @@ return {
 			-- Trouble
 			{ "<leader>x",       group = "Trouble" },
 			-- Etc
-			{ "<leader>/",       "<cmd>NvimTreeFocus<cr>",                                   desc = "Focus Tree" },
 			{ "<leader><space>", "<cmd>lua vim.lsp.buf.code_action()<cr>",                   desc = "Code Actions" },
 			{ "<leader>N",       [[<cmd>lua require("snacks").notifier.show_history()<cr>]], desc = "Show Notifier History" },
 		})

@@ -1,5 +1,5 @@
 return {
-	"ibhagwan/fzf-lua",
+  "ibhagwan/fzf-lua",
 	enabled = true,
 
 	init = function()
