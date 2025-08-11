@@ -25,11 +25,4 @@ else
     end
 end
 
-bat cache --build
-
-
-
-# echo $(command bat --config-dir)
-# # REPO="https://github.com/folke/tokyonight.nvim.git"
-
-# # git clone --no-checkout --depth=1 --filter=blob:none "$REPO"
+command bat cache --build
