@@ -7,6 +7,8 @@ fi
 
 brew bundle --file=/dev/stdin <<EOF
 brew "bat"
+brew "btop"
+brew "eza"
 brew "fd"
 brew "fish"
 brew "fzf"
@@ -15,12 +17,17 @@ brew "git"
 brew "htop"
 brew "httpie"
 brew "jq"
+brew "lazydocker"
 brew "neovim"
 brew "node"
 brew "ripgrep"
 brew "watchexec"
 brew "wget"
 brew "zellij"
+brew "zoxide"
+
+tap "cormacrelf/tap"
+brew "cormacrelf/tap/dark-notify"
 
 # cask "cleanshot"
 # cask "cursor"

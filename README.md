@@ -7,6 +7,14 @@ by [chezmoi](https://chezmoi.io).
 
 ### Install
 
+Install nix:
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+```
+
+Set up dotfiles with chezmoi:
+
 ```shell
 sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply jclem
 ```
