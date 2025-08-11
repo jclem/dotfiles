@@ -81,5 +81,5 @@ vim.keymap.set({ "n", "v" }, "\\", "<cmd>NvimTreeToggle<cr>", { noremap = true }
 vim.api.nvim_set_keymap("i", "<C-c>", "<Esc>", { noremap = true })
 
 -- # Colorscheme
-vim.o.background = "dark" -- Set background to dark
+-- vim.o.background = "dark" -- Set background to dark
 vim.cmd("colorscheme tokyonight") -- Set colorscheme
