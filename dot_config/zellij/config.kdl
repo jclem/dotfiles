@@ -279,8 +279,8 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-// theme "tokyonight-storm"
-theme "tokyonight-day"
+theme "tokyonight-storm"
+// theme "tokyonight-day"
  
 // Choose the base input mode of zellij.
 // Default: normal

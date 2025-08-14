@@ -190,7 +190,7 @@ return {
 
 			local mslsp = require("mason-lspconfig")
 			mslsp.setup({
-				ensure_installed = { "eslint-lsp", "vtsls", "lua_ls" },
+				ensure_installed = { "vtsls", "lua_ls" },
 			})
 		end,
 	},
