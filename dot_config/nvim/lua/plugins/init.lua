@@ -149,6 +149,7 @@ return {
 				},
 				servers = {
 					biome = {},
+					eslint = {},
 					lua_ls = {
 						cmd = { "lua-language-server" },
 						filetypes = { "lua" },
@@ -189,7 +190,7 @@ return {
 
 			local mslsp = require("mason-lspconfig")
 			mslsp.setup({
-				ensure_installed = { "vtsls", "lua_ls" },
+				ensure_installed = { "eslint-lsp", "vtsls", "lua_ls" },
 			})
 		end,
 	},
