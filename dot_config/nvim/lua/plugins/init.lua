@@ -316,4 +316,34 @@ return {
 		version = "*",
 		opts = {},
 	},
+	{
+		-- https://github.com/bwpge/lualine-pretty-path/
+		"bwpge/lualine-pretty-path",
+		version = "*",
+	},
+	{
+		-- https://github.com/nvim-lualine/lualine.nvim
+		"nvim-lualine/lualine.nvim",
+		version = "*",
+		dependencies = { "nvim-tree/nvim-web-devicons", "bwpge/lualine-pretty-path" },
+		opts = {
+			sections = {
+				lualine_a = { "mode" },
+				lualine_b = { "branch", "diff", "diagnostics" },
+				lualine_c = { "pretty_path" },
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {},
+			},
+
+			inactive_sections = {
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = { "pretty_path" },
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {},
+			},
+		},
+	},
 }
