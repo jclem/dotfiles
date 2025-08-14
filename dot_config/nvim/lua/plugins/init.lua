@@ -54,6 +54,9 @@ return {
 				-- Marks
 				{ "<leader>m", group = "Marks" },
 				{ "<leader>mx", "<cmd>delm! | delm A-Z0-9<cr>", desc = "Delete Marks" },
+
+				-- Git
+				{ "<leader>g", group = "Git" },
 			})
 		end,
 	},
@@ -79,7 +82,6 @@ return {
 				},
 
 				-- Git
-				{ "<leader>g", group = "Git" },
 				{ "<leader>gc", "<cmd>FzfLua git_commits<cr>", desc = "Commits" },
 				{ "<leader>gb", "<cmd>FzfLua git_branches<cr>", desc = "Branches" },
 				{ "<leader>gf", "<cmd>FzfLua git_files<cr>", desc = "Files" },
@@ -243,6 +245,15 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
+		keys = {
+			{
+				"<leader>gg",
+				function()
+					require("snacks").lazygit()
+				end,
+				desc = "Lazygit",
+			},
+		},
 		init = function()
 			local Snacks = require("snacks")
 			Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
