@@ -44,7 +44,7 @@ return {
 		vim.o.showbreak = "┕━ " -- Set break indent
 		vim.o.smarttab = true -- Use shiftwidth for tabbing with <Tab> and <BS>
 		vim.o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations
-		vim.o.tabstop = 2 -- Number of spaces that a <Tab> counts for
+		vim.o.tabstop = 4 -- Number of spaces that a <Tab> counts for
 		vim.o.wrap = true -- Wrap lines (no horizontal scrolling in Zellij, anyway)
 
 		-- ## Whitespace Settings
