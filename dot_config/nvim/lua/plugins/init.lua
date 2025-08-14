@@ -141,6 +141,7 @@ return {
 					enabled = true,
 				},
 				servers = {
+					biome = {},
 					lua_ls = {
 						cmd = { "lua-language-server" },
 						filetypes = { "lua" },
