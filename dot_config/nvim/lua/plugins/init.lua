@@ -99,6 +99,13 @@ return {
 
 				-- Symbols
 				{ "<leader>s", group = "Symbol" },
+				{
+					"<leader>sn",
+					function()
+						vim.lsp.buf.rename()
+					end,
+					desc = "Rename",
+				},
 
 				-- UI
 				{ "<leader>u", group = "UI" },
@@ -204,6 +211,11 @@ return {
 				"<cmd>Trouble lsp_references toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
 				desc = "References",
 			},
+			{
+				"<leader>D",
+				"<cmd>Trouble diagnostics toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
+				desc = "Diagnostics",
+			},
 		},
 	},
 	{
@@ -295,6 +307,12 @@ return {
 	{
 		-- https://github.com/f-person/auto-dark-mode.nvim
 		"f-person/auto-dark-mode.nvim",
+		version = "*",
+		opts = {},
+	},
+	{
+		-- https://github.com/saghen/blink.cmp
+		"saghen/blink.cmp",
 		version = "*",
 		opts = {},
 	},
