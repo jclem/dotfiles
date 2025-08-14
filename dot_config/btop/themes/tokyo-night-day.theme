@@ -1,0 +1,64 @@
+# Theme: tokyo-night-day
+# Based on: btop "tokyo-night" structure + Tokyo Night Day palette
+# Author: generated for Jonathan
+
+# Main bg / fg
+theme[main_bg]="#e1e2e7"
+theme[main_fg]="#565a6e"
+
+# Titles / accents
+theme[title]="#2e7de9"
+theme[hi_fg]="#2e7de9"
+
+# Selection
+theme[selected_bg]="#99a7df"
+theme[selected_fg]="#343b59"
+
+# Inactive/disabled text
+theme[inactive_fg]="#a1a6c5"
+
+# Process misc (mini graphs, detail text)
+theme[proc_misc]="#007197"
+
+# Box outlines / dividers
+theme[cpu_box]="#a1a6c5"
+theme[mem_box]="#a1a6c5"
+theme[net_box]="#a1a6c5"
+theme[proc_box]="#a1a6c5"
+theme[div_line]="#a1a6c5"
+
+# Temperature gradient
+theme[temp_start]="#587539"  # green
+theme[temp_mid]="#8c6c3e"    # yellow/brown
+theme[temp_end]="#f52a65"    # red
+
+# CPU usage gradient
+theme[cpu_start]="#587539"
+theme[cpu_mid]="#8c6c3e"
+theme[cpu_end]="#f52a65"
+
+# Mem/Disk meters
+theme[free_start]="#587539"
+theme[free_mid]="#8c6c3e"
+theme[free_end]="#f52a65"
+
+theme[cached_start]="#587539"
+theme[cached_mid]="#8c6c3e"
+theme[cached_end]="#f52a65"
+
+theme[available_start]="#587539"
+theme[available_mid]="#8c6c3e"
+theme[available_end]="#f52a65"
+
+theme[used_start]="#587539"
+theme[used_mid]="#8c6c3e"
+theme[used_end]="#f52a65"
+
+# Network throughput gradients
+theme[download_start]="#587539"
+theme[download_mid]="#8c6c3e"
+theme[download_end]="#f52a65"
+
+theme[upload_start]="#587539"
+theme[upload_mid]="#8c6c3e"
+theme[upload_end]="#f52a65"
