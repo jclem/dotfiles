@@ -215,6 +215,7 @@ return {
 		init = function()
 			local Snacks = require("snacks")
 			Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
+			Snacks.toggle.option("background", { name = "Background", off = "dark", on = "light" }):map("<leader>ud")
 			Snacks.toggle.line_number():map("<leader>ul")
 			Snacks.toggle.inlay_hints():map("<leader>uh")
 			Snacks.toggle.treesitter():map("<leader>uT")
@@ -284,5 +285,16 @@ return {
 			local mason = require("mason")
 			mason.setup({ ensure_installed = { "stylua" } })
 		end,
+	},
+	{
+		-- https://github.com/github/copilot.vim
+		"github/copilot.vim",
+		version = "*",
+	},
+	{
+		-- https://github.com/f-person/auto-dark-mode.nvim
+		"f-person/auto-dark-mode.nvim",
+		version = "*",
+		opts = {},
 	},
 }
