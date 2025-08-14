@@ -11,7 +11,7 @@ return {
 		"folke/tokyonight.nvim",
 		version = "*",
 		lazy = false,
-		init = function(plugin)
+		init = function()
 			vim.cmd("colorscheme tokyonight-storm")
 		end,
 	},
@@ -26,7 +26,7 @@ return {
 		version = "*",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		-- Keys are loaded after other plugins unless we use "config" vs "opts"/"keys".
-		config = function(opts)
+		config = function()
 			local wk = require("which-key")
 
 			wk.setup({
@@ -66,7 +66,7 @@ return {
 			"ivy",
 			marks = { marks = "[A-Za-z]" },
 		},
-		init = function(plugin)
+		init = function()
 			require("which-key").add({
 				-- Files
 				{ "<leader>f", group = "Files" },
@@ -198,7 +198,7 @@ return {
 				},
 			}
 		end,
-		config = function(lspconfig, opts)
+		config = function(_, opts)
 			local lsp = require("lspconfig")
 
 			for server, server_opts in pairs(opts.servers or {}) do
