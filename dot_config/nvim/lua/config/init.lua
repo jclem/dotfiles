@@ -8,6 +8,7 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		-- ## Basic Settings
+		vim.o.autoread = true -- Automatically read files when changed outside of Vim
 		vim.o.autowrite = true -- Automatically write before running commands
 		vim.o.clipboard = "unnamedplus" -- Use system clipboard
 		vim.o.cursorline = true -- Highlight current line
