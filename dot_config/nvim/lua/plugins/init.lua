@@ -217,6 +217,35 @@ return {
 				ensure_installed = { "vtsls", "lua_ls" },
 			})
 		end,
+		init = function()
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if not client then
+						return
+					end
+
+					-- Check if the attached client is Biome
+					if client.name == "biome" then
+						-- Auto-fix safe Biome issues on buffer write (save)
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = args.buf,
+							callback = function()
+								vim.lsp.buf.code_action({
+									context = {
+										---@diagnostic disable-next-line: assign-type-mismatch
+										only = { "source.fixAll.biome" },
+										diagnostics = {},
+									},
+									apply = true,
+									-- You might need to adjust the range or other options based on your setup
+								})
+							end,
+						})
+					end
+				end,
+			})
+		end,
 	},
 	{
 		-- https://github.com/folke/trouble.nvim
