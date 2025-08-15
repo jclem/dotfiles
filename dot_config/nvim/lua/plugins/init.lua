@@ -102,6 +102,11 @@ return {
 				-- Symbols
 				{ "<leader>s", group = "Symbol" },
 				{
+					"<leader>sa",
+					"<cmd>FzfLua lsp_code_actions<cr>",
+					desc = "Code Actions",
+				},
+				{
 					"<leader>sn",
 					function()
 						vim.lsp.buf.rename()
@@ -233,7 +238,7 @@ return {
 			},
 			{
 				"<leader>D",
-				"<cmd>Trouble diagnostics toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
+				"<cmd>Trouble diagnostics toggle win.type=split win.relative=win win.position=bottom auto_jump=false filter.buf=0<cr>",
 				desc = "Diagnostics",
 			},
 		},
@@ -341,7 +346,7 @@ return {
 	},
 	{
 		-- https://github.com/saghen/blink.cmp
-        -- https://cmp.saghen.dev/
+		-- https://cmp.saghen.dev/
 		"saghen/blink.cmp",
 		version = "*",
 		opts = {
