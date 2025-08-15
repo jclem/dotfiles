@@ -291,7 +291,6 @@ return {
 		init = function()
 			local Snacks = require("snacks")
 			Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
-			Snacks.toggle.option("background", { name = "Background", off = "dark", on = "light" }):map("<leader>ud")
 			Snacks.toggle.line_number():map("<leader>ul")
 			Snacks.toggle.inlay_hints():map("<leader>uh")
 			Snacks.toggle.treesitter():map("<leader>uT")
@@ -409,6 +408,73 @@ return {
 				lualine_x = {},
 				lualine_y = {},
 				lualine_z = {},
+			},
+		},
+	},
+	{
+		-- https://github.com/folke/twilight.nvim
+		"folke/twilight.nvim",
+		version = "*",
+		opts = {},
+		dependencies = { "folke/snacks.nvim" },
+		keys = {
+			{ "<leader>ud", "<cmd>Twilight<cr>", desc = "Toggle Twilight" },
+		},
+	},
+	{
+		-- https://github.com/folke/zen-mode.nvim
+		"folke/zen-mode.nvim",
+		version = "*",
+		opts = {},
+		keys = {
+			{ "<leader>uz", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
+		},
+	},
+	{
+		-- https://github.com/folke/flash.nvim
+		"folke/flash.nvim",
+		version = "*",
+		opts = {},
+		keys = {
+			{
+				"s",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").jump()
+				end,
+				desc = "Flash",
+			},
+			{
+				"S",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").treesitter()
+				end,
+				desc = "Flash Treesitter",
+			},
+			{
+				"r",
+				mode = "o",
+				function()
+					require("flash").remote()
+				end,
+				desc = "Remote Flash",
+			},
+			{
+				"R",
+				mode = { "o", "x" },
+				function()
+					require("flash").treesitter_search()
+				end,
+				desc = "Treesitter Search",
+			},
+			{
+				"<c-s>",
+				mode = { "c" },
+				function()
+					require("flash").toggle()
+				end,
+				desc = "Toggle Flash Search",
 			},
 		},
 	},
