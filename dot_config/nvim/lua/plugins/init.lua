@@ -341,9 +341,12 @@ return {
 	},
 	{
 		-- https://github.com/saghen/blink.cmp
+        -- https://cmp.saghen.dev/
 		"saghen/blink.cmp",
 		version = "*",
-		opts = {},
+		opts = {
+			signature = { enabled = true },
+		},
 	},
 	{
 		-- https://github.com/bwpge/lualine-pretty-path/
