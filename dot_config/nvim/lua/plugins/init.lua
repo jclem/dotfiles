@@ -312,15 +312,6 @@ return {
 		opts = {},
 	},
 	{
-		-- https://github.com/saghen/blink.cmp
-		-- https://cmp.saghen.dev/
-		"saghen/blink.cmp",
-		version = "*",
-		opts = {
-			signature = { enabled = true },
-		},
-	},
-	{
 		-- https://github.com/bwpge/lualine-pretty-path/
 		"bwpge/lualine-pretty-path",
 		version = "*",
@@ -420,6 +411,18 @@ return {
 	{
 		-- https://github.com/echasnovski/mini.surround
 		"echasnovski/mini.surround",
+		version = "*",
+		opts = {},
+	},
+	{
+		-- https://github.com/echasnovski/mini.pairs
+		"echasnovski/mini.pairs",
+		version = "*",
+		opts = {},
+	},
+	{
+		-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
+		"echasnovski/mini.bracketed",
 		version = "*",
 		opts = {},
 	},
