@@ -52,6 +52,11 @@ return {
 		vim.opt.list = false
 		vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
+		-- ## Folding
+		vim.o.foldmethod = "expr"
+		vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.o.foldlevelstart = 99 -- Open all folds by default
+
 		-- # Keybindings
 
 		-- ## Basic Keybindings
