@@ -48,6 +48,7 @@ return {
 				{ "<leader>vQ", "<cmd>qa!<cr>", desc = "Quit All (no warn)" },
 				-- Buffers
 				{ "<leader>b", group = "Buffers" },
+				{ "<leader>bc", "<cmd>let @+ = expand('%:~:.')<cr>", desc = "Copy Relative Path" },
 				{ "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete Buffer" },
 				{ "<leader>bD", "<cmd>bdelete!<cr>", desc = "Delete Buffer (no warn)" },
 				{ "<leader>bp", "<cmd>b#<cr>", desc = "Previous Buffer" },
@@ -136,73 +137,11 @@ return {
 		version = "*",
 		dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
 		opts = function()
-			local util = require("lspconfig.util")
-			local root_dir = util.root_pattern(".git")(vim.fn.getcwd()) or vim.fn.getcwd()
-
-			-- Checks if a file exists
-			-- @param path string
-			local function file_exists(path)
-				return vim.fn.filereadable(vim.fn.expand(path)) == 1
-			end
-
-			local nodePath = nil
-			if file_exists(root_dir .. "/src/cli/tsserverNode") then
-				nodePath = root_dir .. "/src/cli/tsserverNode"
-			end
-
 			return {
 				inlay_hints = {
 					enabled = true,
 				},
-				servers = {
-					biome = {},
-					eslint = {},
-					lua_ls = {
-						cmd = { "lua-language-server" },
-						filetypes = { "lua" },
-						settings = {
-							Lua = {
-								runtime = {
-									version = "LuaJIT",
-								},
-								diagnostics = {
-									globals = { "vim" },
-								},
-								workspace = {
-									library = vim.api.nvim_get_runtime_file("", true),
-									checkThirdParty = false,
-								},
-								telemetry = {
-									enable = false,
-								},
-							},
-						},
-					},
-					vtsls = {
-						settings = {
-							vtsls = {
-								autoUseWorkspaceTsdk = true,
-							},
-							typescript = {
-								format = {
-									enable = false,
-								},
-								inlayHints = {
-									parameterNames = { enabled = "all" },
-									parameterTypes = { enabled = true },
-									variableTypes = { enabled = true },
-									propertyDeclarationTypes = { enabled = true },
-									functionLikeReturnTypes = { enabled = true },
-									enumMemberValues = { enabled = true },
-								},
-								tsserver = {
-									nodePath = nodePath,
-									maxTsServerMemory = 24576,
-								},
-							},
-						},
-					},
-				},
+				servers = {},
 			}
 		end,
 		config = function(_, opts)
@@ -477,5 +416,11 @@ return {
 				desc = "Toggle Flash Search",
 			},
 		},
+	},
+	{
+		-- https://github.com/echasnovski/mini.surround
+		"echasnovski/mini.surround",
+		version = "*",
+		opts = {},
 	},
 }
