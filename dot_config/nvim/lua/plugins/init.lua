@@ -16,6 +16,11 @@ return {
 		end,
 	},
 	{
+		-- https://github.com/nvim-lua/plenary.nvim
+		"nvim-lua/plenary.nvim",
+		branch = "master",
+	},
+	{
 		-- https://github.com/nvim-tree/nvim-web-devicons
 		"nvim-tree/nvim-web-devicons",
 		version = "*",
@@ -55,6 +60,12 @@ return {
 				-- Marks
 				{ "<leader>m", group = "Marks" },
 				{ "<leader>mx", "<cmd>delm! | delm A-Z0-9<cr>", desc = "Delete Marks" },
+
+				-- Diagnostics
+				{ "<leader>d", group = "Diagnostics" },
+				{ "<leader>dd", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Open Diagnostics" },
+				{ "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Set Location List" },
+				{ "<leader>dq", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "Set Quickfix List" },
 
 				-- Git
 				{ "<leader>g", group = "Git" },
@@ -200,14 +211,47 @@ return {
 				desc = "Definitions",
 			},
 			{
+
+				"<leader>sl",
+				"<cmd>Trouble lsp_document_symbols toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
+			},
+			{
 				"<leader>sr",
 				"<cmd>Trouble lsp_references toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
 				desc = "References",
 			},
 			{
-				"<leader>D",
+				"<leader>da",
 				"<cmd>Trouble diagnostics toggle win.type=split win.relative=win win.position=bottom auto_jump=false filter.buf=0<cr>",
 				desc = "Diagnostics",
+			},
+			{
+				"[q",
+				function()
+					if require("trouble").is_open() then
+						require("trouble").prev({ skip_groups = true, jump = true })
+					else
+						local ok, err = pcall(vim.cmd.cprev)
+						if not ok then
+							vim.notify(err, vim.log.levels.ERROR)
+						end
+					end
+				end,
+				desc = "Previous Trouble/Quickfix Item",
+			},
+			{
+				"]q",
+				function()
+					if require("trouble").is_open() then
+						require("trouble").next({ skip_groups = true, jump = true })
+					else
+						local ok, err = pcall(vim.cmd.cnext)
+						if not ok then
+							vim.notify(err, vim.log.levels.ERROR)
+						end
+					end
+				end,
+				desc = "Next Trouble/Quickfix Item",
 			},
 		},
 	},
