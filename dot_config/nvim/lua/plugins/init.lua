@@ -97,7 +97,7 @@ return {
 				{ "<leader>gc", "<cmd>FzfLua git_commits<cr>", desc = "Commits" },
 				{ "<leader>gb", "<cmd>FzfLua git_branches<cr>", desc = "Branches" },
 				{ "<leader>gf", "<cmd>FzfLua git_files<cr>", desc = "Files" },
-				{ "<leader>gl", "<cmd>FzfLua git_blame<cr>", desc = "Blame" },
+				{ "<leader>gL", "<cmd>FzfLua git_blame<cr>", desc = "File Blame" },
 				{ "<leader>gt", "<cmd>FzfLua git_stash<cr>", desc = "Stash" },
 				{ "<leader>gC", "<cmd>FzfLua git_bcommits<cr>", desc = "Commits (buffer)" },
 
