@@ -1,5 +1,14 @@
 return {
 	{
+		desc = "Effect.gen",
+		prefix = "gen",
+		body = {
+			"Effect.gen(function*() {",
+			"\t$0",
+			"})",
+		},
+	},
+	{
 		desc = "export named function",
 		prefix = "ef",
 		body = {
