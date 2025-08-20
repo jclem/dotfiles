@@ -1,6 +1,11 @@
 keybinds {
   pane {
     bind "Ctrl k" { Clear; Write 12; SwitchToMode "normal"; }
+    bind "z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "locked"; }
+  }
+
+  locked {
+    bind "z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "normal"; }
   }
 
   tab {
