@@ -1,9 +1,9 @@
 keybinds {
   normal {
-    bind "Ctrl h" { MoveFocus "left"; SwitchToMode "normal"; };
-    bind "Ctrl j" { MoveFocus "down"; SwitchToMode "normal"; };
-    bind "Ctrl k" { MoveFocus "up"; SwitchToMode "normal"; };
-    bind "Ctrl l" { MoveFocus "right"; SwitchToMode "normal"; };
+    bind "Ctrl h" { MoveFocusOrTab "left"; SwitchToMode "normal"; };
+    bind "Ctrl j" { MoveFocusOrTab "down"; SwitchToMode "normal"; };
+    bind "Ctrl k" { MoveFocusOrTab "up"; SwitchToMode "normal"; };
+    bind "Ctrl l" { MoveFocusOrTab "right"; SwitchToMode "normal"; };
   }
 
   pane {
