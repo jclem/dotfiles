@@ -19,20 +19,9 @@ keybinds {
 }
 
 theme "tokyonight-storm"
+// theme "tokyonight-day"
 
 scroll_buffer_size 100_000
-
-plugins {
-  // https://github.com/fresh2dev/zellij-autolock
-  autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
-    is_enabled true
-    triggers "nvim"
-  }
-}
-
-load_plugins {
-  autolock
-}
 
 ui {
   pane_frames {
