@@ -7,70 +7,8 @@ return {
 		version = "*",
 	},
 	{
-		-- https://github.com/folke/tokyonight.nvim
-		"folke/tokyonight.nvim",
+		"LazyVim/LazyVim",
 		version = "*",
-		lazy = false,
-		init = function()
-			vim.cmd("colorscheme tokyonight-storm")
-		end,
-	},
-	{
-		-- https://github.com/nvim-lua/plenary.nvim
-		"nvim-lua/plenary.nvim",
-		branch = "master",
-	},
-	{
-		-- https://github.com/nvim-tree/nvim-web-devicons
-		"nvim-tree/nvim-web-devicons",
-		version = "*",
-	},
-	{
-		-- https://github.com/folke/which-key.nvim
-		"folke/which-key.nvim",
-		version = "*",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		-- Keys are loaded after other plugins unless we use "config" vs "opts"/"keys".
-		config = function()
-			local wk = require("which-key")
-
-			wk.setup({
-				preset = "helix",
-				delay = 0,
-			})
-
-			require("which-key").add({
-				-- Splits
-				{ "<leader>-", "<cmd>split<cr>", desc = "Split (below)" },
-				{ "<leader>\\", "<cmd>vsplit<cr>", desc = "Split (right)" },
-				-- Files
-				{ "<leader>f", group = "Files" },
-				{ "<leader>fs", "<cmd>w<cr>", desc = "Save" },
-				{ "<leader>fv", "<cmd>e!<cr>", desc = "Revert", icon = { icon = "", color = "red" } },
-				-- Neovim
-				{ "<leader>v", group = "Neovim", icon = "" },
-				{ "<leader>vq", "<cmd>qa<cr>", desc = "Quit All" },
-				{ "<leader>vQ", "<cmd>qa!<cr>", desc = "Quit All (no warn)" },
-				-- Buffers
-				{ "<leader>b", group = "Buffers" },
-				{ "<leader>bc", "<cmd>let @+ = expand('%:~:.')<cr>", desc = "Copy Relative Path" },
-				{ "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete Buffer" },
-				{ "<leader>bD", "<cmd>bdelete!<cr>", desc = "Delete Buffer (no warn)" },
-				{ "<leader>bp", "<cmd>b#<cr>", desc = "Previous Buffer" },
-				-- Marks
-				{ "<leader>m", group = "Marks" },
-				{ "<leader>mx", "<cmd>delm! | delm A-Z0-9<cr>", desc = "Delete Marks" },
-
-				-- Diagnostics
-				{ "<leader>d", group = "Diagnostics" },
-				{ "<leader>dd", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Open Diagnostics" },
-				{ "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Set Location List" },
-				{ "<leader>dq", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "Set Quickfix List" },
-
-				-- Git
-				{ "<leader>g", group = "Git" },
-			})
-		end,
 	},
 	{
 		-- https://github.com/ibhagwan/fzf-lua
@@ -84,7 +22,7 @@ return {
 		init = function()
 			require("which-key").add({
 				-- Files
-				{ "<leader>f", group = "Files" },
+				{ "<leader>f",  group = "Files" },
 				{ "<leader>fd", "<cmd>FzfLua files<cr>", desc = "Find Files" },
 				{
 					"<leader>fg",
@@ -94,25 +32,25 @@ return {
 				},
 
 				-- Git
-				{ "<leader>gc", "<cmd>FzfLua git_commits<cr>", desc = "Commits" },
+				{ "<leader>gc", "<cmd>FzfLua git_commits<cr>",  desc = "Commits" },
 				{ "<leader>gb", "<cmd>FzfLua git_branches<cr>", desc = "Branches" },
-				{ "<leader>gf", "<cmd>FzfLua git_files<cr>", desc = "Files" },
-				{ "<leader>gL", "<cmd>FzfLua git_blame<cr>", desc = "File Blame" },
-				{ "<leader>gt", "<cmd>FzfLua git_stash<cr>", desc = "Stash" },
+				{ "<leader>gf", "<cmd>FzfLua git_files<cr>",    desc = "Files" },
+				{ "<leader>gL", "<cmd>FzfLua git_blame<cr>",    desc = "File Blame" },
+				{ "<leader>gt", "<cmd>FzfLua git_stash<cr>",    desc = "Stash" },
 				{ "<leader>gC", "<cmd>FzfLua git_bcommits<cr>", desc = "Commits (buffer)" },
 
 				-- Neovim
-				{ "<leader>vc", "<cmd>FzfLua commands<cr>", desc = "Commands" },
-				{ "<leader>vh", "<cmd>FzfLua helptags<cr>", desc = "Help" },
+				{ "<leader>vc", "<cmd>FzfLua commands<cr>",     desc = "Commands" },
+				{ "<leader>vh", "<cmd>FzfLua helptags<cr>",     desc = "Help" },
 
 				-- Buffers
-				{ "<leader>bl", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
+				{ "<leader>bl", "<cmd>FzfLua buffers<cr>",      desc = "Buffers" },
 
 				-- Marks
-				{ "<leader>ml", "<cmd>FzfLua marks<cr>", desc = "Marks" },
+				{ "<leader>ml", "<cmd>FzfLua marks<cr>",        desc = "Marks" },
 
 				-- Symbols
-				{ "<leader>s", group = "Symbol" },
+				{ "<leader>s",  group = "Symbol" },
 				{
 					"<leader>sa",
 					"<cmd>FzfLua lsp_code_actions<cr>",
@@ -198,88 +136,6 @@ return {
 		end,
 	},
 	{
-		-- https://github.com/folke/trouble.nvim
-		"folke/trouble.nvim",
-		version = "*",
-		dependencies = { "folke/which-key.nvim" },
-		opts = {},
-		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>sd",
-				"<cmd>Trouble lsp_definitions toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
-				desc = "Definitions",
-			},
-			{
-
-				"<leader>sl",
-				"<cmd>Trouble lsp_document_symbols toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
-			},
-			{
-				"<leader>sr",
-				"<cmd>Trouble lsp_references toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
-				desc = "References",
-			},
-			{
-				"<leader>da",
-				"<cmd>Trouble diagnostics toggle win.type=split win.relative=win win.position=bottom auto_jump=false filter.buf=0<cr>",
-				desc = "Diagnostics",
-			},
-			{
-				"[q",
-				function()
-					if require("trouble").is_open() then
-						require("trouble").prev({ skip_groups = true, jump = true })
-					else
-						local ok, err = pcall(vim.cmd.cprev)
-						if not ok then
-							vim.notify(err, vim.log.levels.ERROR)
-						end
-					end
-				end,
-				desc = "Previous Trouble/Quickfix Item",
-			},
-			{
-				"]q",
-				function()
-					if require("trouble").is_open() then
-						require("trouble").next({ skip_groups = true, jump = true })
-					else
-						local ok, err = pcall(vim.cmd.cnext)
-						if not ok then
-							vim.notify(err, vim.log.levels.ERROR)
-						end
-					end
-				end,
-				desc = "Next Trouble/Quickfix Item",
-			},
-		},
-	},
-	{
-		-- https://github.com/folke/snacks.nvim
-		"folke/snacks.nvim",
-		version = "*",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-		keys = {
-			{
-				"<leader>gg",
-				function()
-					require("snacks").lazygit()
-				end,
-				desc = "Lazygit",
-			},
-		},
-		init = function()
-			local Snacks = require("snacks")
-			Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
-			Snacks.toggle.line_number():map("<leader>ul")
-			Snacks.toggle.inlay_hints():map("<leader>uh")
-			Snacks.toggle.treesitter():map("<leader>uT")
-		end,
-	},
-	{
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		"nvim-treesitter/nvim-treesitter",
 		version = "*",
@@ -348,12 +204,6 @@ return {
 		-- https://github.com/github/copilot.vim
 		"github/copilot.vim",
 		version = "*",
-	},
-	{
-		-- https://github.com/f-person/auto-dark-mode.nvim
-		"f-person/auto-dark-mode.nvim",
-		version = "*",
-		opts = {},
 	},
 	{
 		-- https://github.com/bwpge/lualine-pretty-path/
