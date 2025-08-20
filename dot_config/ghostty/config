@@ -21,12 +21,3 @@ keybind = shift+enter=text:\n
 
 # Always start in Zellij
 initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
-
-# Zellij
-keybind = cmd+t=text:
-keybind = cmd+n=text:
-keybind = cmd+shift+n=text:
-keybind = cmd+r=text:
-
-
-
