@@ -50,6 +50,24 @@ return {
 			Snacks.toggle.line_number():map("<leader>ul")
 			Snacks.toggle.inlay_hints():map("<leader>uh")
 			Snacks.toggle.treesitter():map("<leader>uT")
+
+			Snacks.toggle({
+				name = "Diagnostics Virtual Text",
+				get = function()
+					return vim.diagnostic.config().virtual_text ~= false
+				end,
+				set = function(state)
+					if state then
+						vim.diagnostic.config({
+							virtual_text = true
+						})
+					else
+						vim.diagnostic.config({
+							virtual_text = false,
+						})
+					end
+				end
+			}):map("<leader>dv")
 		end,
 	},
 }
