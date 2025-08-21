@@ -8,34 +8,34 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		-- ## Basic Settings
-		vim.o.autoread = true -- Automatically read files when changed outside of Vim
-		vim.o.autowrite = true -- Automatically write before running commands
+		vim.o.autoread = true     -- Automatically read files when changed outside of Vim
+		vim.o.autowrite = true    -- Automatically write before running commands
 		vim.o.clipboard = "unnamedplus" -- Use system clipboard
-		vim.o.cursorline = true -- Highlight current line
-		vim.o.filetype = "on" -- Enable filetype detection
+		vim.o.cursorline = true   -- Highlight current line
+		vim.o.filetype = "on"     -- Enable filetype detection
 		vim.o.inccommand = "split" -- Show live preview of substitutions
-		vim.o.mouse = "a" -- Enable mouse support
-		vim.o.number = true -- Show line numbers
-		vim.o.scrolloff = 10 -- Keep 10 lines above and below the cursor
-		vim.o.showmatch = true -- Show matching brackets
-		vim.o.showmode = false -- Don't show mode, will be in status line
-		vim.o.signcolumn = "yes" -- Always show sign column
-		vim.o.splitbelow = true -- Open new splits to the bottom
-		vim.o.splitright = true -- Open new splits to the right
-		vim.o.swapfile = false -- Disable swap files
+		vim.o.mouse = "a"         -- Enable mouse support
+		vim.o.number = true       -- Show line numbers
+		vim.o.scrolloff = 10      -- Keep 10 lines above and below the cursor
+		vim.o.showmatch = true    -- Show matching brackets
+		vim.o.showmode = false    -- Don't show mode, will be in status line
+		vim.o.signcolumn = "yes"  -- Always show sign column
+		vim.o.splitbelow = true   -- Open new splits to the bottom
+		vim.o.splitright = true   -- Open new splits to the right
+		vim.o.swapfile = false    -- Disable swap files
 		vim.o.termguicolors = true -- Enable 24-bit RGB colors
-		vim.o.timeoutlen = 300 -- Decrease from default (1s)
-		vim.o.updatetime = 250 -- Decrease from default (4s)
+		vim.o.timeoutlen = 300    -- Decrease from default (1s)
+		vim.o.updatetime = 250    -- Decrease from default (4s)
 
 		-- ## Search Settings
 		vim.o.completeopt = "menuone,noinsert,noselect" -- Completion options
-		vim.o.hlsearch = true -- Highlight search results
-		vim.o.ignorecase = true -- Ignore case when searching
-		vim.o.smartcase = true -- ...except when non-lowercase characters are used
+		vim.o.hlsearch = true                     -- Highlight search results
+		vim.o.ignorecase = true                   -- Ignore case when searching
+		vim.o.smartcase = true                    -- ...except when non-lowercase characters are used
 
 		-- ## Undo Settings
 		vim.o.undodir = vim.fn.stdpath("data") .. "undo" -- Set undo directory
-		vim.o.undofile = true -- Enable undo history
+		vim.o.undofile = true                      -- Enable undo history
 
 		-- ## Indentation Settings
 		vim.o.autoindent = true -- Copy indent from current line when starting a new line
@@ -77,5 +77,12 @@ return {
 		-- Map <C-c> to <Esc>, since <C-c> blocks autocommands
 		-- https://bsky.app/profile/tpo.pe/post/3lend4ayck22i
 		vim.api.nvim_set_keymap("i", "<C-c>", "<Esc>", { noremap = true })
+
+		-- Show diagnostics for current line
+		vim.diagnostic.config({
+			virtual_lines = {
+				current_line = true
+			}
+		})
 	end,
 }
