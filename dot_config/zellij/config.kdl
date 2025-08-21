@@ -5,7 +5,7 @@ keybinds {
   }
 
   locked {
-    bind "z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "normal"; }
+    bind "Ctrl Z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "normal"; }
   }
 
   tab {
