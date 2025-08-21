@@ -34,6 +34,9 @@ return {
 				animate = { enabled = false }
 			},
 			input = { enabled = true },
+			scroll = { enabled = true },
+			statuscolumn = { enabled = true },
+			words = { enabled = true }
 		},
 		keys = {
 			{
@@ -68,6 +71,25 @@ return {
 					end
 				end
 			}):map("<leader>dv")
+
+			local whichkey = require("which-key")
+
+			whichkey.add({
+				{
+					"[[",
+					function()
+						require("snacks").words.jump(-vim.v.count1)
+					end,
+					desc = "Previous Word",
+				},
+				{
+					"]]",
+					function()
+						require("snacks").words.jump(vim.v.count1)
+					end,
+					desc = "Next Word",
+				}
+			})
 		end,
 	},
 }
