@@ -88,6 +88,13 @@ return {
 						require("snacks").words.jump(vim.v.count1)
 					end,
 					desc = "Next Word",
+				},
+				{
+					"<leader>z",
+					function()
+						require("snacks").zen()
+					end,
+					desc = "Zen Mode",
 				}
 			})
 		end,
