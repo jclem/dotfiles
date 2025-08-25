@@ -205,5 +205,23 @@ return {
 		"windwp/nvim-ts-autotag",
 		event = "VeryLazy",
 		opts = {}
+	},
+	{
+		-- https://github.com/stevearc/aerial.nvim/
+		"stevearc/aerial.nvim",
+		opts = {},
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons"
+		},
+		keys = {
+			{
+				"<leader>st",
+				function()
+					require("aerial").fzf_lua_picker()
+				end,
+				desc = "Tree"
+			}
+		},
 	}
 }
