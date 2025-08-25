@@ -136,10 +136,15 @@ return {
 		end,
 	},
 	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		version = "*",
+	},
+	{
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		"nvim-treesitter/nvim-treesitter",
 		version = "*",
 		build = ":TSUpdate",
+		dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
 		opts = {
 			ensure_installed = {
 				"bash",
@@ -170,6 +175,18 @@ return {
 			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
+			textobjects = {
+				move = {
+					enable = true,
+					set_jumps = true,
+					goto_next_start = {
+						["]e"] = "@top_level",
+					},
+                    goto_previous_start = {
+						["[e"] = "@top_level",
+					},
+				}
+			}
 		},
 
 		config = function(_, opts)
