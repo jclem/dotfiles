@@ -200,5 +200,10 @@ return {
 			},
 		},
 		opts = {},
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		event = "VeryLazy",
+		opts = {}
 	}
 }
