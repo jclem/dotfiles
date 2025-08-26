@@ -30,6 +30,11 @@ return {
 					desc = "Grep",
 					icon = { icon = "", color = "green" },
 				},
+				{
+					"<leader>fj",
+					"<cmd>FzfLua jumps<cr>",
+					desc = "Jumplist",
+				},
 
 				-- Git
 				{ "<leader>gc", "<cmd>FzfLua git_commits<cr>",  desc = "Commits" },
@@ -182,7 +187,7 @@ return {
 					goto_next_start = {
 						["]e"] = "@top_level",
 					},
-                    goto_previous_start = {
+					goto_previous_start = {
 						["[e"] = "@top_level",
 					},
 				}
