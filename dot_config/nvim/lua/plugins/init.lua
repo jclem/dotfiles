@@ -208,6 +208,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				typescript = { "biome" },
+				yaml = { "yamlfmt" }
 			},
 
 			format_on_save = {
@@ -220,7 +221,7 @@ return {
 			conform.setup(opts)
 
 			local mason = require("mason")
-			mason.setup({ ensure_installed = { "stylua" } })
+			mason.setup({ ensure_installed = { "stylua", "yamlfmt" } })
 		end,
 	},
 	{
