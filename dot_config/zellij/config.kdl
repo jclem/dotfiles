@@ -2,6 +2,11 @@ keybinds {
   pane {
     bind "Ctrl k" { Clear; Write 12; SwitchToMode "normal"; }
     bind "z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "locked"; }
+    bind "u" { TogglePaneFrames; SwitchToMode "normal"; }
+    bind "h" { MoveFocus "left"; SwitchToMode "normal"; }
+    bind "j" { MoveFocus "down"; SwitchToMode "normal"; }
+    bind "k" { MoveFocus "up"; SwitchToMode "normal"; }
+    bind "l" { MoveFocus "right"; SwitchToMode "normal"; }
   }
 
   locked {
@@ -13,13 +18,6 @@ keybinds {
     bind "c" { NewTab; SwitchToMode "normal"; }
     bind "n" { GoToNextTab; SwitchToMode "normal"; }
     bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
-  }
-
-  pane {
-    bind "Ctrl h" { MoveFocus "left"; SwitchToMode "normal"; }
-    bind "Ctrl j" { MoveFocus "down"; SwitchToMode "normal"; }
-    bind "Ctrl k" { MoveFocus "up"; SwitchToMode "normal"; }
-    bind "Ctrl l" { MoveFocus "right"; SwitchToMode "normal"; }
   }
 }
 
