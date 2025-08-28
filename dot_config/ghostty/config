@@ -6,10 +6,10 @@ window-padding-x = 8
 theme = dark:tokyonight-storm,light:tokyonight-day
 
 font-family = Berkeley Mono Variable
-font-variation = wdth=80
+font-variation = wdth=70
 font-variation = wght=500
 font-size = 14
-font-thicken = true
+# font-thicken = true
 adjust-box-thickness = -3
 
 mouse-hide-while-typing = true

@@ -14,6 +14,13 @@ keybinds {
     bind "n" { GoToNextTab; SwitchToMode "normal"; }
     bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
   }
+
+  pane {
+    bind "Ctrl h" { MoveFocus "left"; SwitchToMode "normal"; }
+    bind "Ctrl j" { MoveFocus "down"; SwitchToMode "normal"; }
+    bind "Ctrl k" { MoveFocus "up"; SwitchToMode "normal"; }
+    bind "Ctrl l" { MoveFocus "right"; SwitchToMode "normal"; }
+  }
 }
 
 theme "tokyonight-storm"
