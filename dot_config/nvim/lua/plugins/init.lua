@@ -207,6 +207,7 @@ return {
 		opts = {
 			formatters_by_ft = {
 				lua = { "stylua" },
+				css = { "biome" },
 				typescript = { "biome" },
 				yaml = { "yamlfmt" }
 			},
