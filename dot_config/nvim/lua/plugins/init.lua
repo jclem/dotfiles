@@ -208,6 +208,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				css = { "biome" },
+				json = { "biome" },
 				typescript = { "biome" },
 				yaml = { "yamlfmt" }
 			},
