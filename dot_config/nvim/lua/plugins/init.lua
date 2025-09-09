@@ -26,7 +26,7 @@ return {
 				{ "<leader>fd", "<cmd>FzfLua files<cr>", desc = "Find Files" },
 				{
 					"<leader>fg",
-					"<cmd>FzfLua grep_project<cr>",
+					"<cmd>FzfLua live_grep<cr>",
 					desc = "Grep",
 					icon = { icon = "", color = "green" },
 				},
