@@ -226,15 +226,6 @@ return {
 		},
 	},
 	{
-		-- https://codecompanion.olimorris.dev
-		"olimorris/codecompanion.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-		},
-		opts = {},
-	},
-	{
 		-- Hover preview for symbol definitions
 		"lewis6991/hover.nvim",
 		event = "LspAttach",
