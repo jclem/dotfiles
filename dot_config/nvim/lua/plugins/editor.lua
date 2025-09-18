@@ -226,6 +226,22 @@ return {
 		},
 	},
 	{
+		"greggh/claude-code.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		opts = {},
+		keys = {
+			{
+				"<leader>ac",
+				function()
+					vim.cmd("ClaudeCode")
+				end,
+				desc = "Claude Code"
+			}
+		}
+	},
+	{
 		-- Hover preview for symbol definitions
 		"lewis6991/hover.nvim",
 		event = "LspAttach",
