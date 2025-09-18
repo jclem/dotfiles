@@ -3,7 +3,7 @@ macos-icon = paper
 shell-integration = fish
 window-padding-x = 8
 
-theme = dark:tokyonight-storm,light:tokyonight-day
+theme = dark:TokyoNight Storm,light:TokyoNight Day
 
 font-family = Berkeley Mono Variable
 font-variation = wdth=70
@@ -20,4 +20,4 @@ scrollback-limit = 100_000
 keybind = shift+enter=text:\n
 
 # Always start in Zellij
-initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
+# initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
