@@ -6,12 +6,14 @@
 		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"editor.fontFamily": "Berkeley Mono Variable, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontVariations": "'wdth' 80",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 14,
 	"editor.formatOnSave": true,
 	"editor.scrollbar.horizontalScrollbarSize": 8,
 	"editor.scrollbar.verticalScrollbarSize": 8,
 	"git.confirmSync": false,
+	"typescript.updateImportsOnFileMove.enabled": "always",
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			"before": ["<space>"],
@@ -25,6 +27,12 @@
 		}
 	],
 	"whichkey.bindingOverrides": [
+		{
+			"command": "workbench.action.quickOpen",
+			"keys": "f.d",
+			"name": "Quick Open",
+			"type": "command"
+		},
 		{
 			"command": "workbench.action.files.revert",
 			"keys": "f.v",
@@ -50,6 +58,24 @@
 			"type": "commands"
 		},
 		{
+			"commands": ["issue.copyMarkdownGithubPermalink"],
+			"keys": "g.m",
+			"name": "Copy Markdown GitHub Permalink",
+			"type": "commands"
+		},
+		{
+			"commands": ["issue.copyMarkdownGithubPermalinkWithoutRange"],
+			"keys": "g.M",
+			"name": "Copy Markdown GitHub Permalink",
+			"type": "commands"
+		},
+		{
+			"commands": ["editor.action.revealDefinition"],
+			"keys": "s.d",
+			"name": "Go to Definition",
+			"type": "commands"
+		},
+		{
 			"commands": ["workbench.action.toggleStatusbarVisibility"],
 			"keys": "T.s",
 			"name": "Toggle Status Bar Visibility",
@@ -58,11 +84,11 @@
 	],
 	"window.autoDetectColorScheme": true,
 	"window.commandCenter": false,
+	"workbench.activityBar.orientation": "vertical",
 	"workbench.iconTheme": "rose-pine-icons",
 	"workbench.layoutControl.enabled": false,
 	"workbench.navigationControl.enabled": false,
 	"workbench.preferredDarkColorTheme": "Tokyo Night Storm",
 	"workbench.preferredLightColorTheme": "Tokyo Night Light",
-	"workbench.statusBar.visible": false,
-	"typescript.updateImportsOnFileMove.enabled": "always"
+	"workbench.statusBar.visible": false
 }

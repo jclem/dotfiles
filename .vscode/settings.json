@@ -1,11 +1,11 @@
 {
-  "[lua]": {
-    "editor.insertSpaces": false,
-    "editor.tabSize": 4
-  },
-  "editor.formatOnSave": true,
-  "files.associations": {
-    "*.sh.tmpl": "shellscript",
-    "dot_config/ghostty/config": "toml"
-  }
+	"[lua]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"editor.formatOnSave": true,
+	"files.associations": {
+		"*.sh.tmpl": "shellscript",
+		"dot_config/ghostty/config": "toml"
+	}
 }
