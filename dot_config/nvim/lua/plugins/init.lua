@@ -210,7 +210,8 @@ return {
 				css = { "biome" },
 				json = { "biome" },
 				typescript = { "biome" },
-				yaml = { "yamlfmt" }
+				yaml = { "yamlfmt" },
+				go = { "gopls" },
 			},
 
 			format_on_save = {
