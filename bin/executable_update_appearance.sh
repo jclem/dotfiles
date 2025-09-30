@@ -16,3 +16,4 @@ else
 fi
 
 /opt/homebrew/bin/fish -c "zellij_set_theme"
+/opt/homebrew/bin/fish -c "btop_set_theme"
