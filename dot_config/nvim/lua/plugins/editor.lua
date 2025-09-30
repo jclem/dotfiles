@@ -226,20 +226,15 @@ return {
 		},
 	},
 	{
-		"greggh/claude-code.nvim",
+		"coder/claudecode.nvim",
+		lazy = false,
 		dependencies = {
-			"nvim-lua/plenary.nvim",
+			"folke/snacks.nvim",
 		},
-		opts = {},
-		keys = {
-			{
-				"<leader>ac",
-				function()
-					vim.cmd("ClaudeCode")
-				end,
-				desc = "Claude Code"
-			}
-		}
+		opts = {
+			terminal_cmd = "$XDG_DATA_HOME/mise/installs/claude/2.0.0/bin/claude"
+		},
+		keys = {}
 	},
 	{
 		-- Hover preview for symbol definitions
