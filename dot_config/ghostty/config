@@ -20,8 +20,20 @@ mouse-hide-while-typing = true
 scrollback-limit = 10485760
 window-save-state = always
 
+keybind = super+t>1=goto_tab:1
+keybind = super+t>2=goto_tab:2
+keybind = super+t>3=goto_tab:3
+keybind = super+t>4=goto_tab:4
+keybind = super+t>5=goto_tab:5
+keybind = super+t>6=goto_tab:6
+keybind = super+t>7=goto_tab:7
+keybind = super+t>8=goto_tab:8
+keybind = super+t>9=goto_tab:9
+keybind = super+t>0=goto_tab:1000
 keybind = super+t>n=prompt_surface_title
 keybind = super+t>c=new_tab
+keybind = super+t>h=move_tab:-1
+keybind = super+t>l=move_tab:1
 keybind = super+alt+==equalize_splits
 keybind = super+alt+h=resize_split:left,100
 keybind = super+alt+l=resize_split:right,100
