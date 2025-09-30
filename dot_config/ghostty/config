@@ -5,19 +5,30 @@ window-padding-x = 8
 
 theme = dark:TokyoNight Storm,light:TokyoNight Day
 
+unfocused-split-opacity = 0.7
+unfocused-split-fill = #000
+
 font-family = Berkeley Mono Variable
 font-variation = wdth=70
 font-variation = wght=500
 font-size = 14
-# font-thicken = true
 adjust-box-thickness = -3
 
 mouse-hide-while-typing = true
 
-scrollback-limit = 100_000
+# 100MB of scrollback (this value is in bytes)
+scrollback-limit = 10485760
+window-save-state = always
 
-# Shift+Enter for Claude Code input.
-keybind = shift+enter=text:\n
+keybind = super+t>n=prompt_surface_title
+keybind = super+t>c=new_tab
+keybind = super+alt+==equalize_splits
+keybind = super+alt+h=resize_split:left,100
+keybind = super+alt+l=resize_split:right,100
+keybind = super+alt+j=resize_split:down,100
+keybind = super+alt+k=resize_split:up,100
+keybind = super+shift+h=goto_split:left
+keybind = super+shift+l=goto_split:right
+keybind = super+shift+j=goto_split:down
+keybind = super+shift+k=goto_split:up
 
-# Always start in Zellij
-# initial-command = /opt/homebrew/bin/fish -c "zellij ls | grep main && zellij attach main || zellij -s main"
