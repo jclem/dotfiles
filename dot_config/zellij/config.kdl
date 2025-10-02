@@ -1,7 +1,27 @@
 keybinds {
+  // Reserved for Vim.
+  unbind "Ctrl h"
+  unbind "Ctrl j"
+  unbind "Ctrl k"
+  unbind "Ctrl l"
+
+  shared_except "locked" {
+    bind "Super Ctrl h" { MoveFocus "left"; }
+    bind "Super Ctrl j" { MoveFocus "down"; }
+    bind "Super Ctrl k" { MoveFocus "up"; }
+    bind "Super Ctrl l" { MoveFocus "right"; }
+    bind "Super Alt  h" { Resize "left"; }
+    bind "Super Alt  j" { Resize "down"; }
+    bind "Super Alt  k" { Resize "up"; }
+    bind "Super Alt  l" { Resize "right"; }
+    bind "Super Ctrl [" { GoToPreviousTab; }
+    bind "Super Ctrl ]" { GoToNextTab; }
+
+    bind "Super Shift f" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "locked"; }
+    bind "Super k" { Clear; Write 12; SwitchToMode "normal"; }
+  }
+
   pane {
-    bind "Ctrl k" { Clear; Write 12; SwitchToMode "normal"; }
-    bind "z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "locked"; }
     bind "u" { TogglePaneFrames; SwitchToMode "normal"; }
     bind "h" { MoveFocus "left"; SwitchToMode "normal"; }
     bind "j" { MoveFocus "down"; SwitchToMode "normal"; }
@@ -10,7 +30,7 @@ keybinds {
   }
 
   locked {
-    bind "Ctrl z" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "normal"; }
+    bind "Super Shift f" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "normal"; }
   }
 
   tab {
