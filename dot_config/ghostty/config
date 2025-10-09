@@ -33,3 +33,4 @@ keybind = global:cmd+alt+backquote=toggle_quick_terminal
 keybind = cmd+t=unbind
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
+keybind = cmd+w=unbind
