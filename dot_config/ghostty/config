@@ -21,9 +21,13 @@ quick-terminal-animation-duration = 0.1
 
 # 100MB of scrollback (this value is in bytes)
 scrollback-limit = 10485760
+
 window-save-state = always
 
 # Claude Code
 keybind = shift+enter=text:\n
 
-keybind = global:cmd+backquote=toggle_quick_terminal
+keybind = global:cmd+alt+backquote=toggle_quick_terminal
+
+# Cmd+t used for Zellij
+keybind = cmd+t=unbind
