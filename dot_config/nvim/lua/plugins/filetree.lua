@@ -12,6 +12,14 @@ return {
 				desc = "Open file tree",
 			},
 			{
+				"\\",
+				function()
+					local files = require("mini.files")
+					if not files.close() then files.open() end
+				end,
+				desc = "Toggle file tree",
+			},
+			{
 				"<leader>fT",
 				function()
 					require("mini.files").open(vim.fn.expand("%:p:h"))
