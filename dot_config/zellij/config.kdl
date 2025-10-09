@@ -47,6 +47,7 @@ keybinds clear-defaults=true {
   }
 
   pane {
+    bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0; }
     bind "u" { TogglePaneFrames; SwitchToMode "normal"; }
     bind "h" { MoveFocus "left"; SwitchToMode "normal"; }
     bind "j" { MoveFocus "down"; SwitchToMode "normal"; }
@@ -54,7 +55,12 @@ keybinds clear-defaults=true {
     bind "l" { MoveFocus "right"; SwitchToMode "normal"; }
   }
 
+  renamepane {
+    bind "Ctrl c" "Esc" { UndoRenamePane; SwitchToMode "normal"; }
+  }
+
   tab {
+    bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "Super t" { ToggleTab; SwitchToMode "normal"; }
     bind "[" { GoToPreviousTab; }
     bind "]" { GoToNextTab; }
@@ -67,6 +73,12 @@ keybinds clear-defaults=true {
     bind "7" { GoToTab 7; SwitchToMode "normal"; }
     bind "8" { GoToTab 8; SwitchToMode "normal"; }
     bind "9" { GoToTab 9; SwitchToMode "normal"; }
+    bind "h" { MoveTab "left"; }
+    bind "l" { MoveTab "right"; }
+  }
+
+  renametab {
+    bind "Ctrl c" "Esc" { UndoRenameTab; SwitchToMode "normal"; }
   }
 
   move {
