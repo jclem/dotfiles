@@ -6,5 +6,4 @@ fish_add_path --move \
     $HOME/.cache/.bun/bin \
     $HOME/.bun/bin \
     $HOME/.local/bin/env.fish \
-    $HOME/.claude/local \
-    /nix/var/nix/profiles/default/bin/nix
+    $HOME/.claude/local
