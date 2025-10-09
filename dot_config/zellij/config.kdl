@@ -1,24 +1,45 @@
 keybinds {
-  // Reserved for Vim.
-  unbind "Ctrl h"
-  unbind "Ctrl j"
-  unbind "Ctrl k"
-  unbind "Ctrl l"
-
   shared_except "locked" {
-    bind "Super Ctrl h" { MoveFocus "left"; }
-    bind "Super Ctrl j" { MoveFocus "down"; }
-    bind "Super Ctrl k" { MoveFocus "up"; }
-    bind "Super Ctrl l" { MoveFocus "right"; }
+    // Resizing
+    unbind "Ctrl n" // Resize below; super alt.
     bind "Super Alt  h" { Resize "left"; }
     bind "Super Alt  j" { Resize "down"; }
     bind "Super Alt  k" { Resize "up"; }
     bind "Super Alt  l" { Resize "right"; }
+
+    // Navigation
+    unbind "Ctrl h"
+    unbind "Ctrl j"
+    unbind "Ctrl k"
+    unbind "Ctrl l"
+    bind "Super Ctrl h" { MoveFocus "left"; }
+    bind "Super Ctrl j" { MoveFocus "down"; }
+    bind "Super Ctrl k" { MoveFocus "up"; }
+    bind "Super Ctrl l" { MoveFocus "right"; }
     bind "Super Ctrl [" { GoToPreviousTab; }
     bind "Super Ctrl ]" { GoToNextTab; }
 
-    bind "Super Shift f" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "locked"; }
+    // Zen mode
+    bind "Super Shift f" { ToggleFocusFullscreen; TogglePaneFrames; }
+
+    // Clear pane
     bind "Super k" { Clear; Write 12; SwitchToMode "normal"; }
+
+    // Modes
+    unbind "Ctrl g"
+    unbind "Ctrl o"
+    unbind "Ctrl p"
+    unbind "Ctrl s"
+    unbind "Ctrl t"
+    // bind "Super g" { SwitchToMode "locked"; } // Currently no need for locked mode.
+    bind "Super o" { SwitchToMode "session"; }
+    bind "Super p" { SwitchToMode "pane"; }
+    bind "Super s" { SwitchToMode "search"; }
+    bind "Super t" { SwitchToMode "tab"; }
+
+    // Quit
+    unbind "Ctrl q"
+    bind "Super Alt x" { Quit; }
   }
 
   pane {
@@ -29,12 +50,8 @@ keybinds {
     bind "l" { MoveFocus "right"; SwitchToMode "normal"; }
   }
 
-  locked {
-    bind "Super Shift f" { ToggleFocusFullscreen; TogglePaneFrames; SwitchToMode "normal"; }
-  }
-
   tab {
-    bind "Ctrl t" { ToggleTab; SwitchToMode "normal"; }
+    bind "Super t" { ToggleTab; SwitchToMode "normal"; }
     bind "c" { NewTab; SwitchToMode "normal"; }
     bind "n" { GoToNextTab; SwitchToMode "normal"; }
     bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
