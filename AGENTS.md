@@ -25,6 +25,7 @@
 
 ## Commit & Pull Request Guidelines
 - Follow the `focus(+focus): concise change` format seen in history (e.g., `ghostty+zellij: Cmd+w to close focused pane`); list focuses in alphabetical order and join multiples with `+`.
+- Ensure the text after the focus starts with a capital letter (e.g., `focus: Capitalized message`).
 - Keep each commit to a single logical change even if that entails multiple focuses; split unrelated adjustments before opening a PR.
 - Describe why a change is needed, note any host-specific impacts, and include screenshots or terminal snippets when UI or theme output changes.
 - In PRs, link related issues, flag secrets or environment assumptions, and request review from maintainers familiar with the touched configuration.
