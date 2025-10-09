@@ -34,3 +34,4 @@ keybind = cmd+t=unbind
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
 keybind = cmd+w=unbind
+keybind = cmd+n=unbind

@@ -40,7 +40,10 @@ keybinds {
     // Splits
     bind "Super d" { NewPane "right"; }
     bind "Super Shift d" { NewPane "down"; }
-    bind "Super w" { CloseFocus; }
+    bind "Super w" { CloseTab; }
+
+    bind "Super n" { NewTab; }
+    bind "Super x" { CloseFocus; }
 
     // Quit
     unbind "Ctrl q"
