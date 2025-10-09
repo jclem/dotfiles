@@ -29,5 +29,7 @@ keybind = shift+enter=text:\n
 
 keybind = global:cmd+alt+backquote=toggle_quick_terminal
 
-# Cmd+t used for Zellij
+# Used for Zellij
 keybind = cmd+t=unbind
+keybind = cmd+d=unbind
+keybind = cmd+shift+d=unbind

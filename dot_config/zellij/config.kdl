@@ -37,6 +37,10 @@ keybinds {
     bind "Super s" { SwitchToMode "search"; }
     bind "Super t" { SwitchToMode "tab"; }
 
+    // Splits
+    bind "Super d" { NewPane "right"; }
+    bind "Super Shift d" { NewPane "down"; }
+
     // Quit
     unbind "Ctrl q"
     bind "Super Alt x" { Quit; }
