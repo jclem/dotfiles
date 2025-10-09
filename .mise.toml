@@ -1,0 +1,6 @@
+[tools]
+watchexec = "latest"
+
+[tasks.dev]
+run = 'watchexec "chezmoi apply --force"'
+description = "Watch for and apply changes"
