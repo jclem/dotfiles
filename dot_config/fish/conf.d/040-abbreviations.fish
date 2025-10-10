@@ -6,6 +6,7 @@ if status --is-interactive
     abbr --add --global g    git
     abbr --add --global --set-cursor gcn "git commit --no-verify --message \"%\""
     abbr --add --global gpb  "git push --set-upstream origin (current_branch)"
+    abbr --add --global lg   lazygit
     abbr --add --global tf   terraform
     abbr --add --global vim  nvim
     abbr --add --global zj   zellij
