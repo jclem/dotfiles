@@ -1,5 +1,4 @@
 if status --is-interactive
-    abbr --add --global c    cursor
     abbr --add --global cat  bat
     abbr --add --global cz   chezmoi
     abbr --add --global df   dotfiles
