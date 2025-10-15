@@ -12,6 +12,11 @@ keybinds clear-defaults=true {
     bind "Super Shift d" { NewPane "down"; }
     bind "Super x" { CloseFocus; }
 
+    // When in floating; new floating pane. Otherwise, next position in largest
+    // available space.
+    // https://zellij.dev/documentation/keybindings-possible-actions.html#newpane
+    bind "Super Shift o" { NewPane; }
+
     // Tab Navigation
     bind "Super Ctrl [" { GoToPreviousTab; }
     bind "Super Ctrl ]" { GoToNextTab; }
@@ -104,6 +109,10 @@ keybinds clear-defaults=true {
 
   entersearch {
     bind "Enter" { SwitchToMode "search"; }
+  }
+
+  session {
+    bind "d" { Detach; }
   }
 
   shared_except "normal" "locked" {
