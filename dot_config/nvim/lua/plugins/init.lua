@@ -75,21 +75,9 @@ return {
 		end,
 	},
 	{
-		-- https://github.com/mason-org/mason.nvim
-		"mason-org/mason.nvim",
-		version = "*",
-		opts = {},
-	},
-	{
-		-- https://github.com/mason-org/mason-lspconfig.nvim
-		"mason-org/mason-lspconfig.nvim",
-		version = "*",
-	},
-	{
 		-- https://github.com/neovim/nvim-lspconfig
 		"neovim/nvim-lspconfig",
 		version = "*",
-		dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
 		opts = function()
 			return {
 				inlay_hints = {
@@ -102,42 +90,13 @@ return {
 			local lsp = require("lspconfig")
 
 			for server, server_opts in pairs(opts.servers or {}) do
-				lsp[server].setup(server_opts)
+				if server_opts.enabled == nil or server_opts.enabled then
+					-- Remove 'enabled' field before passing to lspconfig
+					local config = vim.tbl_extend("force", {}, server_opts)
+					config.enabled = nil
+					lsp[server].setup(config)
+				end
 			end
-
-			local mslsp = require("mason-lspconfig")
-			mslsp.setup({
-				ensure_installed = { "vtsls", "lua_ls" },
-			})
-		end,
-		init = function()
-			vim.api.nvim_create_autocmd("LspAttach", {
-				callback = function(args)
-					local client = vim.lsp.get_client_by_id(args.data.client_id)
-					if not client then
-						return
-					end
-
-					-- Check if the attached client is Biome
-					if client.name == "biome" then
-						-- Auto-fix safe Biome issues on buffer write (save)
-						vim.api.nvim_create_autocmd("BufWritePre", {
-							buffer = args.buf,
-							callback = function()
-								vim.lsp.buf.code_action({
-									context = {
-										---@diagnostic disable-next-line: assign-type-mismatch
-										only = { "source.fixAll.biome" },
-										diagnostics = {},
-									},
-									apply = true,
-									-- You might need to adjust the range or other options based on your setup
-								})
-							end,
-						})
-					end
-				end,
-			})
 		end,
 	},
 	{
