@@ -1,5 +1,23 @@
 return {
 	{
+		desc = "Effect.Service",
+		prefix = "service",
+		body = {
+			"class $1 extends Effect.Service<$1>()(",
+			"\t\"$1\",",
+			"\t{",
+			"\t\taccessors: true,",
+			"",
+			"\t\teffect: Effect.gen(function*() {",
+			"\t\t\t$0",
+			"",
+			"\t\t\treturn {",
+			"\t\t\t}",
+			"\t\t}),",
+			"}) {}",
+		},
+	},
+	{
 		desc = "Effect.gen",
 		prefix = "gen",
 		body = {
