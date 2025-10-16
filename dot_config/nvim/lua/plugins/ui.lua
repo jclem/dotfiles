@@ -1,10 +1,5 @@
 return {
 	{
-		-- https://github.com/rcarriga/nvim-notify
-		"rcarriga/nvim-notify",
-		opts = {},
-	},
-	{
 		-- https://github.com/folke/noice.nvim
 		"folke/noice.nvim",
 		version = "*",
