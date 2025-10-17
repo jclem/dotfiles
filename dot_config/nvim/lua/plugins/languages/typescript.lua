@@ -18,6 +18,12 @@ return {
 			useTSGo = true
 		end
 
+		-- If TSGO=0 or TSGO=false is set in the environment, do not use tsgo
+		local tsgo_env = vim.fn.getenv("TSGO")
+		if tsgo_env == "0" or tsgo_env == "false" then
+			useTSGo = false
+		end
+
 		if useTSGo then
 			vim.lsp.config('tsgo', {
 				cmd = { root_dir .. '/node_modules/.bin/tsgo', '--lsp', '--stdio' }
