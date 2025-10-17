@@ -1,8 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
-	opts = {
-		servers = {
-			yamlls = {}
-		}
-	}
+	opts = function()
+		vim.lsp.enable("yamlls")
+		vim.lsp.enable("gh_actions_ls")
+	end,
 }

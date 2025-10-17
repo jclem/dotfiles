@@ -114,23 +114,34 @@ return {
 		keys = {
 			{
 				"<leader>sd",
+				"<cmd>Trouble lsp_definitions toggle pinned=true win.position=right win.size.width=80<cr>",
+				desc = "Definitions (pinned)",
+			},
+			{
+				"<leader>sD",
 				"<cmd>Trouble lsp_definitions toggle win.position=right win.size.width=80<cr>",
 				desc = "Definitions",
 			},
 			{
 
 				"<leader>sl",
-				"<cmd>Trouble lsp_document_symbols toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
+				"<cmd>Trouble lsp toggle pinned=true win.position=right win.size.width=80<cr>",
+				desc = "LSP references/definitions/... (Pinned)"
 			},
 			{
 
 				"<leader>sL",
-				"<cmd>Trouble lsp toggle win.position=right win.size.width=60<cr>",
-				desc = "LSP references/definitions/... (Trouble)"
+				"<cmd>Trouble lsp toggle win.position=right win.size.width=80<cr>",
+				desc = "LSP references/definitions/..."
 			},
 			{
 				"<leader>sr",
-				"<cmd>Trouble lsp_references toggle win.type=split win.relative=win win.position=bottom auto_jump=false<cr>",
+				"<cmd>Trouble lsp_references toggle pinned=true win.position=right win.size.width=80<cr>",
+				desc = "References (pinned)",
+			},
+			{
+				"<leader>sR",
+				"<cmd>Trouble lsp_references toggle win.position=right win.size.width=80<cr>",
 				desc = "References",
 			},
 			{

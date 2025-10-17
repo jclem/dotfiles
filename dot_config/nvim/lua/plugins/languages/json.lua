@@ -10,19 +10,7 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-			return {
-
-				servers = {
-					jsonls = {
-						settings = {
-							json = {
-								schemas = require("schemastore").json.schemas(),
-								validate = { enable = true },
-							},
-						},
-					},
-				},
-			}
+			vim.lsp.enable("jsonls")
 		end,
 	}
 }

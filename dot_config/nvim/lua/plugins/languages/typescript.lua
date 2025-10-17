@@ -31,26 +31,28 @@ return {
 			end
 
 			vim.lsp.config('vtsls', {
-				vtsls = {
-					autoUseWorkspaceTsdk = true,
-				},
-				typescript = {
-					format = {
-						enable = false,
+				settings = {
+					vtsls = {
+						autoUseWorkspaceTsdk = true,
 					},
-					inlayHints = {
-						parameterNames = { enabled = "all" },
-						parameterTypes = { enabled = true },
-						variableTypes = { enabled = true },
-						propertyDeclarationTypes = { enabled = true },
-						functionLikeReturnTypes = { enabled = true },
-						enumMemberValues = { enabled = true },
+					typescript = {
+						format = {
+							enable = false,
+						},
+						inlayHints = {
+							parameterNames = { enabled = "all" },
+							parameterTypes = { enabled = true },
+							variableTypes = { enabled = true },
+							propertyDeclarationTypes = { enabled = true },
+							functionLikeReturnTypes = { enabled = true },
+							enumMemberValues = { enabled = true },
+						},
+						tsserver = {
+							nodePath = nodePath,
+							maxTsServerMemory = 24576,
+						},
 					},
-					tsserver = {
-						nodePath = nodePath,
-						maxTsServerMemory = 24576,
-					},
-				},
+				}
 			})
 
 			vim.lsp.enable('vtsls')
@@ -58,19 +60,6 @@ return {
 	end,
 
 	init = function()
-		vim.api.nvim_create_autocmd("FileType", {
-			group = vim.api.nvim_create_augroup("tsgo_autostart", { clear = true }),
-			pattern = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-			callback = function(args)
-				for _, c in pairs(vim.lsp.get_clients({ bufnr = args.buf })) do
-					if c.name == "tsgo" then
-						return
-					end
-				end
-				vim.cmd("LspStart tsgo")
-			end,
-		})
-
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(args)
 				local client = vim.lsp.get_client_by_id(args.data.client_id)

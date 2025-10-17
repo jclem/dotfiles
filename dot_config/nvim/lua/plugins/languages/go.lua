@@ -2,14 +2,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		opts = function()
-			return {
-				serfvers = {
-					gopls = {
-						cmd = { "gopls" },
-						filetypes = { "go", "gomod", "gowork", "gotmpl" }
-					}
-				}
-			}
+			vim.lsp.enable("gopls")
 		end,
 	}
 }
