@@ -1,0 +1,30 @@
+[
+	{
+		"command": "composerMode.agent",
+		"key": "cmd+i"
+	},
+	{
+		"command": "composerMode.chat",
+		"key": "cmd+k"
+	},
+	{
+		"command": "editor.action.marker.next",
+		"key": "] d",
+		"when": "editorFocus && vim.mode == 'Normal'"
+	},
+	{
+		"command": "-editor.action.marker.next",
+		"key": "alt+f8",
+		"when": "editorFocus"
+	},
+	{
+		"command": "editor.action.marker.prev",
+		"key": "[ d",
+		"when": "editorFocus && vim.mode == 'Normal'"
+	},
+	{
+		"command": "-editor.action.marker.prev",
+		"key": "shift+alt+f8",
+		"when": "editorFocus"
+	}
+]

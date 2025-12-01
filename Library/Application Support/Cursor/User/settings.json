@@ -5,14 +5,22 @@
 	"[jsonc]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"editor.fontFamily": "Berkeley Mono Variable, Menlo, Monaco, 'Courier New', monospace",
-	"editor.fontVariations": "'wdth' 80",
+	"[yaml]": {
+		"editor.indentSize": 2,
+		"editor.insertSpaces": true
+	},
+	"editor.fontFamily": "Berkeley Mono Variable",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 14,
+	"editor.fontVariations": "'wdth' 80",
 	"editor.formatOnSave": true,
+	"editor.minimap.enabled": false,
 	"editor.scrollbar.horizontalScrollbarSize": 8,
 	"editor.scrollbar.verticalScrollbarSize": 8,
+	"emmet.triggerExpansionOnTab": true,
+	"git.autofetch": false,
 	"git.confirmSync": false,
+	"go.lintTool": "golangci-lint-v2",
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
@@ -27,6 +35,12 @@
 		}
 	],
 	"whichkey.bindingOverrides": [
+		{
+			"command": "copyRelativeFilePath",
+			"keys": "b.c",
+			"name": "Copy Relative Path",
+			"type": "command"
+		},
 		{
 			"command": "workbench.action.quickOpen",
 			"keys": "f.d",
@@ -54,7 +68,7 @@
 		{
 			"commands": ["issue.copyGithubPermalinkWithoutRange"],
 			"keys": "g.L",
-			"name": "Copy GitHub Permalink",
+			"name": "Copy GitHub Permalink (without range)",
 			"type": "commands"
 		},
 		{
@@ -66,7 +80,7 @@
 		{
 			"commands": ["issue.copyMarkdownGithubPermalinkWithoutRange"],
 			"keys": "g.M",
-			"name": "Copy Markdown GitHub Permalink",
+			"name": "Copy Markdown GitHub Permalink (without range)",
 			"type": "commands"
 		},
 		{
@@ -90,5 +104,8 @@
 	"workbench.navigationControl.enabled": false,
 	"workbench.preferredDarkColorTheme": "Tokyo Night Storm",
 	"workbench.preferredLightColorTheme": "Tokyo Night Light",
-	"workbench.statusBar.visible": false
+	"workbench.statusBar.visible": false,
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "/.github/workflows/*.{yml,yaml}"
+	}
 }
