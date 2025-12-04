@@ -1,0 +1,114 @@
+{
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[yaml]": {
+		"editor.indentSize": 2,
+		"editor.insertSpaces": true
+	},
+	// "editor.fontFamily": "Berkeley Mono Variable",
+	// "editor.fontLigatures": true,
+	// "editor.fontVariations": "'wdth' 80",
+	"editor.fontFamily": "'Monaspace Xenon Var', monospace",
+	"editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10'",
+	"editor.fontSize": 14,
+	"editor.formatOnSave": true,
+	"editor.inlineSuggest.fontFamily": "'Monaspace Krypton Var', monospace",
+	"editor.minimap.enabled": false,
+	"editor.scrollbar.horizontalScrollbarSize": 8,
+	"editor.scrollbar.verticalScrollbarSize": 8,
+	"emmet.triggerExpansionOnTab": true,
+	"git.autofetch": false,
+	"git.confirmSync": false,
+	"go.lintTool": "golangci-lint-v2",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<space>"],
+			"commands": ["whichkey.show"]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<space>"],
+			"commands": ["whichkey.show"]
+		}
+	],
+	"whichkey.bindingOverrides": [
+		{
+			"command": "copyRelativeFilePath",
+			"keys": "b.c",
+			"name": "Copy Relative Path",
+			"type": "command"
+		},
+		{
+			"command": "workbench.action.quickOpen",
+			"keys": "f.d",
+			"name": "Quick Open",
+			"type": "command"
+		},
+		{
+			"command": "workbench.action.files.revert",
+			"keys": "f.v",
+			"name": "Revert file",
+			"type": "command"
+		},
+		{
+			"commands": ["json.sort", "editor.action.formatDocument"],
+			"keys": "f.j",
+			"name": "JSON: Sort Document",
+			"type": "commands"
+		},
+		{
+			"commands": ["issue.copyGithubPermalink"],
+			"keys": "g.l",
+			"name": "Copy GitHub Permalink",
+			"type": "commands"
+		},
+		{
+			"commands": ["issue.copyGithubPermalinkWithoutRange"],
+			"keys": "g.L",
+			"name": "Copy GitHub Permalink (without range)",
+			"type": "commands"
+		},
+		{
+			"commands": ["issue.copyMarkdownGithubPermalink"],
+			"keys": "g.m",
+			"name": "Copy Markdown GitHub Permalink",
+			"type": "commands"
+		},
+		{
+			"commands": ["issue.copyMarkdownGithubPermalinkWithoutRange"],
+			"keys": "g.M",
+			"name": "Copy Markdown GitHub Permalink (without range)",
+			"type": "commands"
+		},
+		{
+			"commands": ["editor.action.revealDefinition"],
+			"keys": "s.d",
+			"name": "Go to Definition",
+			"type": "commands"
+		},
+		{
+			"commands": ["workbench.action.toggleStatusbarVisibility"],
+			"keys": "T.s",
+			"name": "Toggle Status Bar Visibility",
+			"type": "commands"
+		}
+	],
+	"window.autoDetectColorScheme": true,
+	"window.commandCenter": false,
+	"workbench.activityBar.orientation": "vertical",
+	"workbench.iconTheme": "rose-pine-icons",
+	"workbench.layoutControl.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+	"workbench.preferredLightColorTheme": "Tokyo Night Light",
+	"workbench.statusBar.visible": false,
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "/.github/workflows/*.{yml,yaml}"
+	}
+}
