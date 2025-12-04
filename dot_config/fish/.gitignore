@@ -1,4 +1,4 @@
 completions/notion_worktree.fish
+conf.d/*.local.fish
 functions/notion_worktree.fish
 functions/nt.fish
-conf.d/*.local.fish
