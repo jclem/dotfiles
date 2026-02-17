@@ -4,6 +4,14 @@ return {
 		local util = require("lspconfig.util")
 		local root_dir = util.root_pattern(".git")(vim.fn.getcwd()) or vim.fn.getcwd()
 
+		-- Prefer the project-local biome binary over the global one.
+		local biome_cmd = { 'biome', 'lsp-proxy' }
+		local local_biome = root_dir .. '/node_modules/.bin/biome'
+		if vim.fn.filereadable(local_biome) == 1 then
+			biome_cmd = { local_biome, 'lsp-proxy' }
+		end
+
+		vim.lsp.config('biome', { cmd = biome_cmd })
 		vim.lsp.enable('biome')
 		vim.lsp.enable('eslint')
 
