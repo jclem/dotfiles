@@ -7,10 +7,17 @@ return {
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 
+		-- # Filetype associations
+		vim.filetype.add({
+			extension = {
+				zellij = "kdl",
+			},
+		})
+
 		-- ## Basic Settings
 		vim.o.autoread = true     -- Automatically read files when changed outside of Vim
 		vim.o.autowrite = true    -- Automatically write before running commands
-		vim.o.clipboard = "unnamedplus" -- Use system clipboard
+		vim.o.clipboard = "" -- Keep yanks out of the system clipboard
 		vim.o.cursorline = true   -- Highlight current line
 		vim.o.filetype = "on"     -- Enable filetype detection
 		vim.o.inccommand = "split" -- Show live preview of substitutions
@@ -66,6 +73,7 @@ return {
 		-- ## Command Mode Keybindings
 		vim.api.nvim_set_keymap("n", ";", ":", { noremap = true }) -- Use ; to enter command mode
 		vim.api.nvim_set_keymap("v", ";", ":", { noremap = true }) -- Use ; to enter command mode
+		vim.keymap.set("v", "<leader>c", '"+y', { desc = "Copy to clipboard" })
 
 		-- ## Split Navigation Keybindings
 		-- Using these requires locking Zellij.
@@ -73,6 +81,15 @@ return {
 		vim.keymap.set("", "<C-k>", "<C-w>k", { noremap = true }) -- Move up a split
 		vim.keymap.set("", "<C-h>", "<C-w>h", { noremap = true }) -- Move left a split
 		vim.keymap.set("", "<C-l>", "<C-w>l", { noremap = true }) -- Move right a split
+
+		-- ## GitHub Link Keybindings
+		local github = require("config.github")
+		vim.keymap.set("n", "<leader>gh", function()
+			github.copy_github_link()
+		end, { desc = "Copy GitHub Link" })
+		vim.keymap.set("v", "<leader>gh", function()
+			github.copy_github_link({ include_lines = true })
+		end, { desc = "Copy GitHub Link (lines)" })
 
 		-- Map <C-c> to <Esc>, since <C-c> blocks autocommands
 		-- https://bsky.app/profile/tpo.pe/post/3lend4ayck22i
