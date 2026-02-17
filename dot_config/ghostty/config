@@ -1,9 +1,14 @@
-macos-icon = paper
+# macos-icon = paper
+
+auto-update-channel = stable
 
 shell-integration = fish
 window-padding-x = 8
 
 theme = dark:TokyoNight Storm,light:TokyoNight Day
+
+# background-opacity = 0.8
+# background-blur = true
 
 unfocused-split-opacity = 0.7
 unfocused-split-fill = #000
@@ -20,7 +25,7 @@ adjust-box-thickness = -2
 mouse-hide-while-typing = true
 
 quick-terminal-position = center
-quick-terminal-size = 80%,80%
+quick-terminal-size = 100%,100%
 quick-terminal-animation-duration = 0.1
 
 # 100MB of scrollback (this value is in bytes)
@@ -34,11 +39,10 @@ keybind = global:ctrl+t=toggle_quick_terminal
 # Claude Code
 keybind = shift+enter=text:\n
 
-keybind = global:cmd+alt+backquote=toggle_quick_terminal
-
 # Used for Zellij
 keybind = cmd+t=unbind
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
 keybind = cmd+w=unbind
 keybind = cmd+n=unbind
+keybind = cmd+f=unbind
