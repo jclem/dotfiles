@@ -171,6 +171,7 @@ return {
 				typescript = { "biome" },
 				yaml = { "yamlfmt" },
 				go = { "gopls" },
+				eruby = { "erb_format" },
 			},
 
 			format_on_save = {
