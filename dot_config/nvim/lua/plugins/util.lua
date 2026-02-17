@@ -72,31 +72,8 @@ return {
 				end
 			}):map("<leader>dv")
 
-			local whichkey = require("which-key")
-
-			whichkey.add({
-				{
-					"[[",
-					function()
-						require("snacks").words.jump(-vim.v.count1)
-					end,
-					desc = "Previous Word",
-				},
-				{
-					"]]",
-					function()
-						require("snacks").words.jump(vim.v.count1)
-					end,
-					desc = "Next Word",
-				},
-				{
-					"<leader>z",
-					function()
-						require("snacks").zen()
-					end,
-					desc = "Zen Mode",
-				}
-			})
+			vim.keymap.set("n", "[[", function() require("snacks").words.jump(-vim.v.count1) end, { desc = "Previous Word" })
+			vim.keymap.set("n", "]]", function() require("snacks").words.jump(vim.v.count1) end, { desc = "Next Word" })
 		end,
 	},
 }

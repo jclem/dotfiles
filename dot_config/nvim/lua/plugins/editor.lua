@@ -1,9 +1,5 @@
 return {
 	{
-		"folke/flash.nvim",
-		event = "VeryLazy",
-	},
-	{
 		-- https://github.com/folke/which-key.nvim
 		"folke/which-key.nvim",
 		event = "VeryLazy",
@@ -68,6 +64,13 @@ return {
 
 				-- Git
 				{ "<leader>g", group = "Git" },
+
+				-- Symbols
+				{ "<leader>s", group = "Symbol" },
+				{ "<leader>sn", function() vim.lsp.buf.rename() end, desc = "Rename" },
+
+				-- UI
+				{ "<leader>u", group = "UI" },
 
 				-- Help
 				{

@@ -7,72 +7,30 @@ return {
 		version = "*",
 	},
 	{
-		"LazyVim/LazyVim",
-		version = "*",
-	},
-	{
 		-- https://github.com/ibhagwan/fzf-lua
 		"ibhagwan/fzf-lua",
 		version = "*",
-		dependencies = { "folke/which-key.nvim", "nvim-tree/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {
 			"ivy",
 			marks = { marks = "[A-Za-z]" },
 		},
-		init = function()
-			require("which-key").add({
-				-- Files
-				{ "<leader>f",  group = "Files" },
-				{ "<leader>fd", "<cmd>FzfLua files<cr>", desc = "Find Files" },
-				{
-					"<leader>fg",
-					"<cmd>FzfLua live_grep<cr>",
-					desc = "Grep",
-					icon = { icon = "", color = "green" },
-				},
-				{
-					"<leader>fj",
-					"<cmd>FzfLua jumps<cr>",
-					desc = "Jumplist",
-				},
-
-				-- Git
-				{ "<leader>gc", "<cmd>FzfLua git_commits<cr>",  desc = "Commits" },
-				{ "<leader>gb", "<cmd>FzfLua git_branches<cr>", desc = "Branches" },
-				{ "<leader>gf", "<cmd>FzfLua git_files<cr>",    desc = "Files" },
-				{ "<leader>gL", "<cmd>FzfLua git_blame<cr>",    desc = "File Blame" },
-				{ "<leader>gt", "<cmd>FzfLua git_stash<cr>",    desc = "Stash" },
-				{ "<leader>gC", "<cmd>FzfLua git_bcommits<cr>", desc = "Commits (buffer)" },
-
-				-- Neovim
-				{ "<leader>vc", "<cmd>FzfLua commands<cr>",     desc = "Commands" },
-				{ "<leader>vh", "<cmd>FzfLua helptags<cr>",     desc = "Help" },
-
-				-- Buffers
-				{ "<leader>bl", "<cmd>FzfLua buffers<cr>",      desc = "Buffers" },
-
-				-- Marks
-				{ "<leader>ml", "<cmd>FzfLua marks<cr>",        desc = "Marks" },
-
-				-- Symbols
-				{ "<leader>s",  group = "Symbol" },
-				{
-					"<leader>sa",
-					"<cmd>FzfLua lsp_code_actions<cr>",
-					desc = "Code Actions",
-				},
-				{
-					"<leader>sn",
-					function()
-						vim.lsp.buf.rename()
-					end,
-					desc = "Rename",
-				},
-
-				-- UI
-				{ "<leader>u", group = "UI" },
-			})
-		end,
+		keys = {
+			{ "<leader>fd", "<cmd>FzfLua files<cr>",            desc = "Find Files" },
+			{ "<leader>fg", "<cmd>FzfLua live_grep<cr>",        desc = "Grep" },
+			{ "<leader>fj", "<cmd>FzfLua jumps<cr>",            desc = "Jumplist" },
+			{ "<leader>gc", "<cmd>FzfLua git_commits<cr>",      desc = "Commits" },
+			{ "<leader>gb", "<cmd>FzfLua git_branches<cr>",     desc = "Branches" },
+			{ "<leader>gf", "<cmd>FzfLua git_files<cr>",        desc = "Files" },
+			{ "<leader>gL", "<cmd>FzfLua git_blame<cr>",        desc = "File Blame" },
+			{ "<leader>gt", "<cmd>FzfLua git_stash<cr>",        desc = "Stash" },
+			{ "<leader>gC", "<cmd>FzfLua git_bcommits<cr>",     desc = "Commits (buffer)" },
+			{ "<leader>vc", "<cmd>FzfLua commands<cr>",         desc = "Commands" },
+			{ "<leader>vh", "<cmd>FzfLua helptags<cr>",         desc = "Help" },
+			{ "<leader>bl", "<cmd>FzfLua buffers<cr>",          desc = "Buffers" },
+			{ "<leader>ml", "<cmd>FzfLua marks<cr>",            desc = "Marks" },
+			{ "<leader>sa", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code Actions" },
+		},
 	},
 	{
 		-- https://github.com/neovim/nvim-lspconfig
@@ -191,6 +149,7 @@ return {
 		-- https://github.com/github/copilot.vim
 		"github/copilot.vim",
 		version = "*",
+		event = "InsertEnter",
 	},
 	{
 		-- https://github.com/bwpge/lualine-pretty-path/
@@ -238,7 +197,7 @@ return {
 		version = "*",
 		opts = {},
 		keys = {
-			{ "<leader>uz", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode" },
+			{ "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" },
 		},
 	},
 	{
@@ -293,18 +252,21 @@ return {
 		-- https://github.com/echasnovski/mini.surround
 		"echasnovski/mini.surround",
 		version = "*",
+		event = "VeryLazy",
 		opts = {},
 	},
 	{
 		-- https://github.com/echasnovski/mini.pairs
 		"echasnovski/mini.pairs",
 		version = "*",
+		event = "InsertEnter",
 		opts = {},
 	},
 	{
 		-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 		"echasnovski/mini.bracketed",
 		version = "*",
+		event = "VeryLazy",
 		opts = {},
 	},
 }

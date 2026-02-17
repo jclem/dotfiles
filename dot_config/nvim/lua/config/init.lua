@@ -41,7 +41,7 @@ return {
 		vim.o.smartcase = true                    -- ...except when non-lowercase characters are used
 
 		-- ## Undo Settings
-		vim.o.undodir = vim.fn.stdpath("data") .. "undo" -- Set undo directory
+		vim.o.undodir = vim.fn.stdpath("data") .. "/undo" -- Set undo directory
 		vim.o.undofile = true                      -- Enable undo history
 
 		-- ## Indentation Settings
