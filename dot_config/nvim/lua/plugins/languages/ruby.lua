@@ -12,12 +12,15 @@ return {
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
-					if not client or client.name ~= "ruby_lsp" then
-						return
-					end
+						if not client or client.name ~= "ruby_lsp" then
+							return
+						end
 
-					vim.api.nvim_create_autocmd("BufWritePre", {
-						buffer = args.buf,
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							group = vim.api.nvim_create_augroup("RubyFormat" .. args.buf, {
+								clear = true,
+							}),
+							buffer = args.buf,
 						callback = function()
 							vim.lsp.buf.format({ timeout_ms = 3000 })
 						end,
