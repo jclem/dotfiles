@@ -1,0 +1,5 @@
+{{- $homebrew_bin := .chezmoi.shell.homebrew }}
+
+if test -x "{{ $homebrew_bin }}/brew"
+  eval ("{{ $homebrew_bin }}/brew" shellenv)
+end
