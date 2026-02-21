@@ -14,5 +14,5 @@
 # @raycast.authorURL https://jclem.me
 
 tell application "Finder"
-  delete (every item of folder "Macintosh HD:Users:jclem:CleanShot")
+  delete (every item of folder "Macintosh HD:Users:jclem:Library:Mobile Documents:com~apple~CloudDocs:CleanShot")
 end tell

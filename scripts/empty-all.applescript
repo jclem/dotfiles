@@ -15,6 +15,5 @@
 
 tell application "Finder"
   delete (every item of folder "Macintosh HD:Users:jclem:Downloads")
-  delete (every item of folder "Macintosh HD:Users:jclem:CleanShot")
-  delete (every item of folder "Macintosh HD:Users:jclem:Clop")
+  delete (every item of folder "Macintosh HD:Users:jclem:Library:Mobile Documents:com~apple~CloudDocs:CleanShot")
 end tell
