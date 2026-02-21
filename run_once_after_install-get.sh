@@ -11,4 +11,4 @@ if [[ -z "${MISE_BIN}" ]]; then
   exit 1
 fi
 
-"${MISE_BIN}" x go@latest -- go install github.com/jclem/get@latest
+"${MISE_BIN}" install github:jclem/get
