@@ -10,8 +10,10 @@
         <string>/Users/jclem/bin/update_appearance.sh</string>
     </array>
 
-    <key>StartInterval</key>
-    <integer>1</integer>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/jclem/Library/Preferences/.GlobalPreferences.plist</string>
+    </array>
 
     <key>RunAtLoad</key>
     <true/>
