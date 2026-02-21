@@ -136,7 +136,7 @@ return {
 				json = { "biome" },
 				typescript = { "biome" },
 				yaml = { "yamlfmt" },
-				go = { "gopls" },
+					go = { "goimports", "gofumpt" },
 				eruby = { "erb_format" },
 			},
 
