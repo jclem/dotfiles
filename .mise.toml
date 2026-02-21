@@ -3,5 +3,5 @@ chezmoi = "latest"
 watchexec = "latest"
 
 [tasks.dev]
-run = 'watchexec "chezmoi apply --force"'
-description = "Watch for and apply changes"
+run = 'watchexec --postpone --on-busy-update=queue "chezmoi apply"'
+description = "Watch for and apply changes without forced, immediate reruns"
