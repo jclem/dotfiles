@@ -5,5 +5,4 @@ fish_add_path --move \
     $HOME/.atuin/bin \
     $HOME/.cache/.bun/bin \
     $HOME/.bun/bin \
-    $HOME/.local/bin/env.fish \
     $HOME/.claude/local
