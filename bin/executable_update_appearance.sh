@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Determine output file
 STATE_FILE="${XDG_STATE_HOME:-$HOME/.local/state}/appearance.txt"
