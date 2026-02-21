@@ -2,7 +2,6 @@ return {
 	{
 		-- https://cmp.saghen.dev
 		"saghen/blink.cmp",
-		version = "*",
 		dependencies = {
 			"echasnovski/mini.snippets",
 		},

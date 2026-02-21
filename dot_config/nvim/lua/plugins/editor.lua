@@ -217,7 +217,6 @@ return {
 			"folke/snacks.nvim",
 		},
 		event = "VeryLazy",
-		version = "*",
 		keys = {
 			{
 				"]t",

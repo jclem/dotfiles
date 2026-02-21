@@ -2,7 +2,6 @@ return {
 	{
 		-- https://github.com/echasnovski/mini.snippets
 		"echasnovski/mini.snippets",
-		version = "*",
 		config = function()
 			local mini_snippets = require("mini.snippets")
 			local gen_loader = require("mini.snippets").gen_loader

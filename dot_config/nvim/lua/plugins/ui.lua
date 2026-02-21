@@ -2,7 +2,6 @@ return {
 	{
 		-- https://github.com/folke/noice.nvim
 		"folke/noice.nvim",
-		version = "*",
 		event = "VeryLazy",
 		opts = {
 			presets = {

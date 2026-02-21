@@ -2,7 +2,6 @@ return {
 	{
 		-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md
 		"echasnovski/mini.files",
-		version = "*",
 		keys = {
 			{
 				"<leader>ft",

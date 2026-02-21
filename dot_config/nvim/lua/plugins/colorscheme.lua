@@ -7,7 +7,6 @@ return {
 	{
 		-- https://github.com/folke/tokyonight.nvim
 		"folke/tokyonight.nvim",
-		version = "*",
 		init = function()
 			vim.cmd("colorscheme tokyonight-storm")
 		end,

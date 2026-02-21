@@ -7,12 +7,10 @@ return {
 	{
 		-- https://github.com/nvim-tree/nvim-web-devicons
 		"nvim-tree/nvim-web-devicons",
-		version = "*",
 	},
 	{
 		-- https://github.com/folke/snacks.nvim
 		"folke/snacks.nvim",
-		version = "*",
 		priority = 1000,
 		opts = {
 			bigfile = { enabled = true },
