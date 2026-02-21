@@ -1,8 +1,17 @@
 return {
-	"neovim/nvim-lspconfig",
-	opts = function()
-		local util = require("lspconfig.util")
-		local root_dir = util.root_pattern(".git")(vim.fn.getcwd()) or vim.fn.getcwd()
+		"neovim/nvim-lspconfig",
+		opts = function()
+			local util = require("lspconfig.util")
+			local function buffer_root_dir(bufnr)
+				local fname = vim.api.nvim_buf_get_name(bufnr)
+				if fname == "" then
+					return vim.uv.cwd() or vim.fn.getcwd()
+				end
+
+				return util.root_pattern(".git")(fname) or vim.uv.cwd() or vim.fn.getcwd()
+			end
+
+			local root_dir = buffer_root_dir(vim.api.nvim_get_current_buf())
 
 		-- Prefer the project-local biome binary over the global one.
 		local biome_cmd = { "biome", "lsp-proxy" }
