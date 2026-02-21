@@ -1,5 +1,8 @@
 function try --description "Create or manage try directories"
-    set -l base_dir ~/src/github.com/jclem
+    set -l base_dir "/src/github.com/"
+    if set -q CODE
+        set base_dir ""
+    end
 
     set -l adjectives \
         angry brave calm daring eager fast gentle happy icy jolly \

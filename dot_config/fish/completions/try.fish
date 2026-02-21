@@ -1,5 +1,8 @@
 function __try_complete_names
-    set -l base_dir ~/src/github.com/jclem
+    set -l base_dir "/src/github.com/"
+    if set -q CODE
+        set base_dir ""
+    end
     set -l current (commandline -ct)
     set -l seen
 
