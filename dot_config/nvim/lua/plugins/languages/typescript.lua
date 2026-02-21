@@ -1,8 +1,19 @@
 return {
-	"neovim/nvim-lspconfig",
-	opts = function()
-		local util = require("lspconfig.util")
-		local root_dir = util.root_pattern(".git")(vim.fn.getcwd()) or vim.fn.getcwd()
+		"neovim/nvim-lspconfig",
+		opts = function()
+			local util = require("lspconfig.util")
+			local function buffer_root_dir(bufnr)
+				local fname = vim.api.nvim_buf_get_name(bufnr)
+				if fname == "" then
+					return vim.uv.cwd() or vim.fn.getcwd()
+				end
+
+				return util.root_pattern(".git")(fname) or vim.uv.cwd() or vim.fn.getcwd()
+			end
+
+			local root_dir = buffer_root_dir(vim.api.nvim_get_current_buf())
+			local use_high_memory = vim.fn.getenv("TSLSP_HIGH_MEMORY") == "1" or vim.fn.getenv("TSLSP_HIGH_MEMORY") == "true"
+			local ts_server_memory = use_high_memory and 24576 or 4096
 
 		-- Prefer the project-local biome binary over the global one.
 		local biome_cmd = { "biome", "lsp-proxy" }
@@ -49,10 +60,10 @@ return {
 					vtsls = {
 						autoUseWorkspaceTsdk = true,
 					},
-					typescript = {
-						format = {
-							enable = false,
-						},
+						typescript = {
+							format = {
+								enable = false,
+							},
 						inlayHints = {
 							parameterNames = { enabled = "all" },
 							parameterTypes = { enabled = true },
@@ -61,12 +72,12 @@ return {
 							functionLikeReturnTypes = { enabled = true },
 							enumMemberValues = { enabled = true },
 						},
-						tsserver = {
-							nodePath = nodePath,
-							maxTsServerMemory = 24576,
+							tsserver = {
+								nodePath = nodePath,
+								maxTsServerMemory = ts_server_memory,
+							},
 						},
 					},
-				},
 			})
 
 			vim.lsp.enable("vtsls")
