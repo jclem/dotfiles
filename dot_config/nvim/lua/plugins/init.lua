@@ -148,8 +148,10 @@ return {
 			local conform = require("conform")
 			conform.setup(opts)
 
-			local mason = require("mason")
-			mason.setup({ ensure_installed = { "stylua", "yamlfmt" } })
+			require("mason").setup({})
+			require("mason-tool-installer").setup({
+				ensure_installed = { "stylua", "yamlfmt" },
+			})
 		end,
 	},
 	{
