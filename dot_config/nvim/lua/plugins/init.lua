@@ -4,12 +4,12 @@ return {
 	{
 		-- https://github.com/folke/lazy.nvim
 		"folke/lazy.nvim",
-		version = "*",
+		
 	},
 	{
 		-- https://github.com/ibhagwan/fzf-lua
 		"ibhagwan/fzf-lua",
-		version = "*",
+		
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {
 			"ivy",
@@ -35,7 +35,7 @@ return {
 	{
 		-- https://github.com/neovim/nvim-lspconfig
 		"neovim/nvim-lspconfig",
-		version = "*",
+		
 		opts = function()
 			return {
 				inlay_hints = {
@@ -59,12 +59,12 @@ return {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
-		version = "*",
+		
 	},
 	{
 		-- https://github.com/nvim-treesitter/nvim-treesitter
 		"nvim-treesitter/nvim-treesitter",
-		version = "*",
+		
 		build = ":TSUpdate",
 		dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
 		opts = {
@@ -123,7 +123,7 @@ return {
 	{
 		-- https://github.com/stevearc/conform.nvim
 		"stevearc/conform.nvim",
-		version = "*",
+		
 		dependencies = { "mason-org/mason.nvim" },
 		opts = {
 			formatters_by_ft = {
@@ -156,18 +156,18 @@ return {
 	{
 		-- https://github.com/github/copilot.vim
 		"github/copilot.vim",
-		version = "*",
+		
 		event = "InsertEnter",
 	},
 	{
 		-- https://github.com/bwpge/lualine-pretty-path/
 		"bwpge/lualine-pretty-path",
-		version = "*",
+		
 	},
 	{
 		-- https://github.com/nvim-lualine/lualine.nvim
 		"nvim-lualine/lualine.nvim",
-		version = "*",
+		
 		dependencies = { "nvim-tree/nvim-web-devicons", "bwpge/lualine-pretty-path" },
 		opts = {
 			sections = {
@@ -192,7 +192,7 @@ return {
 	{
 		-- https://github.com/folke/twilight.nvim
 		"folke/twilight.nvim",
-		version = "*",
+		
 		opts = {},
 		dependencies = { "folke/snacks.nvim" },
 		keys = {
@@ -202,7 +202,7 @@ return {
 	{
 		-- https://github.com/folke/zen-mode.nvim
 		"folke/zen-mode.nvim",
-		version = "*",
+		
 		opts = {},
 		keys = {
 			{ "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" },
@@ -211,7 +211,7 @@ return {
 	{
 		-- https://github.com/folke/flash.nvim
 		"folke/flash.nvim",
-		version = "*",
+		
 		opts = {},
 		keys = {
 			{
@@ -259,21 +259,21 @@ return {
 	{
 		-- https://github.com/echasnovski/mini.surround
 		"echasnovski/mini.surround",
-		version = "*",
+		
 		event = "VeryLazy",
 		opts = {},
 	},
 	{
 		-- https://github.com/echasnovski/mini.pairs
 		"echasnovski/mini.pairs",
-		version = "*",
+		
 		event = "InsertEnter",
 		opts = {},
 	},
 	{
 		-- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-bracketed.md
 		"echasnovski/mini.bracketed",
-		version = "*",
+		
 		event = "VeryLazy",
 		opts = {},
 	},
