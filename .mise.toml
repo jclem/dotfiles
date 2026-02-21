@@ -5,3 +5,11 @@ watchexec = "latest"
 [tasks.dev]
 run = 'watchexec --postpone --on-busy-update=queue "chezmoi apply"'
 description = "Watch for and apply changes without forced, immediate reruns"
+
+[tasks.health]
+run = "mise doctor"
+description = "Run mise environment and plugin diagnostics"
+
+[tasks.outdated]
+run = "mise outdated"
+description = "Check for outdated mise-managed tools"

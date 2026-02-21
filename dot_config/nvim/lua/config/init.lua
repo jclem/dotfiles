@@ -33,7 +33,6 @@ return {
 		vim.o.autowrite = true -- Automatically write before running commands
 		vim.o.clipboard = "" -- Keep yanks out of the system clipboard
 		vim.o.cursorline = true -- Highlight current line
-		vim.o.filetype = "on" -- Enable filetype detection
 		vim.o.inccommand = "split" -- Show live preview of substitutions
 		vim.o.mouse = "a" -- Enable mouse support
 		vim.o.number = true -- Show line numbers
@@ -61,7 +60,7 @@ return {
 		-- ## Indentation Settings
 		vim.o.autoindent = true -- Copy indent from current line when starting a new line
 		vim.o.breakindent = true -- Enable indented hard breaks
-		vim.o.expandtab = true -- Use tabs instead of spaces, except when otherwise configured
+vim.o.expandtab = true -- Use spaces for indentation by default
 		vim.o.shiftwidth = 2 -- Number of spaces to use for autoindent
 		vim.o.showbreak = "┕━ " -- Set break indent
 		vim.o.smarttab = true -- Use shiftwidth for tabbing with <Tab> and <BS>
@@ -118,11 +117,18 @@ return {
 			},
 		})
 
-		vim.api.nvim_create_autocmd("LspAttach", {
-			callback = function(args)
-				local opts = { buffer = args.buf, desc = "Go to Definition" }
-				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-			end,
-		})
-	end,
-}
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					local opts = { buffer = args.buf, desc = "Go to Definition" }
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "gr", vim.lsp.buf.references, vim.tbl_extend("force", opts, { desc = "Go to References" }))
+					vim.keymap.set("n", "gI", vim.lsp.buf.implementation, vim.tbl_extend("force", opts, { desc = "Go to Implementation" }))
+					vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Show Hover" }))
+					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code Actions" }))
+					vim.keymap.set("n", "<leader>cf", function()
+						vim.lsp.buf.format({ async = true })
+					end, vim.tbl_extend("force", opts, { desc = "Format buffer" }))
+				end,
+			})
+		end,
+	}

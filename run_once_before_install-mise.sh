@@ -15,4 +15,4 @@ if [[ -z "${MISE_BIN}" ]]; then
   exit 1
 fi
 
-"${MISE_BIN}" install go@latest
+"${MISE_BIN}" install

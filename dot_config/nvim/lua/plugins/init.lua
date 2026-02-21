@@ -123,8 +123,7 @@ return {
 	{
 		-- https://github.com/stevearc/conform.nvim
 		"stevearc/conform.nvim",
-		version = "*",
-		dependencies = { "mason-org/mason.nvim" },
+		dependencies = { "mason-org/mason.nvim", "WhoIsSethDaniel/mason-tool-installer.nvim" },
 		opts = {
 			formatters_by_ft = {
 				lua = { "stylua" },
@@ -149,8 +148,10 @@ return {
 			local conform = require("conform")
 			conform.setup(opts)
 
-			local mason = require("mason")
-			mason.setup({ ensure_installed = { "stylua", "yamlfmt" } })
+			require("mason").setup({})
+			require("mason-tool-installer").setup({
+				ensure_installed = { "stylua", "yamlfmt" },
+			})
 		end,
 	},
 	{
