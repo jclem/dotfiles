@@ -71,6 +71,10 @@ return {
 			ensure_installed = {
 				"bash",
 				"diff",
+				"eex",
+				"elixir",
+				"erlang",
+				"heex",
 				"html",
 				"javascript",
 				"jsdoc",
@@ -125,6 +129,10 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				css = { "biome" },
+				eelixir = { "mix" },
+				elixir = { "mix" },
+				erlang = { "erlfmt" },
+				heex = { "mix" },
 				json = { "biome" },
 				typescript = { "biome" },
 				yaml = { "yamlfmt" },

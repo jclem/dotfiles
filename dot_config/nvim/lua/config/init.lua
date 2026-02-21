@@ -2,6 +2,7 @@ return {
 	setup = function()
 		vim.g.mapleader = " " -- Use space for mapleader, very efficient.
 		vim.g.maplocalleader = " "
+		vim.g.elixir_lsp = vim.g.elixir_lsp or "elixirls" -- Switch to "expert" to use Expert LSP.
 
 		-- # Disable netrw
 		vim.g.loaded_netrw = 1
@@ -11,8 +12,21 @@ return {
 		vim.filetype.add({
 			extension = {
 				zellij = "kdl",
+				ex = "elixir",
+				exs = "elixir",
+				eex = "eelixir",
+				leex = "eelixir",
+				heex = "heex",
+			},
+			filename = {
+				["mix.lock"] = "elixir",
 			},
 		})
+
+		-- Map Neovim's eelixir filetype to the eex parser.
+		if vim.treesitter and vim.treesitter.language then
+			vim.treesitter.language.register("eex", "eelixir")
+		end
 
 		-- ## Basic Settings
 		vim.o.autoread = true     -- Automatically read files when changed outside of Vim
@@ -100,6 +114,13 @@ return {
 			virtual_lines = {
 				current_line = true
 			}
+		})
+
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function(args)
+				local opts = { buffer = args.buf, desc = "Go to Definition" }
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+			end,
 		})
 	end,
 }
