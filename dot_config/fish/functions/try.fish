@@ -1,7 +1,7 @@
 function try --description "Create or manage try directories"
-    set -l base_dir "/src/github.com/"
-    if set -q CODE
-        set base_dir ""
+    set -l base_dir "$HOME/src/github.com"
+    if test -n "$CODE"
+        set base_dir "$CODE"
     end
 
     set -l adjectives \
@@ -161,8 +161,8 @@ function try --description "Create or manage try directories"
         echo "Deleted: "(basename "$target_dir")
         return 0
     else if test "$argv[1]" = cd
-        if test (count $argv) -lt 2
-            set -l try_dir (pwd)
+    if test (count $argv) -lt 2
+        set -l try_dir (pwd)
 
             while true
                 set -l try_name (basename "$try_dir")
