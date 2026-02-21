@@ -4,5 +4,5 @@ return {
 		opts = function()
 			vim.lsp.enable("gopls")
 		end,
-	}
+	},
 }

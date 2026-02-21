@@ -15,7 +15,7 @@ return {
 		prefix = "service",
 		body = {
 			"class $1 extends Effect.Service<$1>()(",
-			"\t\"$1\",",
+			'\t"$1",',
 			"\t{",
 			"\t\taccessors: true,",
 			"",

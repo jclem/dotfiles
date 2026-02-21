@@ -26,17 +26,17 @@ return {
  ██   ██║██║     ██║     ██╔══╝  ██║╚██╔╝██║
  ╚█████╔╝╚██████╗███████╗███████╗██║ ╚═╝ ██║
   ╚════╝  ╚═════╝╚══════╝╚══════╝╚═╝     ╚═╝]],
-				}
+				},
 			},
 			quickfile = { enabled = true },
 			indent = {
 				enabled = true,
-				animate = { enabled = false }
+				animate = { enabled = false },
 			},
 			input = { enabled = true },
 			scroll = { enabled = true },
 			statuscolumn = { enabled = true },
-			words = { enabled = true }
+			words = { enabled = true },
 		},
 		keys = {
 			{
@@ -62,18 +62,22 @@ return {
 				set = function(state)
 					if state then
 						vim.diagnostic.config({
-							virtual_text = true
+							virtual_text = true,
 						})
 					else
 						vim.diagnostic.config({
 							virtual_text = false,
 						})
 					end
-				end
+				end,
 			}):map("<leader>dv")
 
-			vim.keymap.set("n", "[[", function() require("snacks").words.jump(-vim.v.count1) end, { desc = "Previous Word" })
-			vim.keymap.set("n", "]]", function() require("snacks").words.jump(vim.v.count1) end, { desc = "Next Word" })
+			vim.keymap.set("n", "[[", function()
+				require("snacks").words.jump(-vim.v.count1)
+			end, { desc = "Previous Word" })
+			vim.keymap.set("n", "]]", function()
+				require("snacks").words.jump(vim.v.count1)
+			end, { desc = "Next Word" })
 		end,
 	},
 }

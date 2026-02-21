@@ -28,26 +28,26 @@ return {
 				-- Buffers
 				{ "<leader>b", group = "Buffers" },
 				{ "<leader>bc", "<cmd>let @+ = expand('%:~:.')<cr>", desc = "Copy Relative Path" },
-			{
-				"<leader>bc",
-				function()
-					local path = vim.fn.expand("%:~:.")
-					local start_line = vim.fn.line("v")
-					local end_line = vim.fn.line(".")
-					if start_line > end_line then
-						start_line, end_line = end_line, start_line
-					end
-					local result
-					if start_line == end_line then
-						result = path .. "#L" .. start_line
-					else
-						result = path .. "#L" .. start_line .. "-" .. end_line
-					end
-					vim.fn.setreg("+", result)
-				end,
-				mode = "v",
-				desc = "Copy Path with Lines",
-			},
+				{
+					"<leader>bc",
+					function()
+						local path = vim.fn.expand("%:~:.")
+						local start_line = vim.fn.line("v")
+						local end_line = vim.fn.line(".")
+						if start_line > end_line then
+							start_line, end_line = end_line, start_line
+						end
+						local result
+						if start_line == end_line then
+							result = path .. "#L" .. start_line
+						else
+							result = path .. "#L" .. start_line .. "-" .. end_line
+						end
+						vim.fn.setreg("+", result)
+					end,
+					mode = "v",
+					desc = "Copy Path with Lines",
+				},
 				{ "<leader>bC", "<cmd>let @+ = expand('%:p')<cr>", desc = "Copy Absolute Path" },
 				{ "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete Buffer" },
 				{ "<leader>bD", "<cmd>bdelete!<cr>", desc = "Delete Buffer (no warn)" },
@@ -67,7 +67,13 @@ return {
 
 				-- Symbols
 				{ "<leader>s", group = "Symbol" },
-				{ "<leader>sn", function() vim.lsp.buf.rename() end, desc = "Rename" },
+				{
+					"<leader>sn",
+					function()
+						vim.lsp.buf.rename()
+					end,
+					desc = "Rename",
+				},
 
 				-- UI
 				{ "<leader>u", group = "UI" },
@@ -78,8 +84,8 @@ return {
 					function()
 						require("which-key").show({ global = false })
 					end,
-					desc = "Buffer Keymaps (which-key)"
-				}
+					desc = "Buffer Keymaps (which-key)",
+				},
 			})
 		end,
 	},
@@ -150,13 +156,13 @@ return {
 
 				"<leader>sl",
 				"<cmd>Trouble lsp toggle pinned=true win.position=right win.size.width=80<cr>",
-				desc = "LSP references/definitions/... (Pinned)"
+				desc = "LSP references/definitions/... (Pinned)",
 			},
 			{
 
 				"<leader>sL",
 				"<cmd>Trouble lsp toggle win.position=right win.size.width=80<cr>",
-				desc = "LSP references/definitions/..."
+				desc = "LSP references/definitions/...",
 			},
 			{
 				"<leader>sr",
@@ -239,7 +245,7 @@ return {
 	{
 		"windwp/nvim-ts-autotag",
 		event = "VeryLazy",
-		opts = {}
+		opts = {},
 	},
 
 	{
@@ -248,7 +254,7 @@ return {
 		opts = {},
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons"
+			"nvim-tree/nvim-web-devicons",
 		},
 		keys = {
 			{
@@ -256,8 +262,8 @@ return {
 				function()
 					require("aerial").fzf_lua_picker()
 				end,
-				desc = "Tree"
-			}
+				desc = "Tree",
+			},
 		},
 	},
 	{
@@ -267,16 +273,16 @@ return {
 			"folke/snacks.nvim",
 		},
 		opts = {
-			terminal_cmd = "$XDG_DATA_HOME/mise/installs/claude/2.0.0/bin/claude"
+			terminal_cmd = "$XDG_DATA_HOME/mise/installs/claude/2.0.0/bin/claude",
 		},
-		keys = {}
+		keys = {},
 	},
 	{
 		-- Hover preview for symbol definitions
 		"lewis6991/hover.nvim",
 		event = "LspAttach",
 		config = function()
-			require("hover").setup {
+			require("hover").setup({
 				init = function()
 					require("hover.providers.lsp")
 					require("hover.providers.diagnostic")
@@ -288,25 +294,27 @@ return {
 					-- require("hover.providers.highlight")
 				end,
 				preview_opts = {
-					border = "rounded"
+					border = "rounded",
 				},
 				-- Mouse support
 				mouse_providers = {
-					'LSP',
+					"LSP",
 				},
-				mouse_delay = 250
-			}
+				mouse_delay = 250,
+			})
 
 			-- Setup keymaps
 			vim.keymap.set("n", "K", require("hover").hover, { desc = "hover.nvim" })
-			vim.keymap.set("n", "<C-p>", function() require("hover").hover_switch("previous") end,
-				{ desc = "hover.nvim (previous source)" })
-			vim.keymap.set("n", "<C-n>", function() require("hover").hover_switch("next") end,
-				{ desc = "hover.nvim (next source)" })
+			vim.keymap.set("n", "<C-p>", function()
+				require("hover").hover_switch("previous")
+			end, { desc = "hover.nvim (previous source)" })
+			vim.keymap.set("n", "<C-n>", function()
+				require("hover").hover_switch("next")
+			end, { desc = "hover.nvim (next source)" })
 
 			-- Mouse support
-			vim.keymap.set('n', '<MouseMove>', require('hover').hover_mouse, { desc = "hover.nvim (mouse)" })
+			vim.keymap.set("n", "<MouseMove>", require("hover").hover_mouse, { desc = "hover.nvim (mouse)" })
 			vim.o.mousemoveevent = true
-		end
-	}
+		end,
+	},
 }
