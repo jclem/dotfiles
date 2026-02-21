@@ -29,7 +29,8 @@ return {
 		end
 
 		local mason_expert = vim.fn.stdpath("data") .. "/mason/bin/expert"
-		local expert_cmd = vim.fn.executable(mason_expert) == 1 and { mason_expert, "--stdio" } or { "expert", "--stdio" }
+		local expert_cmd = vim.fn.executable(mason_expert) == 1 and { mason_expert, "--stdio" }
+			or { "expert", "--stdio" }
 		local expert_install_dir = vim.fn.stdpath("data") .. "/expert"
 
 		vim.fn.mkdir(expert_install_dir, "p")

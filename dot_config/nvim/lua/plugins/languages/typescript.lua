@@ -5,15 +5,15 @@ return {
 		local root_dir = util.root_pattern(".git")(vim.fn.getcwd()) or vim.fn.getcwd()
 
 		-- Prefer the project-local biome binary over the global one.
-		local biome_cmd = { 'biome', 'lsp-proxy' }
-		local local_biome = root_dir .. '/node_modules/.bin/biome'
+		local biome_cmd = { "biome", "lsp-proxy" }
+		local local_biome = root_dir .. "/node_modules/.bin/biome"
 		if vim.fn.filereadable(local_biome) == 1 then
-			biome_cmd = { local_biome, 'lsp-proxy' }
+			biome_cmd = { local_biome, "lsp-proxy" }
 		end
 
-		vim.lsp.config('biome', { cmd = biome_cmd })
-		vim.lsp.enable('biome')
-		vim.lsp.enable('eslint')
+		vim.lsp.config("biome", { cmd = biome_cmd })
+		vim.lsp.enable("biome")
+		vim.lsp.enable("eslint")
 
 		-- Checks if a file exists
 		-- @param path string
@@ -33,18 +33,18 @@ return {
 		end
 
 		if useTSGo then
-			vim.lsp.config('tsgo', {
-				cmd = { root_dir .. '/node_modules/.bin/tsgo', '--lsp', '--stdio' }
+			vim.lsp.config("tsgo", {
+				cmd = { root_dir .. "/node_modules/.bin/tsgo", "--lsp", "--stdio" },
 			})
 
-			vim.lsp.enable('tsgo')
+			vim.lsp.enable("tsgo")
 		else
 			local nodePath = nil
 			if file_exists(root_dir .. "/src/cli/tsserverNode") then
 				nodePath = root_dir .. "/src/cli/tsserverNode"
 			end
 
-			vim.lsp.config('vtsls', {
+			vim.lsp.config("vtsls", {
 				settings = {
 					vtsls = {
 						autoUseWorkspaceTsdk = true,
@@ -66,10 +66,10 @@ return {
 							maxTsServerMemory = 24576,
 						},
 					},
-				}
+				},
 			})
 
-			vim.lsp.enable('vtsls')
+			vim.lsp.enable("vtsls")
 		end
 	end,
 
@@ -95,9 +95,9 @@ return {
 									diagnostics = {},
 								},
 
-								apply = true
+								apply = true,
 							})
-						end
+						end,
 					})
 				end
 
@@ -115,12 +115,12 @@ return {
 									diagnostics = {},
 								},
 
-								apply = true
+								apply = true,
 							})
-						end
+						end,
 					})
 				end
 			end,
 		})
-	end
+	end,
 }

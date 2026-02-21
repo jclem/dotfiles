@@ -16,19 +16,19 @@ return {
 			marks = { marks = "[A-Za-z]" },
 		},
 		keys = {
-			{ "<leader>fd", "<cmd>FzfLua files<cr>",            desc = "Find Files" },
-			{ "<leader>fg", "<cmd>FzfLua live_grep<cr>",        desc = "Grep" },
-			{ "<leader>fj", "<cmd>FzfLua jumps<cr>",            desc = "Jumplist" },
-			{ "<leader>gc", "<cmd>FzfLua git_commits<cr>",      desc = "Commits" },
-			{ "<leader>gb", "<cmd>FzfLua git_branches<cr>",     desc = "Branches" },
-			{ "<leader>gf", "<cmd>FzfLua git_files<cr>",        desc = "Files" },
-			{ "<leader>gL", "<cmd>FzfLua git_blame<cr>",        desc = "File Blame" },
-			{ "<leader>gt", "<cmd>FzfLua git_stash<cr>",        desc = "Stash" },
-			{ "<leader>gC", "<cmd>FzfLua git_bcommits<cr>",     desc = "Commits (buffer)" },
-			{ "<leader>vc", "<cmd>FzfLua commands<cr>",         desc = "Commands" },
-			{ "<leader>vh", "<cmd>FzfLua helptags<cr>",         desc = "Help" },
-			{ "<leader>bl", "<cmd>FzfLua buffers<cr>",          desc = "Buffers" },
-			{ "<leader>ml", "<cmd>FzfLua marks<cr>",            desc = "Marks" },
+			{ "<leader>fd", "<cmd>FzfLua files<cr>", desc = "Find Files" },
+			{ "<leader>fg", "<cmd>FzfLua live_grep<cr>", desc = "Grep" },
+			{ "<leader>fj", "<cmd>FzfLua jumps<cr>", desc = "Jumplist" },
+			{ "<leader>gc", "<cmd>FzfLua git_commits<cr>", desc = "Commits" },
+			{ "<leader>gb", "<cmd>FzfLua git_branches<cr>", desc = "Branches" },
+			{ "<leader>gf", "<cmd>FzfLua git_files<cr>", desc = "Files" },
+			{ "<leader>gL", "<cmd>FzfLua git_blame<cr>", desc = "File Blame" },
+			{ "<leader>gt", "<cmd>FzfLua git_stash<cr>", desc = "Stash" },
+			{ "<leader>gC", "<cmd>FzfLua git_bcommits<cr>", desc = "Commits (buffer)" },
+			{ "<leader>vc", "<cmd>FzfLua commands<cr>", desc = "Commands" },
+			{ "<leader>vh", "<cmd>FzfLua helptags<cr>", desc = "Help" },
+			{ "<leader>bl", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
+			{ "<leader>ml", "<cmd>FzfLua marks<cr>", desc = "Marks" },
 			{ "<leader>sa", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code Actions" },
 		},
 	},
@@ -66,7 +66,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		version = "*",
 		build = ":TSUpdate",
-		dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
+		dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
 		opts = {
 			ensure_installed = {
 				"bash",
@@ -111,8 +111,8 @@ return {
 					goto_previous_start = {
 						["[e"] = "@top_level",
 					},
-				}
-			}
+				},
+			},
 		},
 
 		config = function(_, opts)
