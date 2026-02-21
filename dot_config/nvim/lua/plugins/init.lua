@@ -123,8 +123,7 @@ return {
 	{
 		-- https://github.com/stevearc/conform.nvim
 		"stevearc/conform.nvim",
-		version = "*",
-		dependencies = { "mason-org/mason.nvim" },
+		dependencies = { "mason-org/mason.nvim", "WhoIsSethDaniel/mason-tool-installer.nvim" },
 		opts = {
 			formatters_by_ft = {
 				lua = { "stylua" },
