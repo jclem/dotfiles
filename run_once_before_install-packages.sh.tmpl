@@ -1,8 +1,9 @@
-#!/usr/bin/env -S bash -x
+#!/usr/bin/env bash
+set -euo pipefail
 
 if test ! "$(which brew)"; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    eval "$(/opt/hombrew/bin/brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew bundle --file=/dev/stdin <<EOF

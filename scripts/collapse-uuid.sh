@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Required parameters:
 # @raycast.schemaVersion 1
@@ -17,4 +18,3 @@
 pbpaste | tr -d '-' | pbcopy
 
 echo "Collapsed UUID copied to clipboard"
-

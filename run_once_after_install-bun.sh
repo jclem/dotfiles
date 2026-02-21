@@ -1,3 +1,4 @@
-#!/usr/bin/env -S bash -x
+#!/usr/bin/env bash
+set -euo pipefail
 
 curl -fsSL https://bun.sh/install | bash
