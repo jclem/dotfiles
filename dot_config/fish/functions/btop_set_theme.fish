@@ -1,5 +1,10 @@
 function btop_set_theme
-    set -l config_file "$XDG_CONFIG_HOME/btop/btop.conf"
+    set -l config_home "$XDG_CONFIG_HOME"
+    if test -z "$config_home"
+        set config_home "$HOME/.config"
+    end
+
+    set -l config_file "$config_home/btop/btop.conf"
 
     if not test -f "$config_file"
         return

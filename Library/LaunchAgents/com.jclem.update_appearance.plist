@@ -7,13 +7,11 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/jclem/bin/update_appearance.sh</string>
+        <string>/Users/jclem/bin/update_appearance_daemon.sh</string>
     </array>
 
-    <key>WatchPaths</key>
-    <array>
-        <string>/Users/jclem/Library/Preferences/.GlobalPreferences.plist</string>
-    </array>
+    <key>KeepAlive</key>
+    <true/>
 
     <key>RunAtLoad</key>
     <true/>
