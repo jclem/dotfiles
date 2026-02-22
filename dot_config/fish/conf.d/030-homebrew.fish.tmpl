@@ -1,4 +1,11 @@
-{{- $homebrew_bin := .chezmoi.shell.homebrew }}
+{{- $homebrew_bin := "/opt/homebrew/bin" -}}
+{{- $shell := index . "shell" -}}
+{{- if $shell -}}
+  {{- $configured_homebrew_bin := index $shell "homebrew" -}}
+  {{- if $configured_homebrew_bin -}}
+    {{- $homebrew_bin = $configured_homebrew_bin -}}
+  {{- end -}}
+{{- end }}
 
 if test -x "{{ $homebrew_bin }}/brew"
   eval ("{{ $homebrew_bin }}/brew" shellenv)
