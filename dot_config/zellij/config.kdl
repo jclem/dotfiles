@@ -110,10 +110,11 @@ keybinds clear-defaults=true {
   }
 
   move {
-    bind "h" { MovePane "left"; SwitchToMode "normal"; }
-    bind "j" { MovePane "down"; SwitchToMode "normal"; }
-    bind "k" { MovePane "up"; SwitchToMode "normal"; }
-    bind "l" { MovePane "right"; SwitchToMode "normal"; }
+    bind "h" { MovePane "left"; }
+    bind "j" { MovePane "down"; }
+    bind "k" { MovePane "up"; }
+    bind "l" { MovePane "right"; }
+    bind "q" "Super Shift m" { SwitchToMode "normal"; }
   }
 
   search {
