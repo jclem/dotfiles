@@ -9,6 +9,7 @@ if status --is-interactive
     abbr --add --global lg   lazygit
     abbr --add --global tf   terraform
     abbr --add --global vim  nvim
+    abbr --add --global w    work
     abbr --add --global we   watchexec
     abbr --add --global zj   zellij
 end
