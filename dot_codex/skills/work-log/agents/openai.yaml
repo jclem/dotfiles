@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Log"
+  short_description: "Create dated work logs in /docs/logs"
+  default_prompt: "Use $work-log to create a new /docs/logs entry with the required filename pattern and markdown template."
