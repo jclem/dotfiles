@@ -13,6 +13,23 @@ return {
 				delay = 0,
 			})
 
+			local function copy_path_with_lines(path)
+				local start_line = vim.fn.line("v")
+				local end_line = vim.fn.line(".")
+				if start_line > end_line then
+					start_line, end_line = end_line, start_line
+				end
+
+				local suffix
+				if start_line == end_line then
+					suffix = "#L" .. start_line
+				else
+					suffix = "#L" .. start_line .. "-" .. end_line
+				end
+
+				vim.fn.setreg("+", path .. suffix)
+			end
+
 			require("which-key").add({
 				-- Splits
 				{ "<leader>-", "<cmd>split<cr>", desc = "Split (below)" },
@@ -31,24 +48,20 @@ return {
 				{
 					"<leader>bc",
 					function()
-						local path = vim.fn.expand("%:~:.")
-						local start_line = vim.fn.line("v")
-						local end_line = vim.fn.line(".")
-						if start_line > end_line then
-							start_line, end_line = end_line, start_line
-						end
-						local result
-						if start_line == end_line then
-							result = path .. "#L" .. start_line
-						else
-							result = path .. "#L" .. start_line .. "-" .. end_line
-						end
-						vim.fn.setreg("+", result)
+						copy_path_with_lines(vim.fn.expand("%:~:."))
 					end,
 					mode = "v",
-					desc = "Copy Path with Lines",
+					desc = "Copy Relative Path with Lines",
 				},
 				{ "<leader>bC", "<cmd>let @+ = expand('%:p')<cr>", desc = "Copy Absolute Path" },
+				{
+					"<leader>bC",
+					function()
+						copy_path_with_lines(vim.fn.expand("%:p"))
+					end,
+					mode = "v",
+					desc = "Copy Absolute Path with Lines",
+				},
 				{ "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete Buffer" },
 				{ "<leader>bD", "<cmd>bdelete!<cr>", desc = "Delete Buffer (no warn)" },
 				{ "<leader>bp", "<cmd>b#<cr>", desc = "Previous Buffer" },
