@@ -1,10 +1,10 @@
 function zellij_reset
-  argparse --name=zellij_reset f/force h/help -- $argv
+  argparse --name=zellij_reset y/yes h/help -- $argv
 
   if set -q _flag_h
-    echo "Usage: zellij_reset [--force]"
+    echo "Usage: zellij_reset [--yes]"
     echo "Kill and delete all zellij sessions."
-    echo "  -f, --force    Skip confirmation."
+    echo "  -y, --yes    Skip confirmation."
     return 0
   end
 
@@ -21,9 +21,9 @@ function zellij_reset
     return 0
   end
 
-  if not set -q _flag_f
+  if not set -q _flag_y
     if not status is-interactive
-      echo "Refusing to ask for confirmation in non-interactive mode. Use --force."
+      echo "Refusing to ask for confirmation in non-interactive mode. Use --yes."
       return 1
     end
 
@@ -34,10 +34,9 @@ function zellij_reset
         echo "  - $cleaned_session"
       end
     end
-    set -l confirm
-    read -l -P "Type \"RESET ZELLIJ\" to confirm: " confirm
+    read -l -P "Continue? [y/N] " confirm
 
-    if test "$confirm" != "RESET ZELLIJ"
+    if test "$confirm" != y
       echo "Aborted."
       return 1
     end
