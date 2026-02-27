@@ -17,10 +17,10 @@ function zellij_set_theme
     end
 
     if test $is_dark -eq 1
-        # Dark: activate storm, comment day
-        sed -E -i '' 's|^[[:space:]]*//[[:space:]]*theme \"tokyonight-storm\"[[:space:]]*$|theme "tokyonight-storm"|; s|^[[:space:]]*theme \"tokyonight-day\"[[:space:]]*$|// theme "tokyonight-day"|' "$config_file"
+        # Dark: activate dark, comment light
+        sed -E -i '' 's|^[[:space:]]*//[[:space:]]*theme \"folio-dark\"[[:space:]]*$|theme "folio-dark"|; s|^[[:space:]]*theme \"folio-light\"[[:space:]]*$|// theme "folio-light"|' "$config_file"
     else
-        # Light: activate day, comment storm
-        sed -E -i '' 's|^[[:space:]]*//[[:space:]]*theme \"tokyonight-day\"[[:space:]]*$|theme "tokyonight-day"|; s|^[[:space:]]*theme \"tokyonight-storm\"[[:space:]]*$|// theme "tokyonight-storm"|' "$config_file"
+        # Light: activate light, comment dark
+        sed -E -i '' 's|^[[:space:]]*//[[:space:]]*theme \"folio-light\"[[:space:]]*$|theme "folio-light"|; s|^[[:space:]]*theme \"folio-dark\"[[:space:]]*$|// theme "folio-dark"|' "$config_file"
     end
 end

@@ -17,10 +17,10 @@ function btop_set_theme
     end
 
     if test $is_dark -eq 1
-        # Dark: activate storm
-        sed -E -i '' 's|^[[:space:]]*color_theme[[:space:]]*=.*$|color_theme = "tokyo-storm"|' "$config_file"
+        # Dark: activate dark
+        sed -E -i '' 's|^[[:space:]]*color_theme[[:space:]]*=.*$|color_theme = "folio-dark"|' "$config_file"
     else
-        # Light: activate day
-        sed -E -i '' 's|^[[:space:]]*color_theme[[:space:]]*=.*$|color_theme = "tokyo-night-day"|' "$config_file"
+        # Light: activate light
+        sed -E -i '' 's|^[[:space:]]*color_theme[[:space:]]*=.*$|color_theme = "folio-light"|' "$config_file"
     end
 end
