@@ -105,8 +105,8 @@
 	"workbench.iconTheme": "rose-pine-icons",
 	"workbench.layoutControl.enabled": false,
 	"workbench.navigationControl.enabled": false,
-	"workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-	"workbench.preferredLightColorTheme": "Tokyo Night Light",
+	"workbench.preferredDarkColorTheme": "Folio Dark",
+	"workbench.preferredLightColorTheme": "Folio Light",
 	"workbench.statusBar.visible": false,
 	"yaml.schemas": {
 		"https://json.schemastore.org/github-workflow.json": "/.github/workflows/*.{yml,yaml}"

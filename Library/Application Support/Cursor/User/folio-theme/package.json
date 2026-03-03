@@ -1,0 +1,25 @@
+{
+  "name": "folio",
+  "displayName": "Folio",
+  "description": "Folio color theme for Cursor (light and dark)",
+  "version": "1.0.0",
+  "publisher": "jclem",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Folio Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/folio-dark.color-theme.json"
+      },
+      {
+        "label": "Folio Light",
+        "uiTheme": "vs",
+        "path": "./themes/folio-light.color-theme.json"
+      }
+    ]
+  }
+}
