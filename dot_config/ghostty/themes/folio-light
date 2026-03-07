@@ -20,3 +20,6 @@ palette = 12=#5E7E9E
 palette = 13=#8B6E8B
 palette = 14=#5E8B8B
 palette = 15=#FFFCF5
+split-divider-color = #C6C2B3
+unfocused-split-opacity = 0.6
+unfocused-split-fill = #FFFCF5
