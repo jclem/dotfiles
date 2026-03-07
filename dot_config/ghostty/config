@@ -33,16 +33,19 @@ scrollback-limit = 10485760
 
 window-save-state = always
 
-# Quick Terminal
-keybind = global:ctrl+t=toggle_quick_terminal
+# Split navigation
+keybind = ctrl+super+h=goto_split:left
+keybind = ctrl+super+j=goto_split:down
+keybind = ctrl+super+k=goto_split:up
+keybind = ctrl+super+l=goto_split:right
+keybind = shift+super+d=new_split:down
+keybind = super+d=new_split:right
+keybind = cmd+alt+d=new_split:left
+keybind = super+x=close_surface
 
-# Claude Code
-keybind = shift+enter=text:\n
+# Tab navigation
+keybind = ctrl+super+bracket_left=previous_tab
+keybind = ctrl+super+bracket_right=next_tab
 
-# Used for Zellij
-keybind = cmd+t=unbind
-keybind = cmd+d=unbind
-keybind = cmd+shift+d=unbind
-keybind = cmd+w=unbind
-keybind = cmd+n=unbind
-keybind = cmd+f=unbind
+# Tab and pane shortcuts
+keybind = super+w=close_tab
