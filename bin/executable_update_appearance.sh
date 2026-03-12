@@ -5,6 +5,24 @@ set -euo pipefail
 STATE_FILE="${XDG_STATE_HOME:-$HOME/.local/state}/appearance.txt"
 mkdir -p "$(dirname "$STATE_FILE")"
 
+clear_zellij_stdin_cache() {
+    local cache_roots=(
+        "$HOME/Library/Caches/org.Zellij-Contributors.Zellij"
+        "${XDG_CACHE_HOME:-$HOME/.cache}/zellij"
+    )
+
+    # Zellij caches OSC 10/11 color query responses in stdin_cache. When the
+    # cache goes stale, apps running inside panes can render against the wrong
+    # terminal background until a fresh server rebuilds that cache.
+    for cache_root in "${cache_roots[@]}"; do
+        [[ -d "$cache_root" ]] || continue
+
+        while IFS= read -r cache_file; do
+            rm -f "$cache_file"
+        done < <(find "$cache_root" -type f -name stdin_cache 2>/dev/null)
+    done
+}
+
 # Check macOS appearance setting.
 APPEARANCE="$(defaults read -g AppleInterfaceStyle 2>/dev/null || true)"
 
@@ -31,6 +49,7 @@ fi
 
 "$FISH_BIN" -c "zellij_set_theme"
 "$FISH_BIN" -c "btop_set_theme"
+clear_zellij_stdin_cache
 
 # Trigger config reload for running btop instances.
 if pgrep -x btop >/dev/null 2>&1; then
