@@ -1,10 +1,9 @@
 function bat
-    set -l style (defaults read -globalDomain AppleInterfaceStyle &>/dev/null; and echo dark; or echo light)
+    set -l theme "folio-light"
 
-    if test "$style" = "dark"
-        set -f theme "tokyonight_night"
-    else
-        set -f theme "tokyonight_day"
+    defaults read -g AppleInterfaceStyle >/dev/null 2>&1
+    if test $status -eq 0
+        set theme "folio-dark"
     end
 
     command bat --theme="$theme" $argv
