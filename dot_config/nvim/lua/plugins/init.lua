@@ -151,6 +151,7 @@ return {
 			require("mason").setup({})
 			require("mason-tool-installer").setup({
 				ensure_installed = {
+					"json-lsp",
 					"stylua",
 					"tailwindcss-language-server",
 					"vtsls",
