@@ -1,0 +1,6 @@
+# VS Code extensions managed by chezmoi.
+jclem.folio@1.0.0
+biomejs.biome
+mvllow.rose-pine
+vscodevim.vim
+VSpaceCode.whichkey
