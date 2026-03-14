@@ -2,8 +2,20 @@
 	"[json]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"[jsonc]": {
+	"[javascript]": {
 		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[yaml]": {
 		"editor.indentSize": 2,
@@ -11,10 +23,8 @@
 	},
 	"editor.fontFamily": "Berkeley Mono Variable",
 	"editor.fontLigatures": true,
-	"editor.fontVariations": "'wdth' 80",
-	// "editor.fontFamily": "'Monaspace Xenon Var', monospace",
-	// "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10'",
 	"editor.fontSize": 14,
+	"editor.fontVariations": "'wdth' 80",
 	"editor.formatOnSave": true,
 	"editor.inlineSuggest.fontFamily": "'Monaspace Krypton Var', monospace",
 	"editor.minimap.enabled": false,
@@ -24,17 +34,26 @@
 	"git.autofetch": false,
 	"git.confirmSync": false,
 	"go.lintTool": "golangci-lint-v2",
-	"typescript.updateImportsOnFileMove.enabled": "always",
+	"js.updateImportsOnFileMove.enabled": "always",
+	"ts.updateImportsOnFileMove.enabled": "always",
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
-			"before": ["<space>"],
-			"commands": ["whichkey.show"]
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"whichkey.show"
+			]
 		}
 	],
 	"vim.visualModeKeyBindingsNonRecursive": [
 		{
-			"before": ["<space>"],
-			"commands": ["whichkey.show"]
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"whichkey.show"
+			]
 		}
 	],
 	"whichkey.bindingOverrides": [
@@ -57,43 +76,58 @@
 			"type": "command"
 		},
 		{
-			"commands": ["json.sort", "editor.action.formatDocument"],
+			"commands": [
+				"json.sort",
+				"editor.action.formatDocument"
+			],
 			"keys": "f.j",
 			"name": "JSON: Sort Document",
 			"type": "commands"
 		},
 		{
-			"commands": ["issue.copyGithubPermalink"],
+			"commands": [
+				"issue.copyGithubPermalink"
+			],
 			"keys": "g.l",
 			"name": "Copy GitHub Permalink",
 			"type": "commands"
 		},
 		{
-			"commands": ["issue.copyGithubPermalinkWithoutRange"],
+			"commands": [
+				"issue.copyGithubPermalinkWithoutRange"
+			],
 			"keys": "g.L",
 			"name": "Copy GitHub Permalink (without range)",
 			"type": "commands"
 		},
 		{
-			"commands": ["issue.copyMarkdownGithubPermalink"],
+			"commands": [
+				"issue.copyMarkdownGithubPermalink"
+			],
 			"keys": "g.m",
 			"name": "Copy Markdown GitHub Permalink",
 			"type": "commands"
 		},
 		{
-			"commands": ["issue.copyMarkdownGithubPermalinkWithoutRange"],
+			"commands": [
+				"issue.copyMarkdownGithubPermalinkWithoutRange"
+			],
 			"keys": "g.M",
 			"name": "Copy Markdown GitHub Permalink (without range)",
 			"type": "commands"
 		},
 		{
-			"commands": ["editor.action.revealDefinition"],
+			"commands": [
+				"editor.action.revealDefinition"
+			],
 			"keys": "s.d",
 			"name": "Go to Definition",
 			"type": "commands"
 		},
 		{
-			"commands": ["workbench.action.toggleStatusbarVisibility"],
+			"commands": [
+				"workbench.action.toggleStatusbarVisibility"
+			],
 			"keys": "T.s",
 			"name": "Toggle Status Bar Visibility",
 			"type": "commands"
@@ -105,8 +139,8 @@
 	"workbench.iconTheme": "rose-pine-icons",
 	"workbench.layoutControl.enabled": false,
 	"workbench.navigationControl.enabled": false,
-	"workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-	"workbench.preferredLightColorTheme": "Tokyo Night Light",
+	"workbench.preferredDarkColorTheme": "Folio Dark",
+	"workbench.preferredLightColorTheme": "Folio Light",
 	"workbench.statusBar.visible": false,
 	"yaml.schemas": {
 		"https://json.schemastore.org/github-workflow.json": "/.github/workflows/*.{yml,yaml}"
