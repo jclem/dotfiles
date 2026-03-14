@@ -150,7 +150,12 @@ return {
 
 			require("mason").setup({})
 			require("mason-tool-installer").setup({
-				ensure_installed = { "stylua", "yamlfmt" },
+				ensure_installed = {
+					"stylua",
+					"tailwindcss-language-server",
+					"vtsls",
+					"yamlfmt",
+				},
 			})
 		end,
 	},
