@@ -11,5 +11,6 @@ if status --is-interactive
     abbr --add --global vim  nvim
     abbr --add --global w    work
     abbr --add --global we   watchexec
+    abbr --add --global wt   worktree
     abbr --add --global zj   zellij
 end

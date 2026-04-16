@@ -8,4 +8,4 @@ if status --is-interactive
     alias lt="eza --tree --level=2 --long --icons=auto --git"
     alias lta="lt --all"
     alias z-="z -"
-  end 
+  end
