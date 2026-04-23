@@ -39,17 +39,18 @@ window-save-state = always
 # keybind = super+d=new_split:right
 # keybind = cmd+alt+d=new_split:left
 # keybind = super+x=close_surface
-
+#
 # # Tab navigation
 # keybind = ctrl+super+bracket_left=previous_tab
 # keybind = ctrl+super+bracket_right=next_tab
-
+#
 # # Tab and pane shortcuts
 # keybind = super+w=close_tab
 
 # Claude Code
 keybind = shift+enter=text:\n
 
+# Quick Terminal
 keybind = global:ctrl+t=toggle_quick_terminal
 
 # Used for Zellij
@@ -58,3 +59,4 @@ keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
 keybind = cmd+w=unbind
 keybind = cmd+n=unbind
+keybind = cmd+f=unbind
