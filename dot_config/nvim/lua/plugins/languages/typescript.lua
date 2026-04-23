@@ -110,27 +110,6 @@ return {
 					return
 				end
 
-				if client.name == "biome" then
-					vim.api.nvim_create_autocmd("BufWritePre", {
-						group = vim.api.nvim_create_augroup("BiomeFixAll" .. args.buf, {
-							clear = true,
-						}),
-						buffer = args.buf,
-
-						callback = function()
-							vim.lsp.buf.code_action({
-								context = {
-									---@diagnostic disable-next-line: assign-type-mismatch
-									only = { "source.fixAll.biome" },
-									diagnostics = {},
-								},
-
-								apply = true,
-							})
-						end,
-					})
-				end
-
 				if client.name == "eslint" then
 					vim.api.nvim_create_autocmd("BufWritePre", {
 						group = vim.api.nvim_create_augroup("EslintFixAll" .. args.buf, {
