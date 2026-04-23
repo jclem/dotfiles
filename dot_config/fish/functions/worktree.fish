@@ -127,14 +127,45 @@ function worktree
 
     switch $subcommand
         case new
-            set -l name $argv[2]
+            set -l branch ""
+            set -l positional
+            set -l i 2
+            while test $i -le (count $argv)
+                switch $argv[$i]
+                    case -h --help
+                        echo "Usage: worktree new [name] [-b B]"
+                        echo ""
+                        echo "Create a new worktree and branch (auto-named if omitted)."
+                        echo ""
+                        echo "OPTIONS:"
+                        echo "  -b, --branch B   Use existing branch B instead of creating a new one"
+                        return 0
+                    case -b --branch
+                        set i (math $i + 1)
+                        if test $i -gt (count $argv)
+                            echo "Error: --branch requires a value" >&2
+                            return 1
+                        end
+                        set branch $argv[$i]
+                    case '*'
+                        set -a positional $argv[$i]
+                end
+                set i (math $i + 1)
+            end
+
+            set -l name $positional[1]
             set -l repo_root (__wt_repo_root)
             or return 1
 
             if test -z "$name"
-                while true
-                    set name (__wt_generate_name)
-                    test -d "$repo_root/.worktrees/$name" || break
+                if test -n "$branch"
+                    set name (string replace -a '/' '--' $branch)
+                end
+                if test -z "$name"
+                    while true
+                        set name (__wt_generate_name)
+                        test -d "$repo_root/.worktrees/$name" || break
+                    end
                 end
             end
 
@@ -144,10 +175,20 @@ function worktree
                 return 1
             end
 
-            git -C $repo_root worktree add $worktree_path -b $name
+            if test -n "$branch"
+                git -C $repo_root worktree add $worktree_path $branch
+            else
+                git -C $repo_root worktree add $worktree_path -b $name
+            end
             and cd $worktree_path
 
         case list ls
+            if contains -- $argv[2] -h --help
+                echo "Usage: worktree ls"
+                echo ""
+                echo "List all worktrees."
+                return 0
+            end
             set -l repo_root (__wt_repo_root)
             or return 1
             for base in "$repo_root/.worktrees" "$repo_root/.claude/worktrees"
@@ -183,6 +224,12 @@ function worktree
             end
 
         case remove rm
+            if contains -- $argv[2] -h --help
+                echo "Usage: worktree rm [name]"
+                echo ""
+                echo "Remove a worktree. Auto-detects current worktree if name is omitted."
+                return 0
+            end
             set -l name $argv[2]
             set -l repo_root (__wt_repo_root)
             or return 1
@@ -212,6 +259,12 @@ function worktree
             end
 
         case cd
+            if contains -- $argv[2] -h --help
+                echo "Usage: worktree cd [name]"
+                echo ""
+                echo "Change directory to a worktree, or to the repo root if name is omitted."
+                return 0
+            end
             set -l name $argv[2]
             set -l repo_root (__wt_repo_root)
             or return 1
@@ -227,6 +280,16 @@ function worktree
             cd $worktree_path
 
         case set
+            if contains -- $argv[2] -h --help
+                echo "Usage: worktree set <field> [name] <value>"
+                echo ""
+                echo "Set metadata on a worktree."
+                echo ""
+                echo "FIELDS:"
+                echo "  note   Set a note"
+                echo "  pr     Set a PR link"
+                return 0
+            end
             set -l field $argv[2]
             set -l repo_root (__wt_repo_root)
             or return 1
@@ -255,14 +318,14 @@ function worktree
                     return 1
             end
 
-        case help ''
+        case help -h --help ''
             echo "worktree - manage git worktrees"
             echo ""
             echo "USAGE:"
-            echo "  worktree new [name]              Create worktree + branch (auto-name if omitted)"
-            echo "  worktree ls                      List all worktrees"
-            echo "  worktree rm [name]               Remove worktree (auto-detect if inside one)"
-            echo "  worktree cd [name]               Change directory (root if omitted)"
+            echo "  worktree new [name] [-b B]        Create worktree (auto-name if omitted, use existing branch B)"
+            echo "  worktree ls                       List all worktrees"
+            echo "  worktree rm [name]                Remove worktree (auto-detect if inside one)"
+            echo "  worktree cd [name]                Change directory (root if omitted)"
             echo "  worktree set note [name] <text>   Set a note"
             echo "  worktree set pr [name] <url>      Set a PR link"
 
