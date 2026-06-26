@@ -1,6 +1,29 @@
+[tools]
+"aqua:npm" = "latest"
+node = "latest"
+usage = "latest"
+
 [settings]
 dotfiles.root = "~/.dotfiles"
 experimental = true
+
+[bootstrap.packages]
+"brew:bat" = "latest"
+"brew:btop" = "latest"
+"brew:eza" = "latest"
+"brew:fd" = "latest"
+"brew:fish" = "latest"
+"brew:fzf" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:jq" = "latest"
+"brew:lazydocker" = "latest"
+"brew:lazygit" = "latest"
+"brew:neovim" = "latest"
+"brew:ripgrep" = "latest"
+"brew:watchexec" = "latest"
+"brew:wget" = "latest"
+"brew:zellij" = "latest"
 
 [dotfiles]
 # Repository and Mise configuration
