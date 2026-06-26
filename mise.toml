@@ -7,6 +7,21 @@ usage = "latest"
 dotfiles.root = "~/.dotfiles"
 experimental = true
 
+# macOS Dock preferences
+# https://mise.jdx.dev/bootstrap/macos-defaults.html
+[bootstrap.macos.dock]
+autohide = true
+orientation = "right"
+show_recents = false
+tilesize = 32
+
+# macOS Finder preferences
+# https://mise.jdx.dev/bootstrap/macos-defaults.html
+[bootstrap.macos.finder]
+preferred_view_style = "column"
+show_all_files = true
+show_pathbar = true
+
 # Machine bootstrap packages
 # https://mise.jdx.dev/bootstrap.html
 # https://mise.jdx.dev/bootstrap/packages/brew.html
