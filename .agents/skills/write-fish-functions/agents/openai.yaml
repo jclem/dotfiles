@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fish Function Style"
+  short_description: "Write consistent repository Fish functions"
+  default_prompt: "Use $write-fish-functions to create or revise a Fish function in this repository."
