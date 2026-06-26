@@ -11,3 +11,4 @@ experimental = true
 "~/.config/fish/config.fish" = ".config/fish/config.fish"
 "~/.config/fish/conf.d/0100-vars.fish" = ".config/fish/conf.d/0100-vars.fish"
 "~/.config/fish/conf.d/0200-path.fish" = ".config/fish/conf.d/0200-path.fish"
+"~/.config/fish/conf.d/0300-homebrew.fish" = ".config/fish/conf.d/0300-homebrew.fish"
