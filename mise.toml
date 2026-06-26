@@ -3,6 +3,10 @@ dotfiles.root = "~/.dotfiles"
 experimental = true
 
 [dotfiles]
+# Repository and Mise configuration
 "~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
 "~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
+
+# Fish shell configuration
 "~/.config/fish/config.fish" = ".config/fish/config.fish"
+"~/.config/fish/conf.d/010-vars.fish" = ".config/fish/conf.d/010-vars.fish"
