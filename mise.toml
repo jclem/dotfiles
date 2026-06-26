@@ -1,0 +1,8 @@
+[settings]
+dotfiles.root = "~/.dotfiles"
+experimental = true
+
+[dotfiles]
+"~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
+"~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
+"~/.config/fish/config.fish" = ".config/fish/config.fish"
