@@ -58,3 +58,4 @@ login_shell = "/opt/homebrew/bin/fish"
 # Fish shell configuration
 "~/.config/fish/config.fish" = ".config/fish/config.fish"
 "~/.config/fish/conf.d/" = ".config/fish/conf.d/"
+"~/.config/fish/functions/" = ".config/fish/functions/"
