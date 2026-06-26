@@ -7,6 +7,9 @@ usage = "latest"
 dotfiles.root = "~/.dotfiles"
 experimental = true
 
+# Machine bootstrap packages
+# https://mise.jdx.dev/bootstrap.html
+# https://mise.jdx.dev/bootstrap/packages/brew.html
 [bootstrap.packages]
 "brew:bat" = "latest"
 "brew:btop" = "latest"
@@ -25,6 +28,8 @@ experimental = true
 "brew:wget" = "latest"
 "brew:zellij" = "latest"
 
+# Managed dotfiles
+# https://mise.jdx.dev/dotfiles.html
 [dotfiles]
 # Repository and Mise configuration
 "~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
