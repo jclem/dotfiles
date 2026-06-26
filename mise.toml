@@ -43,6 +43,11 @@ show_pathbar = true
 "brew:wget" = "latest"
 "brew:zellij" = "latest"
 
+# User login shell
+# https://mise.jdx.dev/bootstrap/user.html
+[bootstrap.user]
+login_shell = "/opt/homebrew/bin/fish"
+
 # Managed dotfiles
 # https://mise.jdx.dev/dotfiles.html
 [dotfiles]
