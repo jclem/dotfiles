@@ -1,6 +1,6 @@
 # Print the current Git branch without a trailing newline.
 function current_branch --description "Print the current Git branch"
-    argparse --name=current_branch --max-args=0 'h/help' -- $argv
+    argparse --name=current_branch --max-args=0 h/help -- $argv
     or return
 
     if set --query _flag_help
