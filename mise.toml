@@ -9,7 +9,4 @@ experimental = true
 
 # Fish shell configuration
 "~/.config/fish/config.fish" = ".config/fish/config.fish"
-"~/.config/fish/conf.d/0100-vars.fish" = ".config/fish/conf.d/0100-vars.fish"
-"~/.config/fish/conf.d/0200-path.fish" = ".config/fish/conf.d/0200-path.fish"
-"~/.config/fish/conf.d/0300-homebrew.fish" = ".config/fish/conf.d/0300-homebrew.fish"
-"~/.config/fish/conf.d/0400-abbreviations.fish" = ".config/fish/conf.d/0400-abbreviations.fish"
+"~/.config/fish/conf.d/" = ".config/fish/conf.d/"
