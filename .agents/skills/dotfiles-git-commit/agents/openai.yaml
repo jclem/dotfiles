@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dotfiles Git Commits"
+  short_description: "Write repository-style Git commit messages"
+  default_prompt: "Use $dotfiles-git-commit to draft a commit message for my current changes."
