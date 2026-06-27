@@ -11,7 +11,7 @@ Create one function per `.config/fish/functions/<function_name>.fish` file. Matc
 
 - Add a concise one-line comment above the function.
 - Add a short `--description` to the function declaration.
-- Parse arguments with `argparse --name=<function_name>` and an appropriate `--max-args` or `--min-args` constraint.
+- For user-invoked functions, parse arguments with `argparse --name=<function_name>` and an appropriate `--max-args` or `--min-args` constraint.
 - Follow `argparse` immediately with `or return`.
 - Use four-space indentation and accept `fish_indent`'s canonical formatting.
 
@@ -38,14 +38,16 @@ function example --description "Describe the function"
 end
 ```
 
-## Always provide help
+## Always provide help for user commands
 
-Implement both `-h` and `--help` for every function without exception, including functions that take no other options or arguments.
+Implement both `-h` and `--help` for every user-invoked function without exception, including functions that take no other options or arguments.
 
 - Define `h/help` with `argparse`.
 - Make both forms print identical help and return successfully without performing the function's normal action.
 - Include usage, a concise explanation, and every option.
 - Show short and long forms together, with `-h, --help` last.
+
+Do not impose command-style argument parsing or help on Fish-owned callbacks such as `fish_prompt`. Preserve the callback protocol, accept or ignore Fish-provided arguments as appropriate, and add a comment explaining the exception.
 
 ## Prefer explicit syntax
 
@@ -83,4 +85,4 @@ fish --no-config -c 'source .config/fish/functions/<function_name>.fish; <functi
 fish --no-config -c 'source .config/fish/functions/<function_name>.fish; <function_name> --help'
 ```
 
-Confirm that both help forms match. Add focused tests for normal output, invalid arguments, missing dependencies, and failure statuses where safe. Do not execute destructive operations merely to validate a function.
+For user-invoked functions, confirm that both help forms match. For Fish-owned callbacks, replace the help checks with focused callback-protocol tests. Add tests for normal output, invalid arguments, missing dependencies, and failure statuses where safe. Do not execute destructive operations merely to validate a function.
