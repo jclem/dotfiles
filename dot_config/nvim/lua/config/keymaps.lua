@@ -112,9 +112,16 @@ end, { desc = "Copy GitHub permalink with lines" })
 -- Treat Control-C like Escape in Insert mode so InsertLeave autocmds run.
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- Request LSP completion explicitly when an automatic result needs refreshing.
--- Use Control-N/Control-P to select and Control-Y to accept a candidate.
-vim.keymap.set("i", "<C-Space>", vim.lsp.completion.get, { desc = "Show LSP completion" })
+-- Toggle LSP completion explicitly. Use Control-N/Control-P to select and
+-- Control-Y to accept a candidate.
+vim.keymap.set("i", "<C-Space>", function()
+    if vim.fn.pumvisible() == 1 then
+        return "<C-e>"
+    end
+
+    vim.lsp.completion.get()
+    return ""
+end, { desc = "Toggle LSP completion", expr = true })
 
 -- Navigate splits with the same directional keys used elsewhere in Neovim.
 -- Zellij must be locked for it to pass these key combinations through.
