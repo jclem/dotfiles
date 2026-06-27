@@ -55,16 +55,16 @@ login_shell = "/opt/homebrew/bin/fish"
 [dotfiles]
 "~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
 
-"~/.config/bat/" = ".config/bat/"
-"~/.config/btop/" = ".config/btop/"
-"~/.config/fish/" = ".config/fish/"
-"~/.config/gh/" = ".config/gh/"
-"~/.config/ghostty/" = ".config/ghostty/"
+"~/.config/bat/" = { source = ".config/bat/", mode = "symlink-each" }
+"~/.config/btop/" = { source = ".config/btop/", mode = "symlink-each" }
+"~/.config/fish/" = { source = ".config/fish/", mode = "symlink-each" }
+"~/.config/gh/" = { source = ".config/gh/", mode = "symlink-each" }
+"~/.config/ghostty/" = { source = ".config/ghostty/", mode = "symlink-each" }
 
 # Render machine-local Git identity values with Tera.
 # https://mise.jdx.dev/templates.html
 "~/.config/git/config" = { source = ".config/git/config.tmpl", mode = "template" }
 "~/.config/git/ignore" = ".config/git/ignore"
-"~/.config/zellij/" = ".config/zellij/"
+"~/.config/zellij/" = { source = ".config/zellij/", mode = "symlink-each" }
 "~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
 "~/.ssh/config" = ".ssh/config"
