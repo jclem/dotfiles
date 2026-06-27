@@ -2,6 +2,7 @@
 "aqua:npm" = "latest"
 atuin = "latest"
 codex = "latest"
+fnox = "latest"
 "github:jclem/get" = "latest"
 go = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
