@@ -4,8 +4,15 @@ local files = require("mini.files")
 
 files.setup()
 
-vim.keymap.set("n", "\\", function()
+local function toggle()
     if not files.close() then
         files.open()
     end
-end, { desc = "Toggle file tree" })
+end
+
+vim.keymap.set("n", "\\", toggle, { desc = "Toggle file tree" })
+vim.keymap.set("n", "<leader>ft", toggle, { desc = "Toggle file tree" })
+
+vim.keymap.set("n", "<leader>fT", function()
+    files.open(vim.api.nvim_buf_get_name(0))
+end, { desc = "Reveal current file in file tree" })
