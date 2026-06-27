@@ -67,7 +67,7 @@ function gg --description "Switch or clean up Git branches"
                 '
                 command git for-each-ref \
                     --sort=refname \
-                    --format='B%x09%(refname:short)%x09%(upstream:short)' \
+                    --format='B%09%(refname:short)%09%(upstream:short)' \
                     refs/heads
             end | command awk -F '\t' \
                 -v current="$current_branch" \
@@ -119,14 +119,26 @@ function gg --description "Switch or clean up Git branches"
                 --bind='space:toggle' \
                 --delimiter='\t' \
                 --with-nth=2 \
-                --prompt='delete branches> ' \
-                --header="Space selects. Enter continues. $origin_icon origin  $worktree_icon worktree" \
+                --style='full:rounded' \
+                --layout=reverse \
+                --margin='1,2' \
+                --padding=1 \
+                --highlight-line \
+                --pointer='▶' \
+                --marker='✓' \
+                --prompt='› ' \
+                --ghost='Type to filter branches' \
+                --header="Space select · Enter continue · $origin_icon origin · $worktree_icon worktree" \
+                --list-label=' branches ' \
+                --input-label=' filter ' \
+                --preview-label=' recent commits ' \
                 --preview='git log --oneline --decorate --max-count=12 {1} 2>/dev/null' \
-                --preview-window='right,45%,border-left' \
+                --preview-window='right,50%,border-rounded' \
                 --border=rounded \
                 --border-label=' gg cleanup ' \
                 --info=inline-right \
-                --height='80%')
+                --height='70%' \
+                --min-height=20)
             set --local fzf_status $status
 
             if contains -- $fzf_status 1 130
