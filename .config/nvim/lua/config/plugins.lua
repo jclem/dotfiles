@@ -2,6 +2,9 @@
 -- https://neovim.io/doc/user/pack.html#vim.pack
 vim.pack.add({
     {
+        src = "https://github.com/ibhagwan/fzf-lua",
+    },
+    {
         src = "https://github.com/b0o/schemastore.nvim",
     },
     {
@@ -22,4 +25,5 @@ require("codex").setup({
     codex_executable = "codex",
 })
 
+require("config.fzf")
 require("config.filetree")
