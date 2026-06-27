@@ -43,6 +43,7 @@ show_pathbar = true
 "brew:watchexec" = "latest"
 "brew:wget" = "latest"
 "brew:zellij" = "latest"
+"brew-cask:1password-cli" = "latest"
 
 # User login shell
 # https://mise.jdx.dev/bootstrap/user.html
@@ -52,15 +53,11 @@ login_shell = "/opt/homebrew/bin/fish"
 # Managed dotfiles
 # https://mise.jdx.dev/dotfiles.html
 [dotfiles]
-# Repository and Mise configuration
 "~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
-"~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
 
-# Fish shell configuration
-"~/.config/fish/config.fish" = ".config/fish/config.fish"
 "~/.config/fish/conf.d/" = ".config/fish/conf.d/"
+"~/.config/fish/config.fish" = ".config/fish/config.fish"
 "~/.config/fish/functions/" = ".config/fish/functions/"
-
-# GitHub CLI configuration
-# https://cli.github.com/manual/gh_config
-"~/.config/gh/config.yml" = ".config/gh/config.yml"
+"~/.config/gh/" = ".config/gh/"
+"~/.config/ghostty/" = ".config/ghostty/"
+"~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
