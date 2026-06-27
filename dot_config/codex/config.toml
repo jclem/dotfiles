@@ -1,0 +1,37 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# Sandboxing
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+allow_login_shell = true
+sandbox_mode = "workspace-write"
+
+# Model settings
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+
+service_tier = "fast"
+
+[shell_environment_policy]
+inherit = "all"
+include_only = [
+  "PATH",
+  "SHELL",
+  "TMPDIR",
+  "TEMP",
+  "TMP",
+  "HOME",
+  "LANG",
+  "LC_ALL",
+  "LC_CTYPE",
+  "LOGNAME",
+  "USER",
+  "XDG_*",
+  "SSH_AUTH_SOCK",
+  "EDITOR",
+  "VISUAL",
+]
+
+[features]
+apps = true
+codex_git_commit = false
