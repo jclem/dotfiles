@@ -1,5 +1,6 @@
 [tools]
 "aqua:npm" = "latest"
+atuin = "latest"
 "github:jclem/get" = "latest"
 node = "latest"
 usage = "latest"
