@@ -21,6 +21,7 @@ usage = "latest"
 [settings]
 dotfiles.root = "~/.dotfiles"
 experimental = true
+minimum_release_age_excludes = ["codex"]
 
 # macOS Dock preferences
 # https://mise.jdx.dev/bootstrap/macos-defaults.html
