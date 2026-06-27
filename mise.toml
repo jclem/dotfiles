@@ -6,6 +6,7 @@ usage = "latest"
 [settings]
 dotfiles.root = "~/.dotfiles"
 experimental = true
+trusted_config_paths = ["/Users/jclem/src/github.com/makenotion/notion-next"]
 
 # macOS Dock preferences
 # https://mise.jdx.dev/bootstrap/macos-defaults.html
