@@ -60,3 +60,7 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/fish/config.fish" = ".config/fish/config.fish"
 "~/.config/fish/conf.d/" = ".config/fish/conf.d/"
 "~/.config/fish/functions/" = ".config/fish/functions/"
+
+# GitHub CLI configuration
+# https://cli.github.com/manual/gh_config
+"~/.config/gh/config.yml" = ".config/gh/config.yml"

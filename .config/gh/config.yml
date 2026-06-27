@@ -1,0 +1,19 @@
+# https://cli.github.com/manual/gh_config
+
+# Current GitHub CLI configuration schema version.
+version: 1
+
+# Use SSH for Git clone and push operations. API authentication remains token-based.
+git_protocol: ssh
+
+# Interactive authoring and display preferences.
+editor: nvim
+prompt: enabled
+prefer_editor_prompt: enabled
+pager: "less --quit-if-one-screen --RAW-CONTROL-CHARS --no-init"
+color_labels: enabled
+
+# Command shortcuts.
+aliases:
+  co: pr checkout
+  view: repo view --web
