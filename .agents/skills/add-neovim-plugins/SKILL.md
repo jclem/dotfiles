@@ -9,7 +9,7 @@ Minimize dependencies and use Neovim's native package manager.
 
 ## Inspect before adding
 
-1. Read `.config/nvim/init.lua`, `.config/nvim/lua/config/plugins.lua`, and related configuration modules before editing.
+1. Read `dot_config/nvim/init.lua`, `dot_config/nvim/lua/config/plugins.lua`, and related configuration modules before editing.
 2. Check whether Neovim 0.12 already provides the requested capability. Prefer a core feature when it is sufficient.
 3. Read the plugin's current upstream documentation and release history. Verify its source URL, Neovim requirements, setup API, runtime dependencies, build steps, and version tags.
 4. Read the native package documentation when loading behavior or hooks matter:
@@ -18,7 +18,7 @@ Minimize dependencies and use Neovim's native package manager.
 
 ## Register the plugin
 
-Add external Git repositories to the existing `vim.pack.add()` call in `.config/nvim/lua/config/plugins.lua`:
+Add external Git repositories to the existing `vim.pack.add()` call in `dot_config/nvim/lua/config/plugins.lua`:
 
 ```lua
 vim.pack.add({
@@ -52,7 +52,7 @@ vim.opt.runtimepath:prepend(vim.fn.stdpath("config") .. "/plugins/example.nvim")
 
 ## Maintain the lockfile
 
-- Treat `.config/nvim/nvim-pack-lock.json` as generated configuration and commit it when `vim.pack` creates or changes it.
+- Treat `dot_config/nvim/nvim-pack-lock.json` as generated configuration and commit it when `vim.pack` creates or changes it.
 - Never edit lockfile revisions by hand.
 - Use `:packupdate` to update packages and review its confirmation buffer before accepting changes.
 - Remove obsolete specs before using `:packdel` to delete packages.

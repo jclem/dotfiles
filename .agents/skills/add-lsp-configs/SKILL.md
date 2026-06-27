@@ -9,7 +9,7 @@ Use Neovim's native LSP configuration model and keep each server override minima
 
 ## Inspect the current setup
 
-1. Read `.config/nvim/init.lua`, `.config/nvim/lua/config/plugins.lua`, existing `.config/nvim/after/lsp/` files, and any central LSP-enabling module before editing.
+1. Read `dot_config/nvim/init.lua`, `dot_config/nvim/lua/config/plugins.lua`, existing `dot_config/nvim/after/lsp/` files, and any central LSP-enabling module before editing.
 2. Confirm Neovim 0.12 or newer is targeted and `neovim/nvim-lspconfig` is already registered through `vim.pack`.
 3. Consult both official sources before choosing names or settings:
    - https://github.com/neovim/nvim-lspconfig/tree/master
@@ -18,7 +18,7 @@ Use Neovim's native LSP configuration model and keep each server override minima
 
 ## Add one server
 
-Prefer `.config/nvim/after/lsp/<server>.lua` for overrides. Return only values that differ from nvim-lspconfig's defaults:
+Prefer `dot_config/nvim/after/lsp/<server>.lua` for overrides. Return only values that differ from nvim-lspconfig's defaults:
 
 ```lua
 return {
@@ -34,7 +34,7 @@ Enable the config with Neovim's native API:
 vim.lsp.enable("server_name")
 ```
 
-Keep enabled server names in the repository's central LSP module. If none exists, create `.config/nvim/lua/config/lsp.lua` and require it from `init.lua` after `config.plugins`.
+Keep enabled server names in the repository's central LSP module. If none exists, create `dot_config/nvim/lua/config/lsp.lua` and require it from `init.lua` after `config.plugins`.
 
 Use `vim.lsp.config("server_name", overrides)` only when a returned `after/lsp` config is unsuitable. Never use deprecated `require("lspconfig").server.setup()` calls.
 

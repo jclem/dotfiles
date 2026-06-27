@@ -1,11 +1,11 @@
 ---
 name: write-fish-functions
-description: Create, rewrite, and review Fish functions for the dotfiles2 repository using its standard file layout, documentation, argument parsing, long-form options, error handling, safety checks, and validation. Use whenever adding or modifying a file under .config/fish/functions.
+description: Create, rewrite, and review Fish functions for the dotfiles2 repository using its standard file layout, documentation, argument parsing, long-form options, error handling, safety checks, and validation. Use whenever adding or modifying a file under dot_config/fish/functions.
 ---
 
 # Write Fish Functions
 
-Create one function per `.config/fish/functions/<function_name>.fish` file. Match the filename to the function name.
+Create one function per `dot_config/fish/functions/<function_name>.fish` file. Match the filename to the function name.
 
 ## Follow the standard structure
 
@@ -79,10 +79,10 @@ For destructive functions:
 Run all applicable checks before finishing:
 
 ```sh
-fish --no-execute .config/fish/functions/<function_name>.fish
-fish_indent --check .config/fish/functions/<function_name>.fish
-fish --no-config -c 'source .config/fish/functions/<function_name>.fish; <function_name> -h'
-fish --no-config -c 'source .config/fish/functions/<function_name>.fish; <function_name> --help'
+fish --no-execute dot_config/fish/functions/<function_name>.fish
+fish_indent --check dot_config/fish/functions/<function_name>.fish
+fish --no-config -c 'source dot_config/fish/functions/<function_name>.fish; <function_name> -h'
+fish --no-config -c 'source dot_config/fish/functions/<function_name>.fish; <function_name> --help'
 ```
 
 For user-invoked functions, confirm that both help forms match. For Fish-owned callbacks, replace the help checks with focused callback-protocol tests. Add tests for normal output, invalid arguments, missing dependencies, and failure statuses where safe. Do not execute destructive operations merely to validate a function.
