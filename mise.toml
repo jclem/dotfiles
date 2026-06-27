@@ -53,6 +53,7 @@ login_shell = "/opt/homebrew/bin/fish"
 # Managed dotfiles
 # https://mise.jdx.dev/dotfiles.html
 [dotfiles]
+"~/.bashrc" = ".bashrc"
 "~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
 
 "~/.config/bat/" = { source = ".config/bat/", mode = "symlink-each" }
@@ -68,3 +69,4 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/zellij/" = { source = ".config/zellij/", mode = "symlink-each" }
 "~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
 "~/.ssh/config" = ".ssh/config"
+"~/.zshrc" = ".zshrc"
