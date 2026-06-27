@@ -25,8 +25,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -- Enable language servers configured by nvim-lspconfig and after/lsp overrides.
 vim.lsp.enable({
     "fish_lsp",
+    "gh_actions_ls",
     "golangci_lint_ls",
     "gopls",
     "jsonls",
     "lua_ls",
+    "rust_analyzer",
+    "tsgo",
+    "vtsls",
+    "yamlls",
 })

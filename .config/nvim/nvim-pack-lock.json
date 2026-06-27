@@ -14,6 +14,11 @@
       "src": "https://github.com/neovim/nvim-lspconfig",
       "version": ">=0.0.0"
     },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
     "schemastore.nvim": {
       "rev": "490afbd7fd3b316330550405ac74758a971104a4",
       "src": "https://github.com/b0o/schemastore.nvim"
