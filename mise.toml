@@ -2,6 +2,7 @@
 "aqua:npm" = "latest"
 atuin = "latest"
 "github:jclem/get" = "latest"
+lua-language-server = "latest"
 node = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 usage = "latest"
