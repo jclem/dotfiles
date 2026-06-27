@@ -14,6 +14,9 @@ set -x CONFIG "$XDG_CONFIG_HOME"
 set -x DATA "$XDG_DATA_HOME"
 set -x STATE "$XDG_STATE_HOME"
 
+# Tool configuration files
+set -x RIPGREP_CONFIG_PATH "$CONFIG/ripgrep/config"
+
 # Common user directories
 set -x BIN "$HOME/.local/bin"
 set -x CODE "$HOME/src/github.com"
