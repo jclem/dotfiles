@@ -1,3 +1,6 @@
+[settings.general]
+mise = true
+
 [settings.web]
 auto_start = true
 bind_port = 6660

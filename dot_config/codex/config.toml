@@ -35,3 +35,7 @@ include_only = [
 [features]
 apps = true
 codex_git_commit = false
+
+[mcp_servers.pitchfork]
+command = "pitchfork"
+args = ["mcp"]
