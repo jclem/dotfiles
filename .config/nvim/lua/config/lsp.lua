@@ -19,12 +19,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
             -- https://neovim.io/doc/user/lsp.html#vim.lsp.completion.enable()
             vim.lsp.completion.enable(true, client.id, args.buf)
         end
-
-        local opts = { buffer = args.buf }
-
-        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, {
-            desc = "Code actions",
-        }))
     end,
 })
 

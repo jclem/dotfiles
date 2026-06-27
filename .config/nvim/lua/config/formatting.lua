@@ -23,6 +23,6 @@ conform.setup({
     notify_no_formatters = false,
 })
 
-vim.keymap.set({ "n", "x" }, "<leader>cf", function()
+vim.keymap.set({ "n", "x" }, "<leader>bf", function()
     conform.format({ async = true, lsp_format = "fallback" })
 end, { desc = "Format buffer" })

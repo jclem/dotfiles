@@ -29,6 +29,10 @@ vim.pack.add({
         src = "https://github.com/ibhagwan/fzf-lua",
     },
     {
+        src = "https://github.com/lewis6991/gitsigns.nvim",
+        version = vim.version.range("*"),
+    },
+    {
         src = "https://github.com/b0o/schemastore.nvim",
     },
     {
@@ -40,7 +44,19 @@ vim.pack.add({
         version = "main",
     },
     {
+        src = "https://github.com/nvim-mini/mini.bracketed",
+        version = vim.version.range("*"),
+    },
+    {
         src = "https://github.com/nvim-mini/mini.files",
+        version = vim.version.range("*"),
+    },
+    {
+        src = "https://github.com/nvim-mini/mini.pairs",
+        version = vim.version.range("*"),
+    },
+    {
+        src = "https://github.com/nvim-mini/mini.surround",
         version = vim.version.range("*"),
     },
     {
@@ -64,5 +80,7 @@ require("codex").setup({
 require("config.formatting")
 require("config.fzf")
 require("config.filetree")
+require("config.gitsigns")
+require("config.mini")
 require("config.treesitter").setup()
 require("config.which-key")

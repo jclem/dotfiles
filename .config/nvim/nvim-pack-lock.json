@@ -9,9 +9,29 @@
       "rev": "b6f0392fe1645973c795b5bbbd8d6db466a5a25a",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
+    "gitsigns.nvim": {
+      "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
+      "src": "https://github.com/lewis6991/gitsigns.nvim",
+      "version": ">=0.0.0"
+    },
+    "mini.bracketed": {
+      "rev": "7662c280946faf573c4eabf307d78406ad0783e4",
+      "src": "https://github.com/nvim-mini/mini.bracketed",
+      "version": ">=0.0.0"
+    },
     "mini.files": {
       "rev": "a5689dae6b732955e33eec225b798d6815063179",
       "src": "https://github.com/nvim-mini/mini.files",
+      "version": ">=0.0.0"
+    },
+    "mini.pairs": {
+      "rev": "4a014143fcb4e9df26198ccb3ecff3b9e77a048c",
+      "src": "https://github.com/nvim-mini/mini.pairs",
+      "version": ">=0.0.0"
+    },
+    "mini.surround": {
+      "rev": "580e4cb98c5900d9fe743865fb5a5b2178b4ab18",
+      "src": "https://github.com/nvim-mini/mini.surround",
       "version": ">=0.0.0"
     },
     "nvim-lspconfig": {
