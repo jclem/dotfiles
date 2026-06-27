@@ -15,6 +15,10 @@ vim.pack.add({
         src = "https://github.com/nvim-mini/mini.files",
         version = vim.version.range("*"),
     },
+    {
+        src = "https://github.com/folke/which-key.nvim",
+        version = vim.version.range("*"),
+    },
 }, { confirm = false })
 
 -- Load the repository-local Codex plugin directly from the configuration.
@@ -27,3 +31,4 @@ require("codex").setup({
 
 require("config.fzf")
 require("config.filetree")
+require("config.which-key")
