@@ -90,4 +90,5 @@ login_shell = "/opt/homebrew/bin/fish"
 
 # Less-used shell configs.
 "~/.bashrc" = "dot_bashrc"
+"~/.zprofile" = "dot_zprofile"
 "~/.zshrc" = "dot_zshrc"
