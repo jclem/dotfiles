@@ -178,8 +178,8 @@ keybinds clear-defaults=true {
 
 // Select a theme from ~/.config/zellij/themes.
 // https://zellij.dev/documentation/themes.html
-// theme "folio-dark"
-theme "folio-light"
+// theme "folio-light"
+theme "folio-dark"
 
 // Keep this many lines of terminal output available for scrolling.
 // https://zellij.dev/documentation/options.html#scroll-buffer-size
