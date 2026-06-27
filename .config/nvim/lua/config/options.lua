@@ -63,6 +63,10 @@ vim.o.updatetime = 250
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Do not create recovery swapfiles for open buffers.
+-- https://neovim.io/doc/user/options.html#'swapfile'
+vim.o.swapfile = false
+
 -- Preserve undo history between editing sessions. Neovim 0.12 already places
 -- these files under stdpath("state"), so no custom undo directory is needed.
 vim.o.undofile = true
