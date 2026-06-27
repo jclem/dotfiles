@@ -3,6 +3,7 @@
 atuin = "latest"
 "github:jclem/get" = "latest"
 node = "latest"
+"npm:vscode-langservers-extracted" = "latest"
 usage = "latest"
 
 [settings]

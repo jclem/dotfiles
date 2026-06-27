@@ -2,6 +2,9 @@
 -- https://neovim.io/doc/user/pack.html#vim.pack
 vim.pack.add({
     {
+        src = "https://github.com/b0o/schemastore.nvim",
+    },
+    {
         src = "https://github.com/neovim/nvim-lspconfig",
         version = vim.version.range("*"),
     },

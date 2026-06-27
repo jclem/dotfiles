@@ -9,6 +9,10 @@
       "rev": "229b79051b380377664edc4cbd534930154921a1",
       "src": "https://github.com/neovim/nvim-lspconfig",
       "version": ">=0.0.0"
+    },
+    "schemastore.nvim": {
+      "rev": "490afbd7fd3b316330550405ac74758a971104a4",
+      "src": "https://github.com/b0o/schemastore.nvim"
     }
   }
 }
