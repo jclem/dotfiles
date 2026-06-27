@@ -20,7 +20,6 @@ usage = "latest"
 [settings]
 dotfiles.root = "~/.dotfiles"
 experimental = true
-trusted_config_paths = ["/Users/jclem/src/github.com/makenotion/notion-next"]
 
 # macOS Dock preferences
 # https://mise.jdx.dev/bootstrap/macos-defaults.html
@@ -69,7 +68,7 @@ login_shell = "/opt/homebrew/bin/fish"
 # Managed dotfiles
 # https://mise.jdx.dev/dotfiles.html
 [dotfiles]
-"~/.dotfiles" = "~/src/github.com/jclem/dotfiles2"
+"~/.dotfiles" = "~/src/github.com/jclem/dotfiles"
 
 "~/.config/bat/" = { source = "dot_config/bat/", mode = "symlink-each" }
 "~/.config/btop/" = { source = "dot_config/btop/", mode = "symlink-each" }
@@ -84,7 +83,7 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/git/config" = { source = "dot_config/git/config.tmpl", mode = "template" }
 "~/.config/git/ignore" = "dot_config/git/ignore"
 "~/.config/zellij/" = { source = "dot_config/zellij/", mode = "symlink-each" }
-"~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
+"~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles/mise.toml"
 "~/.ssh/config" = "dot_ssh/config"
 
 # Less-used shell configs.

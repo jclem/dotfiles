@@ -1,6 +1,6 @@
 ---
 name: add-neovim-plugins
-description: Add, configure, update, or remove Neovim 0.12 plugins in the dotfiles2 repository using the native vim.pack package manager. Use when introducing a plugin, replacing a plugin, adding plugin dependencies or build hooks, configuring native plugin loading, or maintaining the Neovim package lockfile.
+description: Add, configure, update, or remove Neovim 0.12 plugins in the dotfiles repository using the native vim.pack package manager. Use when introducing a plugin, replacing a plugin, adding plugin dependencies or build hooks, configuring native plugin loading, or maintaining the Neovim package lockfile.
 ---
 
 # Add Neovim Plugins

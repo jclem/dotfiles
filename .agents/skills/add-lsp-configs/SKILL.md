@@ -1,6 +1,6 @@
 ---
 name: add-lsp-configs
-description: Add or update Neovim 0.12 language-server configurations using native vim.lsp APIs, nvim-lspconfig defaults, vim.pack, and Mise-managed server executables. Use when adding a language server, migrating an LSP spec, changing server settings, enabling LSP formatting, or validating LSP behavior in the dotfiles2 Neovim configuration.
+description: Add or update Neovim 0.12 language-server configurations using native vim.lsp APIs, nvim-lspconfig defaults, vim.pack, and Mise-managed server executables. Use when adding a language server, migrating an LSP spec, changing server settings, enabling LSP formatting, or validating LSP behavior in the dotfiles Neovim configuration.
 ---
 
 # Add Neovim LSP Configs

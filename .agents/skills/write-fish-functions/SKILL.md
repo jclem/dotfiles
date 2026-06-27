@@ -1,6 +1,6 @@
 ---
 name: write-fish-functions
-description: Create, rewrite, and review Fish functions for the dotfiles2 repository using its standard file layout, documentation, argument parsing, long-form options, error handling, safety checks, and validation. Use whenever adding or modifying a file under dot_config/fish/functions.
+description: Create, rewrite, and review Fish functions for the dotfiles repository using its standard file layout, documentation, argument parsing, long-form options, error handling, safety checks, and validation. Use whenever adding or modifying a file under dot_config/fish/functions.
 ---
 
 # Write Fish Functions

@@ -9,8 +9,8 @@ installed.
 
 ```sh
 mkdir -p ~/src/github.com/jclem
-git clone https://github.com/jclem/dotfiles2.git ~/src/github.com/jclem/dotfiles2
-cd ~/src/github.com/jclem/dotfiles2
+git clone https://github.com/jclem/dotfiles.git ~/src/github.com/jclem/dotfiles
+cd ~/src/github.com/jclem/dotfiles
 mise trust
 mise bootstrap --force-dotfiles
 ```

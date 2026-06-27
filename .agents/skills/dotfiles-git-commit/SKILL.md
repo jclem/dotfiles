@@ -1,6 +1,6 @@
 ---
 name: dotfiles-git-commit
-description: Write and review Git commit messages for the dotfiles2 repository. Use when drafting a commit message, creating a commit, or checking whether commit text follows this repository's area-prefixed style.
+description: Write and review Git commit messages for the dotfiles repository. Use when drafting a commit message, creating a commit, or checking whether commit text follows this repository's area-prefixed style.
 ---
 
 # Dotfiles Git Commits
