@@ -72,6 +72,7 @@ login_shell = "/opt/homebrew/bin/fish"
 [dotfiles]
 "~/.dotfiles" = "~/src/github.com/jclem/dotfiles"
 
+"~/.config/atuin/" = { source = "dot_config/atuin/", mode = "symlink-each" }
 "~/.config/bat/" = { source = "dot_config/bat/", mode = "symlink-each" }
 "~/.config/btop/" = { source = "dot_config/btop/", mode = "symlink-each" }
 "~/.config/fish/" = { source = "dot_config/fish/", mode = "symlink-each" }
