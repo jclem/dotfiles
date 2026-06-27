@@ -86,12 +86,13 @@ vim.o.showbreak = "┕━ "
 -- default. Tabs, trailing spaces, and non-breaking spaces each get a distinct mark.
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- Show completion candidates as text is entered. Adding the omnifunc source
--- lets the same native menu combine LSP results with Neovim's buffer sources.
+-- Show completion candidates as text is entered. Put the LSP-backed omnifunc
+-- first, while retaining Neovim's buffer and tag sources as fallbacks. Keep
+-- fuzzy matching without score-based sorting so that source priority is stable.
 -- https://neovim.io/doc/user/insert.html#ins-autocompletion
 vim.o.autocomplete = true
-vim.opt.complete:append("o")
-vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noselect", "popup" }
+vim.opt.complete = { "o", ".", "w", "b", "u", "t" }
+vim.opt.completeopt = { "fuzzy", "nosort", "menu", "menuone", "noselect", "popup" }
 
 -- Keep the completion menu compact and give it and other floating windows a
 -- consistent rounded border. Neovim does not yet expose a documentation-width
