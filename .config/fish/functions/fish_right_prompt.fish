@@ -5,15 +5,11 @@
 function fish_right_prompt --description "Render the right prompt"
     set --global __fish_git_prompt_showcolorhints true
 
-    # Work around fish_git_prompt not treating this repository setting as a
-    # veto when the Fish variable enables informative status globally:
+    # Disable informative status for an expensive repository by setting all three:
+    # git config --local bash.showDirtyState false
+    # git config --local bash.showUntrackedFiles false
     # git config --local bash.showInformativeStatus false
-    set --local informative_status (command git config --type=bool --get bash.showInformativeStatus 2>/dev/null)
-    if test "$informative_status" = false
-        set --global __fish_git_prompt_show_informative_status false
-    else
-        set --global __fish_git_prompt_show_informative_status true
-    end
+    set --global __fish_git_prompt_show_informative_status true
 
     fish_git_prompt
 end
