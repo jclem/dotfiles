@@ -65,4 +65,5 @@ login_shell = "/opt/homebrew/bin/fish"
 # https://mise.jdx.dev/templates.html
 "~/.config/git/config" = { source = ".config/git/config.tmpl", mode = "template" }
 "~/.config/git/ignore" = ".config/git/ignore"
+"~/.config/zellij/" = ".config/zellij/"
 "~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"

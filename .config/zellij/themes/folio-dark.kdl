@@ -1,0 +1,120 @@
+themes {
+  folio-dark {
+    text_unselected {
+      base 213 210 200  // #D5D2C8 (fg0)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 200 96 96  // #C86060 (red)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 112 153 187  // #7099BB (blue)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    text_selected {
+      base 28 27 24  // #1C1B18 (bg0)
+      background 213 210 200  // #D5D2C8 (fg0)
+      emphasis_0 200 96 96  // #C86060 (red)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 112 153 187  // #7099BB (blue)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    ribbon_unselected {
+      base 213 210 200  // #D5D2C8 (fg0)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 196 160 80  // #C4A050 (yellow)
+      emphasis_1 112 153 187  // #7099BB (blue)
+      emphasis_2 168 130 168  // #A882A8 (magenta)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    ribbon_selected {
+      base 28 27 24  // #1C1B18 (bg0)
+      background 213 210 200  // #D5D2C8 (fg0)
+      emphasis_0 196 160 80  // #C4A050 (yellow)
+      emphasis_1 112 153 187  // #7099BB (blue)
+      emphasis_2 168 130 168  // #A882A8 (magenta)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    table_title {
+      base 213 210 200  // #D5D2C8 (fg0)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 112 153 187  // #7099BB (blue)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 168 130 168  // #A882A8 (magenta)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    table_cell_unselected {
+      base 213 210 200  // #D5D2C8 (fg0)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 200 96 96  // #C86060 (red)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 112 153 187  // #7099BB (blue)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    table_cell_selected {
+      base 28 27 24  // #1C1B18 (bg0)
+      background 213 210 200  // #D5D2C8 (fg0)
+      emphasis_0 200 96 96  // #C86060 (red)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 112 153 187  // #7099BB (blue)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    list_unselected {
+      base 213 210 200  // #D5D2C8 (fg0)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 200 96 96  // #C86060 (red)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 112 153 187  // #7099BB (blue)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    list_selected {
+      base 28 27 24  // #1C1B18 (bg0)
+      background 213 210 200  // #D5D2C8 (fg0)
+      emphasis_0 200 96 96  // #C86060 (red)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 112 153 187  // #7099BB (blue)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    frame_selected {
+      base 196 168 130  // #C4A882 (accent)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 112 153 187  // #7099BB (blue)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 168 130 168  // #A882A8 (magenta)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    frame_highlight {
+      base 200 96 96  // #C86060 (red)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 112 153 187  // #7099BB (blue)
+      emphasis_1 196 160 80  // #C4A050 (yellow)
+      emphasis_2 200 96 96  // #C86060 (red)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    exit_code_success {
+      base 138 170 112  // #8AAA70 (green)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 112 168 160  // #70A8A0 (cyan)
+      emphasis_1 112 153 187  // #7099BB (blue)
+      emphasis_2 196 160 80  // #C4A050 (yellow)
+      emphasis_3 168 130 168  // #A882A8 (magenta)
+    }
+    exit_code_error {
+      base 200 96 96  // #C86060 (red)
+      background 28 27 24  // #1C1B18 (bg0)
+      emphasis_0 196 160 80  // #C4A050 (yellow)
+      emphasis_1 112 153 187  // #7099BB (blue)
+      emphasis_2 168 130 168  // #A882A8 (magenta)
+      emphasis_3 138 170 112  // #8AAA70 (green)
+    }
+    multiplayer_user_colors {
+      player_1 168 130 168  // #A882A8 (magenta)
+      player_2 112 153 187  // #7099BB (blue)
+      player_3 200 96 96  // #C86060 (red)
+      player_4 112 168 160  // #70A8A0 (cyan)
+      player_5 196 160 80  // #C4A050 (yellow)
+      player_6 138 170 112  // #8AAA70 (green)
+      player_7 176 173 159  // #B0AD9F (fg1)
+      player_8 94 91 80  // #5E5B50 (fg3)
+      player_9 28 27 24  // #1C1B18 (bg0)
+      player_10 58 52 40  // #3A3428 (highlight)
+    }
+  }
+}

@@ -1,0 +1,128 @@
+themes {
+  folio-light {
+    text_unselected {
+      base 43 41 36  // #2B2924 (fg0)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 160 64 64  // #A04040 (red)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 74 106 139  // #4A6A8B (blue)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    text_selected {
+      base 255 252 245  // #FFFCF5 (bg0)
+      background 43 41 36  // #2B2924 (fg0)
+      emphasis_0 160 64 64  // #A04040 (red)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 74 106 139  // #4A6A8B (blue)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    ribbon_unselected {
+      base 43 41 36  // #2B2924 (fg0)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 139 112 64  // #8B7040 (yellow)
+      emphasis_1 74 106 139  // #4A6A8B (blue)
+      emphasis_2 122 90 122  // #7A5A7A (magenta)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    ribbon_selected {
+      base 255 252 245  // #FFFCF5 (bg0)
+      background 43 41 36  // #2B2924 (fg0)
+      emphasis_0 139 112 64  // #8B7040 (yellow)
+      emphasis_1 74 106 139  // #4A6A8B (blue)
+      emphasis_2 122 90 122  // #7A5A7A (magenta)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    table_title {
+      base 43 41 36  // #2B2924 (fg0)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 74 106 139  // #4A6A8B (blue)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 122 90 122  // #7A5A7A (magenta)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    table_cell_unselected {
+      base 43 41 36  // #2B2924 (fg0)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 160 64 64  // #A04040 (red)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 74 106 139  // #4A6A8B (blue)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    table_cell_selected {
+      base 255 252 245  // #FFFCF5 (bg0)
+      background 43 41 36  // #2B2924 (fg0)
+      emphasis_0 160 64 64  // #A04040 (red)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 74 106 139  // #4A6A8B (blue)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    list_unselected {
+      base 43 41 36  // #2B2924 (fg0)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 160 64 64  // #A04040 (red)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 74 106 139  // #4A6A8B (blue)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    list_selected {
+      base 255 252 245  // #FFFCF5 (bg0)
+      background 43 41 36  // #2B2924 (fg0)
+      emphasis_0 160 64 64  // #A04040 (red)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 74 106 139  // #4A6A8B (blue)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    frame_unselected {
+      base 110 106 95  // #6E6A5F (fg2)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 74 106 139  // #4A6A8B (blue)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 122 90 122  // #7A5A7A (magenta)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    frame_selected {
+      base 139 115 85  // #8B7355 (accent)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 74 106 139  // #4A6A8B (blue)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 122 90 122  // #7A5A7A (magenta)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    frame_highlight {
+      base 160 64 64  // #A04040 (red)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 74 106 139  // #4A6A8B (blue)
+      emphasis_1 139 112 64  // #8B7040 (yellow)
+      emphasis_2 160 64 64  // #A04040 (red)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    exit_code_success {
+      base 90 122 74  // #5A7A4A (green)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 74 122 122  // #4A7A7A (cyan)
+      emphasis_1 74 106 139  // #4A6A8B (blue)
+      emphasis_2 139 112 64  // #8B7040 (yellow)
+      emphasis_3 122 90 122  // #7A5A7A (magenta)
+    }
+    exit_code_error {
+      base 160 64 64  // #A04040 (red)
+      background 255 252 245  // #FFFCF5 (bg0)
+      emphasis_0 139 112 64  // #8B7040 (yellow)
+      emphasis_1 74 106 139  // #4A6A8B (blue)
+      emphasis_2 122 90 122  // #7A5A7A (magenta)
+      emphasis_3 90 122 74  // #5A7A4A (green)
+    }
+    multiplayer_user_colors {
+      player_1 122 90 122  // #7A5A7A (magenta)
+      player_2 74 106 139  // #4A6A8B (blue)
+      player_3 160 64 64  // #A04040 (red)
+      player_4 74 122 122  // #4A7A7A (cyan)
+      player_5 139 112 64  // #8B7040 (yellow)
+      player_6 90 122 74  // #5A7A4A (green)
+      player_7 77 74 67  // #4D4A43 (fg1)
+      player_8 156 152 137  // #9C9889 (fg3)
+      player_9 255 252 245  // #FFFCF5 (bg0)
+      player_10 237 228 208  // #EDE4D0 (highlight)
+    }
+  }
+}
