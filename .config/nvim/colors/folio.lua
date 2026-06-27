@@ -300,8 +300,3 @@ hi("MiniStatuslineModeCommand", { fg = p.bg0, bg = p.yellow, bold = true })
 hi("MiniIndentscopeSymbol", { fg = p.fg3 })
 hi("IblIndent", { fg = p.bg2 })
 hi("IblScope", { fg = p.fg3 })
-
--- Lazy
-hi("LazyButton", { fg = p.fg1, bg = p.bg2 })
-hi("LazyButtonActive", { fg = p.bg0, bg = p.accent, bold = true })
-hi("LazyH1", { fg = p.bg0, bg = p.accent, bold = true })
