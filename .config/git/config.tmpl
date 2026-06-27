@@ -1,0 +1,35 @@
+[alias]
+	cm  = commit
+	co  = checkout
+	df  = diff
+	ds  = diff --staged
+	lg  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	pl  = "!f() { \
+    branch=$(git symbolic-ref --short HEAD) && \
+    git fetch origin $branch && \
+    git merge --ff-only origin/$branch; \
+  }; f"
+	ps  = push
+	psf = push --force-with-lease --force-if-includes
+	st  = status
+[commit]
+	gpgsign = true
+[diff]
+	mnemonicPrefix = true
+	renames = copies
+[fetch]
+	prune = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[init]
+	defaultBranch = main
+[merge]
+	ff = only
+[rerere]
+	enabled = true
+[user]
+	name = {{ vars.git_user_name }}
+	email = {{ vars.git_user_email }}
+	signingkey = {{ vars.git_signing_key }}

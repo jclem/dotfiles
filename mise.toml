@@ -60,5 +60,9 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/fish/functions/" = ".config/fish/functions/"
 "~/.config/gh/" = ".config/gh/"
 "~/.config/ghostty/" = ".config/ghostty/"
+
+# Render machine-local Git identity values with Tera.
+# https://mise.jdx.dev/templates.html
+"~/.config/git/config" = { source = ".config/git/config.tmpl", mode = "template" }
 "~/.config/git/ignore" = ".config/git/ignore"
 "~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles2/mise.toml"
