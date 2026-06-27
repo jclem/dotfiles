@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Neovim LSP Configs"
+  short_description: "Add native Neovim language server configs"
+  default_prompt: "Use $add-lsp-configs to add a Neovim LSP configuration for the requested language."

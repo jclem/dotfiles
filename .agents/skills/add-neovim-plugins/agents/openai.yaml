@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Neovim Plugins"
+  short_description: "Add plugins with Neovim native package management"
+  default_prompt: "Use $add-neovim-plugins to add and configure the requested Neovim plugin."
