@@ -10,7 +10,16 @@ vim.diagnostic.config({
 -- Add only the convenient mappings that are not covered by those defaults.
 -- https://neovim.io/doc/user/lsp.html#lsp-defaults
 vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("config.lsp", { clear = true }),
     callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client and client:supports_method("textDocument/completion") then
+            -- Enable LSP completion-item resolution, edits, and native snippets.
+            -- The `o` source in 'complete' handles automatic triggering.
+            -- https://neovim.io/doc/user/lsp.html#vim.lsp.completion.enable()
+            vim.lsp.completion.enable(true, client.id, args.buf)
+        end
+
         local opts = { buffer = args.buf }
 
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, {

@@ -1,6 +1,19 @@
 -- Configure Neovim's built-in editing behavior.
 -- https://neovim.io/doc/user/options.html
 
+-- Opt into Neovim 0.12's experimental replacement for the command-line and
+-- message UI. Guard it because reloading this configuration must not attach it
+-- to the same UI twice.
+-- https://neovim.io/doc/user/lua.html#ui2
+if not vim.g.ui2_enabled then
+    require("vim._core.ui2").enable({
+        msg = {
+            targets = "msg",
+        },
+    })
+    vim.g.ui2_enabled = true
+end
+
 -- mini.files is the configured file explorer, so do not load netrw's explorer.
 -- https://neovim.io/doc/user/pi_netrw.html#netrw-noload
 vim.g.loaded_netrw = 1
@@ -68,6 +81,22 @@ vim.o.showbreak = "┕━ "
 -- Keep useful whitespace glyphs ready for `:set list` without showing them by
 -- default. Tabs, trailing spaces, and non-breaking spaces each get a distinct mark.
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+-- Show completion candidates as text is entered. Adding the omnifunc source
+-- lets the same native menu combine LSP results with Neovim's buffer sources.
+-- https://neovim.io/doc/user/insert.html#ins-autocompletion
+vim.o.autocomplete = true
+vim.opt.complete:append("o")
+vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noselect", "popup" }
+
+-- Keep the completion menu compact and give it and other floating windows a
+-- consistent rounded border. Neovim does not yet expose a documentation-width
+-- limit, so pummaxwidth applies only to the completion candidates.
+-- https://neovim.io/doc/user/options.html#'pumborder'
+vim.o.pumborder = "rounded"
+vim.o.pumheight = 12
+vim.o.pummaxwidth = 60
+vim.o.winborder = "rounded"
 
 -- Let Tree-sitter calculate folds, but start with every fold open. Languages
 -- without an installed parser simply have no syntax-derived folds.
