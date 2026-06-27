@@ -78,6 +78,7 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/fish/" = { source = "dot_config/fish/", mode = "symlink-each" }
 "~/.config/gh/" = { source = "dot_config/gh/", mode = "symlink-each" }
 "~/.config/ghostty/" = { source = "dot_config/ghostty/", mode = "symlink-each" }
+"~/.config/lazygit/" = { source = "dot_config/lazygit/", mode = "symlink-each" }
 "~/.config/nvim/" = { source = "dot_config/nvim/", mode = "symlink-each" }
 "~/.config/ripgrep/" = { source = "dot_config/ripgrep/", mode = "symlink-each" }
 

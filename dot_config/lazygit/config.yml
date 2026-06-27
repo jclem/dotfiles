@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/v0.62.2/schema/config.json
+# Keep this file sparse: only intentional overrides belong here; Lazygit's
+# built-in defaults handle everything else and can evolve with future releases.
+gui:
+  theme:
+    # Reverse video follows the terminal palette in both light and dark modes.
+    selectedLineBgColor: ["reverse"]
+  # Show change size in the files view without opening each diff.
+  showNumstatInFilesView: true
+  # Keep the command log focused now that the onboarding tips are familiar.
+  showRandomTip: false
+  # Show both direction and count so branch divergence is immediately useful.
+  showDivergenceFromBaseBranch: "arrowAndNumber"
+  # Match remembered fragments instead of requiring an exact substring.
+  filterMode: "fuzzy"
+
+git:
+  # Never let a WIP prefix silently add --no-verify; bypass hooks explicitly.
+  skipHookPrefix: ""
+  # Signing uses the 1Password SSH agent, so Lazygit can keep rebase and patch
+  # features enabled without waiting for an interactive GPG prompt.
+  overrideGpg: true
+  # Put recently used branches first so active work stays easy to reach.
+  localBranchSortOrder: "recency"
