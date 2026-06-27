@@ -34,6 +34,11 @@
       "src": "https://github.com/nvim-mini/mini.surround",
       "version": ">=0.0.0"
     },
+    "neoscroll.nvim": {
+      "rev": "a731f66f1d39ec6175fd201c5bf849e54abda99c",
+      "src": "https://github.com/karb94/neoscroll.nvim",
+      "version": ">=0.0.0"
+    },
     "nvim-lspconfig": {
       "rev": "229b79051b380377664edc4cbd534930154921a1",
       "src": "https://github.com/neovim/nvim-lspconfig",

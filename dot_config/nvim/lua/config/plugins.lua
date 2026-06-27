@@ -33,6 +33,10 @@ vim.pack.add({
         version = vim.version.range("*"),
     },
     {
+        src = "https://github.com/karb94/neoscroll.nvim",
+        version = vim.version.range("*"),
+    },
+    {
         src = "https://github.com/b0o/schemastore.nvim",
     },
     {
@@ -82,5 +86,6 @@ require("config.fzf")
 require("config.filetree")
 require("config.gitsigns")
 require("config.mini")
+require("neoscroll").setup()
 require("config.treesitter").setup()
 require("config.which-key")
