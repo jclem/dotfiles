@@ -5,6 +5,10 @@ vim.pack.add({
         src = "https://github.com/neovim/nvim-lspconfig",
         version = vim.version.range("*"),
     },
+    {
+        src = "https://github.com/nvim-mini/mini.files",
+        version = vim.version.range("*"),
+    },
 }, { confirm = false })
 
 -- Load the repository-local Codex plugin directly from the configuration.
@@ -14,3 +18,5 @@ require("codex").setup({
     auto_start = true,
     codex_executable = "codex",
 })
+
+require("config.filetree")
