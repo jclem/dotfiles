@@ -17,6 +17,13 @@ vim.keymap.set({ "n", "x" }, ";", ":", { desc = "Enter command mode" })
 -- continue to use Neovim's registers without changing the macOS clipboard.
 vim.keymap.set("x", "<leader>c", '"+y', { desc = "Copy selection" })
 
+-- Copy a stable link to the current file, including selected lines in Visual mode.
+local github = require("config.github")
+vim.keymap.set("n", "<leader>gh", github.copy_permalink, { desc = "Copy GitHub permalink" })
+vim.keymap.set("x", "<leader>gh", function()
+    github.copy_permalink({ include_lines = true })
+end, { desc = "Copy GitHub permalink with lines" })
+
 -- Treat Control-C like Escape in Insert mode so InsertLeave autocmds run.
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
