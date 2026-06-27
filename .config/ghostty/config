@@ -1,0 +1,66 @@
+# Ghostty configuration reference:
+# https://ghostty.org/docs/config/reference
+
+# Use Ghostty's stable automatic update channel on macOS.
+auto-update-channel = stable
+
+# Inject Fish shell integration for working-directory reporting, prompt marks,
+# and other terminal-aware behaviour.
+# https://ghostty.org/docs/features/shell-integration
+shell-integration = fish
+
+# Add eight points of horizontal space between the terminal grid and window.
+window-padding-x = 8
+
+# Follow the macOS appearance with separate bundled dark and light themes.
+theme = dark:folio-dark,light:folio-light
+
+# Optional appearance experiments.
+background-opacity = 0.8
+background-blur = true
+
+# Use a condensed, medium-weight Berkeley Mono variable font at 14 points.
+font-family = Berkeley Mono Variable
+font-variation = wdth=70
+font-variation = wght=500
+font-size = 14
+
+# Make box-drawing glyphs two pixels thinner.
+adjust-box-thickness = -2
+
+# Hide the pointer while keyboard input is active.
+mouse-hide-while-typing = true
+
+# Show the quick terminal as a nearly instant, full-screen centred window.
+quick-terminal-position = center
+quick-terminal-size = 100%,100%
+quick-terminal-animation-duration = 0.1
+
+# Retain 10 MiB of scrollback per terminal surface.
+scrollback-limit = 10485760
+
+# Restore windows whenever Ghostty launches.
+window-save-state = always
+
+# Hide the current-directory proxy icon from the native macOS titlebar.
+macos-titlebar-proxy-icon = hidden
+
+# Keep the native window title visually empty and ignore application titles.
+title = " "
+
+# Keybinding syntax and actions:
+# https://ghostty.org/docs/config/keybind
+
+# Send a newline for Shift+Enter, as expected by Claude Code.
+keybind = shift+enter=text:\n
+
+# Toggle the quick terminal globally with Control+T.
+keybind = global:ctrl+t=toggle_quick_terminal
+
+# Let Zellij receive shortcuts that Ghostty normally handles itself.
+keybind = cmd+t=unbind
+keybind = cmd+d=unbind
+keybind = cmd+shift+d=unbind
+keybind = cmd+w=unbind
+keybind = cmd+n=unbind
+keybind = cmd+f=unbind
