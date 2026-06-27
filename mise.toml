@@ -36,6 +36,7 @@ show_pathbar = true
 "brew:eza" = "latest"
 "brew:fd" = "latest"
 "brew:fish" = "latest"
+"brew:fish-lsp" = "latest"
 "brew:fzf" = "latest"
 "brew:gh" = "latest"
 "brew:git" = "latest"
