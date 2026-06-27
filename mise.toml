@@ -14,6 +14,7 @@ node = "latest"
 "npm:@vtsls/language-server" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "npm:yaml-language-server" = "latest"
+pitchfork = "latest"
 rust = "latest"
 rust-analyzer = "latest"
 usage = "latest"
@@ -80,6 +81,7 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/ghostty/" = { source = "dot_config/ghostty/", mode = "symlink-each" }
 "~/.config/lazygit/" = { source = "dot_config/lazygit/", mode = "symlink-each" }
 "~/.config/nvim/" = { source = "dot_config/nvim/", mode = "symlink-each" }
+"~/.config/pitchfork/" = { source = "dot_config/pitchfork/", mode = "symlink-each" }
 "~/.config/ripgrep/" = { source = "dot_config/ripgrep/", mode = "symlink-each" }
 
 # Render machine-local Git identity values with Tera.
