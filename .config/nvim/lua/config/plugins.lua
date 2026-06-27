@@ -22,6 +22,10 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
 vim.pack.add({
     {
+        src = "https://github.com/stevearc/conform.nvim",
+        version = vim.version.range("*"),
+    },
+    {
         src = "https://github.com/ibhagwan/fzf-lua",
     },
     {
@@ -57,6 +61,7 @@ require("codex").setup({
     codex_executable = "codex",
 })
 
+require("config.formatting")
 require("config.fzf")
 require("config.filetree")
 require("config.treesitter").setup()

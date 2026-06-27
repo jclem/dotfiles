@@ -25,9 +25,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, {
             desc = "Code actions",
         }))
-        vim.keymap.set("n", "<leader>cf", function()
-            vim.lsp.buf.format({ async = true })
-        end, vim.tbl_extend("force", opts, { desc = "Format buffer" }))
     end,
 })
 
