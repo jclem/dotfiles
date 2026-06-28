@@ -67,6 +67,10 @@ vim.pack.add({
         src = "https://github.com/folke/which-key.nvim",
         version = vim.version.range("*"),
     },
+    {
+        src = "https://github.com/f-person/auto-dark-mode.nvim",
+        version = "main"
+    }
 }, { confirm = false })
 
 -- nvim-treesitter does not support lazy loading; its filetype registrations
