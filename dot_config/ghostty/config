@@ -16,8 +16,8 @@ window-padding-x = 8
 theme = dark:folio-dark,light:folio-light
 
 # Optional appearance experiments.
-background-opacity = 0.8
-background-blur = true
+# background-opacity = 0.8
+# background-blur = true
 
 # Use a condensed, medium-weight Berkeley Mono variable font at 14 points.
 font-family = Berkeley Mono Variable
