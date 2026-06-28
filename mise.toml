@@ -47,6 +47,12 @@ preferred_view_style = "column"
 show_all_files = true
 show_pathbar = true
 
+[bootstrap.macos.launchd.agents.watch-appearance]
+program = "~/.local/bin/watch_appearance.fish"
+stdout_path = "~/.local/share/watch_appearance.log"
+stderr_path = "~/.local/share/watch_appearance.log"
+run_at_load = true
+
 # Machine bootstrap packages
 # https://mise.jdx.dev/bootstrap.html
 # https://mise.jdx.dev/bootstrap/packages/brew.html
@@ -68,6 +74,7 @@ show_pathbar = true
 "brew:tree-sitter-cli" = "latest"
 "brew:watchexec" = "latest"
 "brew:wget" = "latest"
+"brew:cormacrelf/tap/dark-notify" = "latest"
 "brew:zellij" = "latest"
 "brew-cask:1password-cli" = "latest"
 
@@ -83,7 +90,7 @@ login_shell = "/opt/homebrew/bin/fish"
 
 "~/.config/atuin/" = { source = "dot_config/atuin/", mode = "symlink-each" }
 "~/.config/bat/" = { source = "dot_config/bat/", mode = "symlink-each" }
-"~/.config/btop/" = { source = "dot_config/btop/", mode = "symlink-each" }
+"~/.config/btop/" = { source = "dot_config/btop/", mode = "copy" }
 "~/.config/codex/config.toml" = { source = "dot_config/codex/config.toml", mode = "copy" }
 "~/.config/fish/" = { source = "dot_config/fish/", mode = "symlink-each" }
 "~/.config/gh/" = { source = "dot_config/gh/", mode = "symlink-each" }
@@ -97,9 +104,13 @@ login_shell = "/opt/homebrew/bin/fish"
 # https://mise.jdx.dev/templates.html
 "~/.config/git/config" = { source = "dot_config/git/config.tmpl", mode = "template" }
 "~/.config/git/ignore" = "dot_config/git/ignore"
-"~/.config/zellij/" = { source = "dot_config/zellij/", mode = "symlink-each" }
+"~/.config/zellij/" = { source = "dot_config/zellij/", mode = "copy" }
 "~/.config/mise/config.toml" = "~/src/github.com/jclem/dotfiles/mise.toml"
 "~/.ssh/config" = "dot_ssh/config"
+
+# Binaries
+"~/.local/bin/update_appearance.fish" = "dot_local/bin/update_appearance.fish"
+"~/.local/bin/watch_appearance.fish" = "dot_local/bin/watch_appearance.fish"
 
 # Less-used shell configs.
 "~/.bashrc" = "dot_bashrc"

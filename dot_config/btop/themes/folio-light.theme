@@ -1,0 +1,62 @@
+# Theme: folio-light
+
+# Main bg / fg
+theme[main_bg]="#FFFCF5"
+theme[main_fg]="#4D4A43"
+
+# Titles / accents
+theme[title]="#4A6A8B"
+theme[hi_fg]="#4A6A8B"
+
+# Selection
+theme[selected_bg]="#EDE4D0"
+theme[selected_fg]="#2B2924"
+
+# Inactive/disabled text
+theme[inactive_fg]="#9C9889"
+
+# Process misc (mini graphs, detail text)
+theme[proc_misc]="#4A7A7A"
+
+# Box outlines / dividers
+theme[cpu_box]="#9C9889"
+theme[mem_box]="#9C9889"
+theme[net_box]="#9C9889"
+theme[proc_box]="#9C9889"
+theme[div_line]="#9C9889"
+
+# Temperature gradient
+theme[temp_start]="#5A7A4A"
+theme[temp_mid]="#8B7040"
+theme[temp_end]="#A04040"
+
+# CPU usage gradient
+theme[cpu_start]="#5A7A4A"
+theme[cpu_mid]="#8B7040"
+theme[cpu_end]="#A04040"
+
+# Mem/Disk meters
+theme[free_start]="#5A7A4A"
+theme[free_mid]="#8B7040"
+theme[free_end]="#A04040"
+
+theme[cached_start]="#5A7A4A"
+theme[cached_mid]="#8B7040"
+theme[cached_end]="#A04040"
+
+theme[available_start]="#5A7A4A"
+theme[available_mid]="#8B7040"
+theme[available_end]="#A04040"
+
+theme[used_start]="#5A7A4A"
+theme[used_mid]="#8B7040"
+theme[used_end]="#A04040"
+
+# Network throughput gradients
+theme[download_start]="#5A7A4A"
+theme[download_mid]="#8B7040"
+theme[download_end]="#A04040"
+
+theme[upload_start]="#5A7A4A"
+theme[upload_mid]="#8B7040"
+theme[upload_end]="#A04040"
