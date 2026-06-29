@@ -1,0 +1,189 @@
+default:
+  margin:
+    percent: 8
+  colors:
+    foreground: p:fg0
+    background: p:bg0
+
+slide_title:
+  alignment: center
+  padding_top: 1
+  padding_bottom: 1
+  colors:
+    foreground: p:accent
+  bold: true
+  font_size: 2
+
+code:
+  alignment: center
+  minimum_size: 50
+  minimum_margin:
+    percent: 8
+  theme_name: folio-light
+  padding:
+    horizontal: 2
+    vertical: 1
+
+execution_output:
+  colors:
+    foreground: p:fg0
+    background: p:bg1
+  status:
+    running:
+      foreground: p:blue
+    success:
+      foreground: p:green
+    failure:
+      foreground: p:error
+    not_started:
+      foreground: p:warn
+  padding:
+    horizontal: 2
+    vertical: 1
+
+pty_output:
+  colors:
+    foreground: p:fg0
+    background: p:bg1
+  cursor:
+    highlight_colors:
+      foreground: p:bg0
+      background: p:fg0
+
+inline_code:
+  colors:
+    foreground: p:cyan
+    background: p:highlight
+
+intro_slide:
+  title:
+    alignment: center
+    colors:
+      foreground: p:accent
+    font_size: 2
+  subtitle:
+    alignment: center
+    colors:
+      foreground: p:fg1
+  event:
+    alignment: center
+    colors:
+      foreground: p:blue
+  location:
+    alignment: center
+    colors:
+      foreground: p:cyan
+  date:
+    alignment: center
+    colors:
+      foreground: p:warn
+  author:
+    alignment: center
+    colors:
+      foreground: p:fg1
+    positioning: page_bottom
+
+headings:
+  h1:
+    prefix: "██"
+    colors:
+      foreground: p:accent
+  h2:
+    prefix: "▓▓▓"
+    colors:
+      foreground: p:blue
+  h3:
+    prefix: "▒▒▒▒"
+    colors:
+      foreground: p:green
+  h4:
+    prefix: "░░░░░"
+    colors:
+      foreground: p:magenta
+  h5:
+    prefix: "░░░░░░"
+    colors:
+      foreground: p:cyan
+  h6:
+    prefix: "░░░░░░░"
+    colors:
+      foreground: p:fg2
+
+block_quote:
+  prefix: "▍ "
+  colors:
+    foreground: p:fg1
+    background: p:bg1
+    prefix: p:accent
+
+alert:
+  prefix: "▍ "
+  base_colors:
+    foreground: p:fg0
+    background: p:bg1
+  styles:
+    note:
+      color: p:blue
+    tip:
+      color: p:green
+    important:
+      color: p:magenta
+    warning:
+      color: p:warn
+    caution:
+      color: p:error
+
+typst:
+  colors:
+    foreground: p:fg0
+    background: p:bg1
+
+footer:
+  style: template
+  right: "{current_slide} / {total_slides}"
+
+modals:
+  selection_colors:
+    foreground: p:accent
+
+mermaid:
+  background: transparent
+  theme: default
+
+d2:
+  theme: 4
+
+layout_grid:
+  color: p:blue
+
+palette:
+  colors:
+    bg0: "FFFCF5"
+    bg1: "F4F1EA"
+    bg2: "E8E5DD"
+    bg3: "DDDAD2"
+    fg0: "2B2924"
+    fg1: "4D4A43"
+    fg2: "6E6A5F"
+    fg3: "9C9889"
+    accent: "8B7355"
+    highlight: "EDE4D0"
+    diff_add: "D5E0C8"
+    diff_del: "E8D0C8"
+    error: "A04040"
+    warn: "8B7040"
+    red: "A04040"
+    green: "5A7A4A"
+    yellow: "8B7040"
+    blue: "4A6A8B"
+    magenta: "7A5A7A"
+    cyan: "4A7A7A"
+    white: "F4F1EA"
+    bright_black: "6E6A5F"
+    bright_red: "B85050"
+    bright_green: "6E8B5E"
+    bright_yellow: "A08550"
+    bright_blue: "5E7E9E"
+    bright_magenta: "8B6E8B"
+    bright_cyan: "5E8B8B"
+    bright_white: "FFFCF5"

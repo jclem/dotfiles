@@ -16,6 +16,7 @@ node = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "npm:yaml-language-server" = "latest"
 pitchfork = "latest"
+"github:mfontanini/presenterm" = "latest"
 rust = "latest"
 rust-analyzer = "latest"
 usage = "latest"
@@ -98,6 +99,9 @@ login_shell = "/opt/homebrew/bin/fish"
 "~/.config/lazygit/" = { source = "dot_config/lazygit/", mode = "symlink-each" }
 "~/.config/nvim/" = { source = "dot_config/nvim/", mode = "symlink-each" }
 "~/.config/pitchfork/" = { source = "dot_config/pitchfork/", mode = "symlink-each" }
+"~/.config/presenterm/" = { source = "dot_config/presenterm/", mode = "symlink-each" }
+"~/.config/presenterm/themes/highlighting/folio-dark.tmTheme" = { source = "dot_config/bat/themes/folio-dark.tmTheme", mode = "symlink" }
+"~/.config/presenterm/themes/highlighting/folio-light.tmTheme" = { source = "dot_config/bat/themes/folio-light.tmTheme", mode = "symlink" }
 "~/.config/ripgrep/" = { source = "dot_config/ripgrep/", mode = "symlink-each" }
 
 # Render machine-local Git identity values with Tera.
