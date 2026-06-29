@@ -111,6 +111,7 @@ login_shell = "/opt/homebrew/bin/fish"
 # Binaries
 "~/.local/bin/update_appearance.fish" = "dot_local/bin/update_appearance.fish"
 "~/.local/bin/watch_appearance.fish" = "dot_local/bin/watch_appearance.fish"
+"~/.local/bin/raycast/" = { source = "dot_local/bin/raycast/", mode = "copy" }
 
 # Less-used shell configs.
 "~/.bashrc" = "dot_bashrc"
