@@ -67,5 +67,5 @@ function envsource --description "Load dotenv assignments into the environment"
         set --global --export "$key" "$value"
     end <"$file"
 
-    return
+    return 0
 end
