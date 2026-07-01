@@ -69,7 +69,15 @@ vim.pack.add({
     },
     {
         src = "https://github.com/f-person/auto-dark-mode.nvim",
-        version = "main"
+        version = "main",
+    },
+    {
+        src = "https://github.com/saghen/blink.lib",
+        version = "main",
+    },
+    {
+        src = "https://github.com/saghen/blink.cmp",
+        version = "main",
     }
 }, { confirm = false })
 
@@ -93,3 +101,4 @@ require("config.mini")
 require("neoscroll").setup()
 require("config.treesitter").setup()
 require("config.which-key")
+require("config.completion")

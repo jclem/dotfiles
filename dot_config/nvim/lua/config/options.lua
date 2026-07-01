@@ -86,21 +86,6 @@ vim.o.showbreak = "┕━ "
 -- default. Tabs, trailing spaces, and non-breaking spaces each get a distinct mark.
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- Request omnifunc candidates as identifiers are typed. Preview the first
--- match beyond the cursor so it is inserted only after explicit acceptance.
-vim.o.autocomplete = true
-vim.opt.complete = { "o" }
-vim.opt.completeopt = { "menu", "menuone", "popup", "preinsert" }
-
--- Keep the completion menu compact and give it and other floating windows a
--- consistent rounded border. Neovim does not yet expose a documentation-width
--- limit, so pummaxwidth applies only to the completion candidates.
--- https://neovim.io/doc/user/options.html#'pumborder'
-vim.o.pumborder = "rounded"
-vim.o.pumheight = 12
-vim.o.pummaxwidth = 60
-vim.o.winborder = "rounded"
-
 -- Let Tree-sitter calculate folds, but start with every fold open. Languages
 -- without an installed parser simply have no syntax-derived folds.
 vim.o.foldmethod = "expr"
