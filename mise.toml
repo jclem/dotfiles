@@ -21,6 +21,12 @@ rust = "latest"
 rust-analyzer = "latest"
 usage = "latest"
 bun = "latest"
+"aqua:getsentry/sentry-cli" = "2.42.0"
+"github:cameroncooke/AXe" = "1.6.0"
+periphery = "3.6.0"
+swiftlint = "0.63.2"
+tuist = "4.196.0"
+xcsift = "1.2.0"
 
 [settings]
 dotfiles.root = "~/.dotfiles"
