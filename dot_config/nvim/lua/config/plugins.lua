@@ -48,6 +48,10 @@ vim.pack.add({
         version = "main",
     },
     {
+        src = "https://github.com/nvim-treesitter/nvim-treesitter-context",
+        version = vim.version.range("*"),
+    },
+    {
         src = "https://github.com/nvim-mini/mini.bracketed",
         version = vim.version.range("*"),
     },
@@ -108,5 +112,6 @@ require("config.gitsigns")
 require("config.mini")
 require("neoscroll").setup()
 require("config.treesitter").setup()
+require("config.treesitter-context")
 require("config.which-key")
 require("config.completion")
