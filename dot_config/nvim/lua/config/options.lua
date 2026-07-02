@@ -52,6 +52,9 @@ vim.o.mouse = "a"
 vim.o.splitbelow = true
 vim.o.splitright = true
 
+-- Use rounded borders for floating windows unless a plugin overrides them.
+vim.o.winborder = "rounded"
+
 -- Use full terminal colors for the Folio colorscheme.
 vim.o.termguicolors = true
 
