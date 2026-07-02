@@ -33,6 +33,7 @@ dotfiles.root = "~/.dotfiles"
 env_shell_expand = true
 experimental = true
 minimum_release_age_excludes = ["codex"]
+trusted_config_paths = ["/Users/jclem/src/github.com/makenotion/notion-next"]
 
 [env]
 # Codex config and data home
