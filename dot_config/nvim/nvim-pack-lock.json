@@ -44,6 +44,10 @@
       "src": "https://github.com/lewis6991/gitsigns.nvim",
       "version": ">=0.0.0"
     },
+    "lualine.nvim": {
+      "rev": "221ce6b2d999187044529f49da6554a92f740a96",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
     "mini.bracketed": {
       "rev": "7662c280946faf573c4eabf307d78406ad0783e4",
       "src": "https://github.com/nvim-mini/mini.bracketed",
@@ -88,6 +92,10 @@
       "rev": "ed1cf48d5af252248c55f50b9427e8ce883a2c6b",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-context",
       "version": ">=0.0.0"
+    },
+    "nvim-web-devicons": {
+      "rev": "dad71387de386a946b123079d0e53f23028f3abd",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "schemastore.nvim": {
       "rev": "490afbd7fd3b316330550405ac74758a971104a4",

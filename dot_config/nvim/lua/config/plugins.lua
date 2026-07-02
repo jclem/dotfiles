@@ -99,6 +99,8 @@ vim.pack.add({
         src = "https://github.com/nvim-mini/mini.icons",
         version = vim.version.range("*"),
     },
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-lualine/lualine.nvim'
 }, { confirm = false })
 
 -- nvim-treesitter does not support lazy loading; its filetype registrations
@@ -120,6 +122,7 @@ require("config.formatting")
 require("config.fzf")
 require("config.filetree")
 require("config.gitsigns")
+require("config.lualine")
 require("config.mini")
 require("neoscroll").setup()
 require("config.treesitter").setup()
