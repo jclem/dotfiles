@@ -72,6 +72,10 @@ vim.pack.add({
         version = "main",
     },
     {
+        src = "https://github.com/xzbdmw/colorful-menu.nvim",
+        version = "master",
+    },
+    {
         src = "https://github.com/saghen/blink.lib",
         version = "main",
     },
