@@ -7,6 +7,13 @@ fzf.setup({
     marks = { marks = "[A-Za-z]" },
 })
 
+-- Use fzf for selected default LSP mappings.
+vim.keymap.set({ "n", "x" }, "gra", function()
+    fzf.lsp_code_actions({ silent = true })
+end, { desc = "Code Actions" })
+vim.keymap.set("n", "grr", fzf.lsp_references, { desc = "References" })
+vim.keymap.set("n", "grt", fzf.lsp_typedefs, { desc = "Type Definitions" })
+
 vim.keymap.set("n", "<leader>bl", fzf.buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>db", fzf.diagnostics_document, { desc = "Buffer Diagnostics" })
 vim.keymap.set("n", "<leader>dw", fzf.diagnostics_workspace, { desc = "Workspace Diagnostics" })
