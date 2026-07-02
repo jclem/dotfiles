@@ -80,6 +80,14 @@ vim.pack.add({
         version = "master",
     },
     {
+        src = "https://github.com/zbirenbaum/copilot.lua",
+        version = "master",
+    },
+    {
+        src = "https://github.com/fang2hou/blink-copilot",
+        version = vim.version.range("*"),
+    },
+    {
         src = "https://github.com/saghen/blink.lib",
         version = "main",
     },
@@ -96,6 +104,9 @@ vim.pack.add({
 -- nvim-treesitter does not support lazy loading; its filetype registrations
 -- must be active before Tree-sitter is started for a buffer.
 vim.cmd.packadd("nvim-treesitter")
+
+-- Source Copilot's command definitions before configuring its LSP client.
+vim.cmd.packadd("copilot.lua")
 
 -- Load the repository-local Codex plugin directly from the configuration.
 vim.opt.runtimepath:prepend(vim.fn.stdpath("config") .. "/plugins/codex.nvim")
@@ -114,4 +125,5 @@ require("neoscroll").setup()
 require("config.treesitter").setup()
 require("config.treesitter-context")
 require("config.which-key")
+require("config.copilot")
 require("config.completion")

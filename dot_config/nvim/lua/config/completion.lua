@@ -1,4 +1,22 @@
 local cmp = require("blink.cmp")
+
+local function kind_icon(ctx)
+    if ctx.source_id == "copilot" then
+        return ctx.kind_icon
+    end
+
+    return require("mini.icons").get("lsp", ctx.kind)
+end
+
+local function kind_highlight(ctx)
+    if ctx.source_id == "copilot" then
+        return ctx.kind_hl
+    end
+
+    local _, hl = require("mini.icons").get("lsp", ctx.kind)
+    return hl
+end
+
 cmp.build():pwait()
 cmp.setup({
     completion = {
@@ -9,32 +27,34 @@ cmp.setup({
                 cursorline_priority = 0,
                 components = {
                     kind_icon = {
-                        text = function(ctx)
-                            local kind_icon = require("mini.icons").get("lsp", ctx.kind)
-                            return kind_icon
-                        end,
-
-                        highlight = function(ctx)
-                            local _, hl = require("mini.icons").get("lsp", ctx.kind)
-                            return hl
-                        end,
+                        text = kind_icon,
+                        highlight = kind_highlight,
                     },
                     kind = {
-                        highlight = function(ctx)
-                            local _, hl = require("mini.icons").get("lsp", ctx.kind)
-                            return hl
-                        end,
+                        highlight = kind_highlight,
                     },
                     label = {
-                        highlight = function(ctx)
-                            local _, hl = require("mini.icons").get("lsp", ctx.kind)
-                            return hl
-                        end,
+                        highlight = kind_highlight,
                     },
                 },
             },
         },
     },
     fuzzy = { implementation = "rust" },
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer", "copilot" },
+        providers = {
+            copilot = {
+                name = "Copilot",
+                module = "blink-copilot",
+                async = true,
+                score_offset = 100,
+                opts = {
+                    kind_icon = "",
+                    kind_hl = "MiniIconsPurple",
+                },
+            },
+        },
+    },
     signature = { enabled = true },
 })
