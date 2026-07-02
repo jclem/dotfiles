@@ -1,3 +1,7 @@
+-- Provide icons and their highlight groups to completion and file plugins.
+-- https://github.com/nvim-mini/mini.icons
+require("mini.icons").setup()
+
 -- Add paired characters automatically while typing.
 -- https://github.com/nvim-mini/mini.pairs
 require("mini.pairs").setup()

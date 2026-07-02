@@ -78,7 +78,11 @@ vim.pack.add({
     {
         src = "https://github.com/saghen/blink.cmp",
         version = "main",
-    }
+    },
+    {
+        src = "https://github.com/nvim-mini/mini.icons",
+        version = vim.version.range("*"),
+    },
 }, { confirm = false })
 
 -- nvim-treesitter does not support lazy loading; its filetype registrations

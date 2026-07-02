@@ -137,6 +137,7 @@ hi("DiagnosticVirtualTextError", { fg = p.error, bg = p.bg1 })
 hi("DiagnosticVirtualTextWarn", { fg = p.warn, bg = p.bg1 })
 hi("DiagnosticVirtualTextInfo", { fg = p.blue, bg = p.bg1 })
 hi("DiagnosticVirtualTextHint", { fg = p.cyan, bg = p.bg1 })
+hi("LspSignatureActiveParameter", { fg = p.accent, bg = p.highlight, bold = true })
 
 -- Diff
 hi("DiffAdd", { bg = p.diffAdd })
