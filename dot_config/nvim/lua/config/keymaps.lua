@@ -76,9 +76,6 @@ require("which-key").add({
 
     -- Diagnostics
     { "<leader>d", group = "Diagnostics" },
-    { "<leader>dd", "<cmd>lua vim.diagnostic.open_float()<cr>", desc = "Open Diagnostics" },
-    { "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<cr>", desc = "Set Location List" },
-    { "<leader>dq", "<cmd>lua vim.diagnostic.setqflist()<cr>", desc = "Set Quickfix List" },
 
     -- Help
     {

@@ -8,6 +8,8 @@ fzf.setup({
 })
 
 vim.keymap.set("n", "<leader>bl", fzf.buffers, { desc = "Buffers" })
+vim.keymap.set("n", "<leader>db", fzf.diagnostics_document, { desc = "Buffer Diagnostics" })
+vim.keymap.set("n", "<leader>dw", fzf.diagnostics_workspace, { desc = "Workspace Diagnostics" })
 vim.keymap.set("n", "<leader>fd", fzf.files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>gC", fzf.git_commits, { desc = "Commits" })
